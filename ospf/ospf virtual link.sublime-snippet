@@ -6,6 +6,28 @@ Actually for OSPF to work, all areas should be connected to backbone area 0. but
 
 But, routers forming virtual link atleast should have a leg in area 0.
 
+Few important points to remember
+
+We can configure virtual links on ABRs.
+We must always specify router ID but not ip address.
+
+R1(config)#router ospf 1
+R1(config‐router)#area 1 virtual‐link 192.168.23.3
+
+R2(config)#router ospf 1
+R2(config‐router)#area 1 virtual‐link 1.1.1.1
+
+
+R1#show ip ospf database
+OSPF Router with ID (1.1.1.1) (Process ID 1)
+Router Link States (Area 0)
+Link ID ADV Router Age Seq# Checksum Link count
+1.1.1.1 1.1.1.1 189 0x80000004 0x00E333 2
+192.168.23.2 192.168.23.2 1 (DNA) 0x80000002 0x009816 1
+
+DNS meaning Do not Age timer in virtual links.
+
+
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>ospf virtual link</tabTrigger>
