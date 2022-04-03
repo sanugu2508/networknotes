@@ -1,0 +1,39 @@
+<snippet>
+	<content><![CDATA[
+
+
+default hello and dead timers are 10, 40 seconds.
+
+we can configure hello and dead timers to as low as 1 second.
+
+
+R1 & R2
+
+interface ethernet0/0
+ip ospf hello-interval 1
+ip ospf dead-interval 3
+
+we can lower the timers much lesser.
+
+R1 & R2
+interface ethernet0/0
+ip ospf dead‐interval minimal hello‐multiplier 3
+
+
+R1#show ip ospf interface FastEthernet 0/0 | include intervals
+Timer intervals configured, Hello 333 msec, Dead 1, Wait 1, Retransmit 5
+
+we can reduce them still lower using BFD.
+
+
+1) BFD can detect a downed neighbor much faster than any OSPF timer manipulation
+2) BFD is less CPU intensive than very small OSPF timers because BFD is pushed o漀椀 to the data
+plane, whereas OSPF timer events must be processed by the router’s control plane
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ospf hello timers</tabTrigger>
+</snippet>

@@ -1,0 +1,34 @@
+<snippet>
+	<content><![CDATA[
+
+
+It is impossible to summarize within an area. meaning we need to do in ABR or ASBR. OSPF can only summarize type 3 and type 5.
+
+why we need to summarize the routes ?
+
+To reduce the LSAs and CPU power for running SPF.
+
+summarization of type3 is called interarea summarization.
+
+*	summary route will only be advertised if you have atleast one subnet that falls within 		that summary range.
+*	cost of the summary route will be the lowest cost of the subnet that falls within that 		range.
+*	ABR that creates summary route will create Null0 to prevent loops.
+
+* 	in summary command you need to type subnet mask instead of wildcard mask.
+
+R1(config)#router ospf 1
+R1(config‐router)#area 0 range 172.16.0.0 255.255.0.0
+
+
+Other type of summarization is external route summarization.
+
+* 	You can create the summary only on the ASBR.
+* 	A null0 entry will be created in the routing table for the summary route.
+
+Donna(config)#router ospf 1
+Donna(config‐router)#summary‐address 172.16.0.0 255.255.0.0
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ospf route summarization</tabTrigger>
+</snippet>

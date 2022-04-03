@@ -1,0 +1,112 @@
+<snippet>
+	<content><![CDATA[
+
+
+OSPF uses type 3 LSA for inter-area prefixes and you should only do it on ABR. filtering is possible on inbound and outbound using filter-list.
+
+Look at OSPF route filtering LAB diagram.
+
+R1(config‐router)#network 1.1.1.1 0.0.0.0 area 1
+R1(config‐router)#network 192.168.14.0 0.0.0.255 area 1
+
+R2(config)#router ospf 1
+R2(config‐router)#network 2.2.2.2 0.0.0.0 area 2
+R2(config‐router)#network 192.168.24.0 0.0.0.255 area 2
+
+R3(config)#router ospf 1
+R3(config‐router)#network 3.3.3.3 0.0.0.0 area 3
+R3(config‐router)#network 192.168.34.0 0.0.0.255 area 3
+
+R4(config)#router ospf 1
+R4(config‐router)#network 4.4.4.4 0.0.0.0 area 0
+R4(config‐router)#network 192.168.14.0 0.0.0.255 area 1
+R4(config‐router)#network 192.168.24.0 0.0.0.255 area 2
+R4(config‐router)#network 192.168.34.0 0.0.0.255 area 3
+
+
+
+R3#show ip route ospf
+1.0.0.0/32 is subnetted, 1 subnets
+O IA 1.1.1.1 [110/3] via 192.168.34.4, 00:03:50, FastEthernet0/0
+	2.0.0.0/32 is subnetted, 1 subnets
+O IA 2.2.2.2 [110/3] via 192.168.34.4, 00:03:50, FastEthernet0/0  -------> remember this
+O IA 192.168.14.0/24 [110/2] via 192.168.34.4, 00:03:50, FastEthernet0/0
+	4.0.0.0/32 is subnetted, 1 subnets
+O IA 4.4.4.4 [110/2] via 192.168.34.4, 00:03:50, FastEthernet0/0
+O IA 192.168.24.0/24 [110/2] via 192.168.34.4, 00:03:50, FastEthernet0/0
+
+
+Inbound Area LSA Type 3 filtering
+===================================
+
+R4(config)#ip prefix‐list INTO‐AREA3 deny 2.2.2.2/32
+R4(config)#ip prefix‐list INTO‐AREA3 permit 0.0.0.0/0 le 32
+R4(config)#router ospf 1
+R4(config‐router)#area 3 filter‐list prefix INTO‐AREA3 in
+
+
+R4#show ip ospf 1 | begin Area 3
+Area 3
+Number of interfaces in this area is 1
+Area has no authentication
+SPF algorithm last executed 00:01:50.060 ago
+SPF algorithm executed 3 times
+Area ranges are
+Area‐filter INTO‐AREA3 in  -----------------------> filter in place
+Number of LSA 5. Checksum Sum 0x03C737
+Number of opaque link LSA 0. Checksum Sum 0x000000
+Number of DCbitless LSA 0
+Number of indication LSA 0
+Number of DoNotAge LSA 0
+Flood list length 0
+
+R3#show ip route ospf
+1.0.0.0/32 is subnetted, 1 subnets
+O IA 1.1.1.1 [110/3] via 192.168.34.4, 00:07:19, FastEthernet0/0
+4.0.0.0/32 is subnetted, 1 subnets
+O IA 4.4.4.4 [110/3] via 192.168.34.4, 00:07:19, FastEthernet0/0
+O IA 192.168.14.0/24 [110/2] via 192.168.34.4, 00:07:19, FastEthernet0/0
+
+
+Outbound Area LSA Type 3 filtering
+===================================
+
+R1#show ip route 3.3.3.3
+Routing entry for 3.3.3.3/32
+Known via "ospf 1", distance 110, metric 3, type inter area
+Last update from 192.168.14.4 on FastEthernet0/0, 00:03:07 ago
+Routing Descriptor Blocks:
+* 192.168.14.4, from 4.4.4.4, 00:03:07 ago, via FastEthernet0/0
+Route metric is 3, traffic share count is 1
+
+
+R2#show ip route 3.3.3.3
+Routing entry for 3.3.3.3/32
+Known via "ospf 1", distance 110, metric 3, type inter area
+Last update from 192.168.24.4 on FastEthernet0/0, 00:03:23 ago
+Routing Descriptor Blocks:
+* 192.168.24.4, from 4.4.4.4, 00:03:23 ago, via FastEthernet0/0
+Route metric is 3, traffic share count is 1
+
+
+
+R4(config)#ip prefix‐list OUT‐AREA3 deny 3.3.3.3/32
+R4(config)#ip prefix‐list OUT‐AREA3 permit 0.0.0.0/0 le 32
+
+R4(config)#router ospf 1
+R4(config‐router)#area 3 filter‐list prefix OUT‐AREA3 out
+
+R1#show ip route 3.3.3.3
+% Network not in table
+
+In Summary:
+
+The inbound area 　㈀lter-list will 　㈀lter pre　㈀xes from all areas that are sent to 1 area.
+The outbound area 　㈀lter-list will 　㈀lter pre　㈀xes from 1 area sent to all other areas.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ospf typ3 route filtering</tabTrigger>
+</snippet>

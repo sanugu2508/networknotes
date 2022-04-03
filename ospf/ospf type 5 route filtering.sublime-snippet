@@ -1,0 +1,44 @@
+<snippet>
+	<content><![CDATA[
+
+there are three ways we can filter type 5 LSAs.
+
+
+Distribute-list
+---------------
+
+we can use Distribute-list we need to use ASBR to filter certain networks outbound.
+
+R1(config)#ip access‐list standard R1_L0
+R1(config‐std‐nacl)#deny host 172.16.0.1
+R1(config‐std‐nacl)#permit any
+R1(config)#router ospf 1
+R1(config‐router)#distribute‐list R1_L0 out
+
+redistribution with route-map
+-----------------------------
+
+we can prevent certain routes to redistribute in the first place.
+
+R1(config)#ip access‐list standard R1_L1
+R1(config‐std‐nacl)#permit host 172.16.1.1
+R1(config)#route‐map CONNECTED_TO_OSPF deny 10
+R1(config‐route‐map)#match ip address R1_L1
+R1(config)#route‐map CONNECTED_TO_OSPF permit 20
+R1(config)#router ospf 1
+R1(config‐router)#redistribute connected subnets route‐map CONNECTED_TO_OSPF
+
+
+Summary No-Advertise
+--------------------
+
+R1(config)#router ospf 1
+R1(config‐router)#summary‐address 172.16.2.1 255.255.255.255 not‐advertise
+
+If you want to completely stop Type 5 LSAs into an area is to configure STUB Area.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ospf typ5 route filtering</tabTrigger>
+</snippet>

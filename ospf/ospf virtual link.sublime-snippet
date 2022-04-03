@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+
+Actually for OSPF to work, all areas should be connected to backbone area 0. but sometimes, if you want to directly connect two areas without backbone area, then we can use virtual link. 
+
+But, routers forming virtual link atleast should have a leg in area 0.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ospf virtual link</tabTrigger>
+</snippet>
