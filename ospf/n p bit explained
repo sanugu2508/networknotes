@@ -1,0 +1,69 @@
+in OSPF NSSA, when we redistribute a network into OSPF, they are flooeded as Type 7 within NSSA. Then they are translated as Type 5 by ABR into other areas.
+
+P-bit standsa for propagate bit and can be found in options filed in Type 7 LSA.  It tells the ABR if this type 7 LSA can be translated into type 5 or not.
+only LSA with P-bit will be translated and this bit is set automatically for all redistributed prefixes.
+
+
+
+R4#show ip ospf database nssa‐external
+OSPF Router with ID (4.4.4.4) (Process ID 1)
+Type‐7 AS External Link States (Area 1)
+LS age: 895
+Options: (No TOS‐capability, Type 7/5 translation, DC)
+LS Type: AS External Link
+Link State ID: 4.4.4.4 (External Network Number )
+Advertising Router: 4.4.4.4
+LS Seq Number: 80000001
+Checksum: 0x78A5
+Length: 36
+Network Mask: /32
+Metric Type: 2 (Larger than any link state path)
+MTID: 0
+Metric: 20
+Forward Address: 192.168.234.4
+External Route Tag: 0
+
+
+The type "Type 7/5 translation" actually means P-bit.  in Wireshark you will NP bit. 
+
+N-bit: Used in hello packet of OSPF NSSA routers.
+P-bit: This one is used in the NSSA external LSA header.
+
+R4#show ip ospf database nssa‐external
+OSPF Router with ID (4.4.4.4) (Process ID 1)
+Type‐7 AS External Link States (Area 1)
+LS age: 895
+Options: (No TOS‐capability, Type 7/5 translation, DC)
+LS Type: AS External Link
+Link State ID: 4.4.4.4 (External Network Number )
+Advertising Router: 4.4.4.4
+LS Seq Number: 80000001
+Checksum: 0x78A5
+Length: 36
+Network Mask: /32
+Metric Type: 2 (Larger than any link state path)
+MTID: 0
+Metric: 20
+Forward Address: 192.168.234.4
+External Route Tag: 0
+
+
+OSPF seperates preserves the ASBR ip address in the field of Forward Address:
+
+If you have two ABRs then there will be a election and router with higest router-id will do the translation. 
+
+Can we filter LSA type 7/ Type5.
+
+There is no way to manually change the P-Bit on cisco routers. If the NSSA ASBR and ABR are both same routers, then it wont set P-bit at all.
+
+or you can use OSPF not-advertise command.
+
+R2 & R3#
+(config)#router ospf 1
+(config‐router)#summary‐address 4.4.4.4 255.255.255.255 not‐advertise
+
+or use  a distribute-list to filter the routes.
+
+
+
+
