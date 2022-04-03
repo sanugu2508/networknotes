@@ -1,1 +1,20 @@
+OSPF types of paths.
 
+Intra-Area (O)
+Inter-Area (O IA)
+External Type 1 (E1)
+NSSA Type 1 (N1)
+External Type 2 (E2)
+NSSA Type 2 (N2)
+
+Once selected a path, then it selects the lowest cost.
+https://networktechstudy.com/home/learning-ospf-path-selection
+
+E1 or External Type Routes –
+The cost of E1 routes is the cost of the external metric with the addition of the internal cost within OSPF to reach that network.
+
+E2 or External Type2 Routes –
+The cost of E2 routes will always be the external metric, the metric will takes no notice of the internal cost to reach that network.
+
+If 2 external type 2 routes exist with the same metric to the same destination the route with the lowest metric to the ASBR will is used. Also if an E1 and E2 route exist to the same destination the E1 route will always be preferred irrespective of the metric.
+https://ipwithease.com/ospf-external-e1-and-e2-routes/
