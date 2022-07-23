@@ -1,0 +1,115 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+tcpdump -i dp0bond0.6217 host 10.81.22.22
+sudo tshark -R “ip.addr == 1.1.1.1 and tcp.port == 80”
+
+sudo tshark -i dp0bond0.6217
+
+
+set security firewall name out_to_softlayer rule 620  log ‘enable’
+
+
+set resources group address-group AppDynamics_VPN_OAC address '10.85.16.0/21'
+set resources group address-group AppDynamics_VPN_OAC address '10.37.16.0/21'
+set resources group address-group AppDynamics_VPN_OAC address '10.48.0.0/14'
+
+set security firewall name out_to_softlayer rule 620 action 'accept'
+set security firewall name out_to_softlayer rule 620 description 'AppDynamics access from VPN OAC'
+set security firewall name out_to_softlayer rule 620 destination address '10.185.43.240/32'
+set security firewall name out_to_softlayer rule 620 destination port '8090'
+set security firewall name out_to_softlayer rule 620 'log'
+set security firewall name out_to_softlayer rule 620 protocol 'tcp'
+set security firewall name out_to_softlayer rule 620 source address 'AppDynamics_VPN_OAC'
+set security firewall name out_to_softlayer rule 620 state 'enable'
+
+
+Source:
+
+Motiva VPN, OAC
+AppDynamics_VPN_OAC
+10.85.16.0/21
+10.37.16.0/21
+10.48.0.0/14
+
+ 
+
+Destination:
+
+10.185.43.240
+
+ 
+
+Port:
+
+TCP/8090
+
+
+tshark -i dp0bond0.6217 host 10.81.22.22
+
+
+
+
+NbmaY692 
+
+EPZ96StY
+dp0bond0, PRIVATE_ZONE
+
+10.185.43.211 , dp0bond0.6217, perf-app, in_from_softlayer
+10.185.43.192/26, dp0bond0.6217, 
+10.184.47.128/27, dp0bond0.1587, perf-web, in_from_softlayer
+10.184.29.155, 10.184.29.128/26, dp0bond0.1272, perf-db, in_from_softlayer
+
+10.185.43.198, 10.185.43.199, 10.185.43.200, 10.185.43.201
+ 
+10.17.3.130 10.17.3.131 10.17.3.133
+ 
+22, 80, 8080, 445, 1433
+
+
+
+set resources group port-group biztalktosap_ports port '22'
+set resources group port-group biztalktosap_ports port '80'
+set resources group port-group biztalktosap_ports port '8080'
+set resources group port-group biztalktosap_ports port '445'
+set resources group port-group biztalktosap_ports port '1433'
+
+set resources group address-group SAP_RTP_DEV address 10.17.3.130
+set resources group address-group SAP_RTP_DEV address 10.17.3.131
+set resources group address-group SAP_RTP_DEV address 10.17.3.133
+
+
+set resources group address-group Biztalk_DAL_Perf address 10.185.43.198
+set resources group address-group Biztalk_DAL_Perf address 10.185.43.199
+set resources group address-group Biztalk_DAL_Perf address 10.185.43.200
+set resources group address-group Biztalk_DAL_Perf address 10.185.43.201
+
+set security firewall name out_to_softlayer rule 621 action 'accept'
+set security firewall name out_to_softlayer rule 621 description 'BizTalk DAL Perf to RTP CMS DEV'
+set security firewall name out_to_softlayer rule 621 destination address 'SAP_RTP_DEV'
+set security firewall name out_to_softlayer rule 621 protocol 'tcp'
+set security firewall name out_to_softlayer rule 621 source address 'Biztalk_DAL_Perf'
+set security firewall name out_to_softlayer rule 621 state 'enable'
+set security firewall name out_to_softlayer rule 621 destination port 'biztalktosap_ports'
+set security firewall name out_to_softlayer rule 621 'log'
+
+
+
+set security firewall name out_to_softlayer rule 2240 action 'accept'
+set security firewall name out_to_softlayer rule 2240 description 'RightAngle UAT S20 in Softlayer Perf'
+set security firewall name out_to_softlayer rule 2240 destination address '10.81.22.22/32'
+set security firewall name out_to_softlayer rule 2240 destination port '443'
+set security firewall name out_to_softlayer rule 2240 'log'
+set security firewall name out_to_softlayer rule 2240 protocol 'tcp'
+set security firewall name out_to_softlayer rule 2240 source address 'rightangle_uat'
+set security firewall name out_to_softlayer rule 2240 state 'enable'
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vyatta rules</tabTrigger>
+</snippet>

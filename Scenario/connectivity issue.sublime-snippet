@@ -1,0 +1,29 @@
+<snippet>
+	<content><![CDATA[
+
+first i will collect the source ip, destination ip or URL, port number from user
+
+if user gives me URL, then i will ask him to run nslookup and share me the ip address.
+
+Then i will ask the user to ping the gateway from command prompt 
+
+if gateway is pinging then, i will ask the user to do a telnet to destination on port number.
+
+if telnet is failing, then i will ask the user to share me trace route to destination ip.
+
+If the traffic is reaching firewall, then i will login to firewall.
+
+i will check if acl is there, route is there and a nat is there for this communication. 
+
+if i run packet-tracer command in cisco asa, it will show acl, nat, route everything.
+
+if access is already allowed in firewall, then i will run packet capture on outside interface of firewall
+
+if i see traffic on outside interface, then it is no more our issue, and could be an issue with destination network. i will share all logs to user and ask him to check with destination side network team.
+
+Incase there is a troubleshooting call, i will join the call and share the details.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>connectivity issue</tabTrigger>
+</snippet>

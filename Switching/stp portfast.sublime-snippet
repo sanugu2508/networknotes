@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+
+When we configure a port into portfast, it will immediately transition into forwarding mode thus reducing the overall time it takes to forward the data. We should always configure it on accessports.
+
+https://www.omnisecu.com/cisco-certified-network-associate-ccna/what-is-spanning-tree-protocol-stp-backbonefast.php
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp portfast</tabTrigger>
+</snippet>

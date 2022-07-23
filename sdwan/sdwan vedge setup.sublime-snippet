@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+
+minimum required configuration for vedge is
+system ip
+organization name.
+clock 
+vbond
+commit.
+
+tcpdump interface ge0/0
+
+request vedge-cloud activate chassis-number <chasis> token <otp>
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sdwan vedge config</tabTrigger>
+</snippet>

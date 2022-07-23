@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+
+. The main difference between VTP Version 3 and VTP Version 2 is that the version 3 supports extended range VLANs (1005- 4096)
+. It also supports for the creation and advertisement of private VLANs
+. VTP version 3 provides protection against an unnecessary overwriting of the VLAN database by a switch with a greater revision number
+. VTP password can be only encrypted for VTPv3 by entering the command vtp password password hidden in the global configuration mode
+. After entering this command, the password would be stored in an encrypted format in the vlan.dat file and even the show vtp password command will be unable to reveal the original password.
+
+VTP v2 is almost similar to VTP v1. 
+The only major difference is that VTP V2 supports for Token Ring VLANs. 
+If using Token Ring VLANs, you should enable VTP V2. Or else, there is no reason for using VTP V2. 
+VTP v2 stores the password as ASCII in a running configuration whereas version 3 stores it as a hexadecimal number which enhances the server authentication process.
+
+With VTP version 2, if a switch is set to transparent mode, it will communicate without checking version information.  
+
+Whereas with VTP version 1, it will check the domain and version before if forwarding any frame.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vtp versions</tabTrigger>
+</snippet>

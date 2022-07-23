@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+
+using hsrp interface tracking, we can monitor one interface or ip and if that goes down, the priority will decrease. if priority decrease, then router become standby. 
+
+For this to work, we must enable preempt.
+
+command:
+
+track 1 interface gig0/2 line-protocol
+
+interface vlan 1
+standby 1 track 1 decrement 60
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hsrp tracking</tabTrigger>
+</snippet>

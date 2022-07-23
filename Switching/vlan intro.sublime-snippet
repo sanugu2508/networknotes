@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+
+A VLAN is a logical grouping of network users and resources connected to a switch. VLAN divides the broadcast domain so, the frames that will be broadcasted onto the network are only switched between the ports logically grouped within the same VLAN.
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vlan intro</tabTrigger>
+</snippet>

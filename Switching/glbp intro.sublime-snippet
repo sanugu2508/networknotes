@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+
+glbp is gateway load balancing protocol and it provides gateway redundancy for end cleints. It also provides load balancing .
+
+First AVG ( Active Virtual gateway) is elected. AVG assigns virtual ip addresses to other routers.
+
+AVG and rest of other devices will become AVF (active virtual forwarders).
+
+When a client send an ARP request, the AVG will respond with virtual mac address from the group. 
+
+There are three type of load balancing methods,
+round robin
+host-dependant
+weighted.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>glbp intro</tabTrigger>
+</snippet>

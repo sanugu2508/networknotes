@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+We can use SPAN to copy all the traffic from a source port or vlan and send it to a target port in the same switch for monitoring, sniffing etc.
+
+and we can use RSPAN, to copy the data to a remote switch port.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>span</tabTrigger>
+</snippet>

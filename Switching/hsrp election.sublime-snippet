@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+HSRP Election process
+
+any router with highest priority will become active router. if priority matches, then the router with highest ip address will be tie breaker.
+
+Once router is elected as active, it will stay as active till it goes down.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hsrp election</tabTrigger>
+</snippet>

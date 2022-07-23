@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+We can run packet-tracer command to check packet flow for source and destination and port number.
+
+"Packet-tracer input inside tcp 192.168.10.10 1234 1.1.1.1 80"
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa packettracer</tabTrigger>
+</snippet>

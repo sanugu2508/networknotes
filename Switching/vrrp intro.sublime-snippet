@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+vrrp is an open standard protocol to provide gateway redundancy for end clients.
+
+it uses multicast 224.0.0.18 for sending hello packets.
+it uses IP protocol 112.
+if we have 3 routers in vrrp group, then one will be master, other two will be backup.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vrrp intro</tabTrigger>
+</snippet>

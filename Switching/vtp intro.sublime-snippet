@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+162.What is VTP?
+VTP (VLAN Trunking Protocol) is a Cisco proprietary protocol used by Cisco switches to 
+exchange VLAN information. VTP is used to synchronize VLAN information. Ex- (VLAN ID or 
+VLAN Name) with switches inside the same VTP domain.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vtp intro</tabTrigger>
+</snippet>

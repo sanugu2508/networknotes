@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+
+HSRP is Hot standby routing protocol. It basically provides gateway redundancy to end points. lets say we have configured a vlan on a layer3 switch and gateway is configured using SVI(switch virtual interface). If this switch goes down, all the clients will loose access to gateway and they cant reach other networks.
+
+To avoid single point of failure at layer3 gateway, by configuring virtual gateway using HSRP protocol.
+
+HSRP uses multicast address 224.0.0.2 and UDP port 1985 for communication.
+
+HSRP mac address is 0000.0c07.ac01.
+
+If we have three routers in hsrp group, one will be active, second will be standby and third one will be listen.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hsrp intro</tabTrigger>
+</snippet>

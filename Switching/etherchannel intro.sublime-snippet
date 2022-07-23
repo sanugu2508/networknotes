@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+Etherchannels are also called Link Aggregation, it helps to bundle physical links into a single link.
+You can add upto 8 physical interfaces.
+
+we have two protocols to configure etherchannels.
+
+PAgP
+LACP
+
+For etherchannel to form, we need to match, switchport mode, duplex, speed, native vlans and allowed vlans on all interfaces.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>etherchannel intro</tabTrigger>
+</snippet>

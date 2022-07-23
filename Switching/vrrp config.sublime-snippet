@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+
+interface FastEthernet0/0
+ip address 10.0.1.2 255.255.255.0
+vrrp 1 ip 10.0.1.1
+vrrp 1 timers {advertise <hello> | learn}
+vrrp 1 priority <priority>
+vrrp 1 preempt
+vrrp 1 authentication md5 key-string <password>
+vrrp 1 track <object> decrement <value>
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vrrp config</tabTrigger>
+</snippet>

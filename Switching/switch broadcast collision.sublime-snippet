@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+
+Broadcast Domain- In Broadcast domain, the sending device sends a single copy of data and that copy of data will be delivered to every other device in the same network segment.
+
+Collision Domain- In Collision Domain one device sends a packet on a network 
+segment and every other device on that same segment listen to it. 
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>switch broadcast collision</tabTrigger>
+</snippet>

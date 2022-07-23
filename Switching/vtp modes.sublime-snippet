@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+
+163.What are differentVTP mode?
+
+▪ VTP Server mode- By default, every switch is in server mode. Switch in VTP Server 
+Mode can create, delete VLANs and will propagate VLAN changes.
+
+▪ VTP Client mode- Switch in VTP client mode cannot create or delete VLANs. 
+(VTP) client mode switch listen to VTP advertisements from other switches and modify their VLAN configuration accordingly. 
+It listens and forwards updates.
+
+▪ VTP Transparent mode- Switch in VTP Transparent mode does not share its VLAN database but it forwards received VTP advertisements
+. We can create and delete VLANs on a VTP transparent switch, but these changes are not sent to other switches
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vtp modes</tabTrigger>
+</snippet>

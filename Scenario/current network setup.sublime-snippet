@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+
+Our client has pharma plants across NA, Europe and also in india. they have data centers in Raliegh, Colorado, boulder and netherlands. each plant has mpls connection to mpls cloud. we have firewalls at each plant and load balancers in datacenters.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>current network setup</tabTrigger>
+</snippet>
+

@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+
+
+In STP, if the available path to the Root Switch (Root Bridge) goes down, there will be a 50-second delay due to STP MaxAge timer and ForwardDelay timer. before the currently blocked path will be available.
+
+When a switch loses connectivity, alternate paths are used for communication. By enabling UplinkFast we can speed-up the selection of a new Root Port. when a link or switch fails or when STP reconfiguration happens. UplinkFast is used for direct link failures.
+
+When UplinkFast is enabled, Root Port transitions to the Forwarding State  immediately,  without going through the Listening State and Learning State.
+
+Now the problem is that the backup link is brought up so quickly from blocking state to forwarding state, but the MAC tables are not updated. to solve it now the switch begins to flood dummy packets with the different MAC addresses source as multicast. This multicast flooding is done to update MAC tables on the other switches.
+
+When a switch is configured for UplinkFast, its Bridge Priority is changed to become 49,152 (default is 32768) and all of its port costs are increased by 3000. The reason for the priority being raised is to prevent the switch from becoming the Root Switch
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp uplink fast</tabTrigger>
+</snippet>

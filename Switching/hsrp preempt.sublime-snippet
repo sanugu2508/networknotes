@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+
+When we enable preempt on a router, a router with highest priority will always the new active router. 
+
+Let me explain, Lets say we have router1 and router2. Router1 is elected as active router because it has highest priority. Router2 is standby due to low priority. 
+
+After sometime, lets say router1 went down, due to some power issue. Obviously router2 will become active router. suppose if router1 becomes online, then router2 will not giveup its active role. 
+
+But if we enable preempt, there will be new election and router1 will become new active router.
+
+When we enable preempt, it immediately make router1 as active router. But it is good idea to add some delay. Like for spanning tree protocol to unblock the ports, etc. For this purpose we add preempt delay like 60 seconds.
+
+
+Command 
+-------
+
+interface vlan10
+standby 1 preempt delay minimum 60
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hsrp preempt</tabTrigger>
+</snippet>

@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+
+151.What is the deference between an access port and a trunk port?
+
+▪ Access Port- Access port belongs to and carries the traffic of only one VLAN.
+Anything arriving on an access port is simply assumed to belong to the VLAN 
+assigned to the port. Access-link device can’t communicate with 
+devices outside their VLAN unless the packet is routed. 
+
+▪ Trunk Port- Trunk port can carry the traffic of multiple VLANs from 1-4094 VLANs at a time. 
+Normally Trunk link is used to connect switches to other switches or to routers. 
+Trunk ports support tagged and untagged traffic simultaneously.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vlan access trunk</tabTrigger>
+</snippet>

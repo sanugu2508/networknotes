@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[
+
+
+156.Tell me the commands to create VLAN?
+▪ Switch(config)#Vlan 10
+▪ Switch(config-vlan) #name sale
+▪ Switch(config-vlan) #exit
+
+157.How can we add an interface to a VLAN?
+▪ Switch(config)#interface fast Ethernet 0/0
+▪ Switch(config-if) #switchport mode access 
+▪ Switch(config-if) #switchport access vlan 10
+
+158.How to configure trunk link?
+▪ Switch(config)#interface fast Ethernet 0/24
+▪ Switch(config-if) #switchport trunk encapsulation <dot1q/isl>
+▪ Switch(config-if) #switchport mode trunk
+
+159.How can we change Native Vlan?
+▪ Switch(config)#interface fast Ethernet f0/0
+▪ Switch(config-if) switchport trunk native vlan 100
+
+160.Which command used to trunk interface?
+▪ Switch(config)#show interface trunk
+
+161.Which command is used to see all VLANs 
+▪ Switch(config)#show vlan
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vlan config</tabTrigger>
+</snippet>

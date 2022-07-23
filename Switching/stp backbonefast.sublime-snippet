@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+
+
+The BackboneFast uses to decrease the convergence time of the Spanning Tree Protocol if there is a Indirect link failure, anywhere in the STP.Backbone Fast is pro-active and when Backbone fast is implemented, it can minimize the max age timer interval. By enabling Backbone fast the max age timer can be skipped and the delay is minimized from 50 seconds to 30 seconds.
+
+
+Explanation
+============
+
+incase of indirect link failure, other switches will consider them as root bridge and sends inferior bpdu, meaning BPDU with longer distance. But they have higher bridge ID. a BPDU is generally stored in root port till max age timer is expired.
+
+When max age timer expires, the Switch is still receiving inferior BPDUs. The port with inferior BPDU will now transition into Listening State, learning and then into forwarding state. so in total it takes 30 seconds.
+
+
+
+https://www.omnisecu.com/cisco-certified-network-associate-ccna/what-is-spanning-tree-protocol-stp-backbonefast.php
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp backbone fast</tabTrigger>
+</snippet>

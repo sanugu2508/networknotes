@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+
+All the switches exchange information to select root bridge as well as for configuration of 
+the network. This is done through the Bridge Protocol Data Unit (BPDU). Each switch 
+compares the parameters in the BPDU that it sends to one neighbor with the one that it 
+receives from another neighbor
+
+https://mrncciew.com/2013/04/19/configuring-bpdu-guard-filtering/
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp bpdu</tabTrigger>
+</snippet>

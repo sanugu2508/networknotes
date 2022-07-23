@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+normally a switch needs to flood broadcast frames, multicast frames, or unicast frames where the destination MAC address is unknown to all its ports. If the neighboring switch doesn’t have any active ports in the source VLAN, this broadcast is not needed and excessive unwanted traffic may create problems on the network.
+
+VTP pruning helps in increasing the available bandwidth by avoiding unnecessary flooded traffic. 
+
+broadcast is only sent over a trunk link only if the switch on the receiving end of the trunk link has ports in the source VLAN. Otherwise the vlan is pruned on trunk.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vtp pruning</tabTrigger>
+</snippet>

@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+
+Lets say an interface is configured as portfast and you want to filter any bpdu on interface, Then you can cofigure bpdu filter.
+
+PortFast BPDU filtering prevent the end client from sending or even receiving BPDUs on specified ports.
+
+https://mrncciew.com/2013/04/19/configuring-bpdu-guard-filtering/
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp bpdu filter</tabTrigger>
+</snippet>

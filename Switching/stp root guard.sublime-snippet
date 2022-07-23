@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+
+Root Guard:
+The STP root guard feature prevents a port from becoming root port or blocked port. If a port configured for root guard receives a superior BPDU, the port immediately goes to the root-inconsistent (blocked) state.
+
+Usually STP root guard is configured on primary & secondary root switches.  You can configure this per interface level as shown in the below.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp root guard</tabTrigger>
+</snippet>

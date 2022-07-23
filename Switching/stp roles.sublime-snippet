@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+
+
+▪ Root port- The root port is always the link directly connected to the root bridge, or 
+the shortest path to the root bridge. It is always on Non-Root Bridge.
+▪ Designated port- A designated port is one that has been determined as having the 
+best(lowest) cost. A designated port will be marked as a forwarding port. It can be on 
+both the root Bridge & non-root Bridge. All ports of root bridge are designated port.
+▪ Forwarding port- A forwarding port forwarding frames.
+▪ Blocked port- A blocked port is the port that is used to prevent loops. It only listens 
+to BPDUs. Any port other than root port and designated port is a blocked port.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp roles</tabTrigger>
+</snippet>

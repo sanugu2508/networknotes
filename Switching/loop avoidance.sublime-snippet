@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+
+In BGP:
+
+for eBGP, AS_PATH is the loop avoidance mechanism.
+for iBGP, split horizon is the loop avoidance mechanism.
+
+In OSPF:
+if a router wants to send the routes from one area to other area,they must go through area 0.
+
+In EIGRP:
+
+in EIGRP Split horizon is the loop avoidance mechanism. Split horizon says a router will not advertise a route back onto the interface from which it was learned.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>loop avoidance</tabTrigger>
+</snippet>

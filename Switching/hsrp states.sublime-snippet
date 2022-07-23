@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+
+HSRP states are 
+
+Initial : First state in hsrp
+Listen : router knows the virtual ip address and listen for hello messages from 		 other hsrp routers.
+Speak : router sends hello messages and will join election process to elect an 			active router
+standby: router failed in election and became standby, but it will keep sending 		hello messages. Incase active router goes down, it will become active.
+Active: router won the election, and actively send hello messages and forward 			packets.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hsrp states</tabTrigger>
+</snippet>

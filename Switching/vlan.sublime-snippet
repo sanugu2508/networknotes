@@ -1,0 +1,70 @@
+<snippet>
+	<content><![CDATA[
+
+50.What is a VLAN and How does it reduce the broadcast traffic?
+A VLAN is a logical grouping of network users and resources connected to a switch. VLAN divides the broadcast domain so, the frames that will be broadcasted onto the network are only switched between the ports logically grouped within the same VLAN.
+
+151.What is the deference between an access port and a trunk port?
+
+▪ Access Port- Access port belongs to and carries the traffic of only one VLAN.
+Anything arriving on an access port is simply assumed to belong to the VLAN 
+assigned to the port. Access-link device can’t communicate with 
+devices outside their VLAN unless the packet is routed. 
+
+▪ Trunk Port- Trunk port can carry the traffic of multiple VLANs from 1-4094 VLANs at a time. 
+Normally Trunk link is used to connect switches to other switches or to routers. 
+Trunk ports support tagged and untagged traffic simultaneously.
+
+
+152.What is Frame Tagging and Different types of Tagging?
+Frame tagging method uniquely assigns a VLAN ID to each frame. It is used to identify the VLAN that the Frame belongs to.
+There are mainly two types of Frame Tagging Method: -
+▪ Inter-Switch Link (ISL) cisco 
+▪ 802.1Q Open Standard
+
+153.Explain the different between 802.1Q and ISL?
+
+802.1Q- It’s an open standard . To identify to which VLAN a frame belongs to, a field is inserted into the frame’s header. It is a light weighted protocol & adds only 4 Byte within Frame’s Header.
+
+ISL (Inter-Switch Link)- This protocol is Cisco proprietary which means unlike 802.1Q, it can 
+be used only between Cisco switches’ works by adding Header (26 Bytes) and Trailer(4Bytes) 
+with Original Ethernet Frame.
+
+154.What is a Native VLAN and What type of traffic will go through Native VLAN?
+The trunk port is assigned a default VLAN ID for a VLAN that all untagged traffic will travel on. This VLAN is called the Native VLAN and is always VLAN 1 by default (but can be changed to any VLAN number). 
+so if any untagged or tagged traffic with unassigned VLAN ID is assumed to belong to the Native VLAN.
+
+155.What is Inter-VLAN Routing?
+VLANs divide broadcast domain in a LAN environment So, by default only Hosts that are 
+members of the same VLAN can communicate. Whenever host in one VLAN need to communicate with hosts in another VLAN, the traffic must be routed between them. This is known as Inter-VLAN routing.
+This can be done by two methods – Router-On-Stick & switch Virtual Interface (SVI)
+
+156.Tell me the commands to create VLAN?
+▪ Switch(config)#Vlan 10
+▪ Switch(config-vlan) #name sale
+▪ Switch(config-vlan) #exit
+
+157.How can we add an interface to a VLAN?
+▪ Switch(config)#interface fast Ethernet 0/0
+▪ Switch(config-if) #switchport mode access 
+▪ Switch(config-if) #switchport access vlan 10
+
+158.How to configure trunk link?
+▪ Switch(config)#interface fast Ethernet 0/24
+▪ Switch(config-if) #switchport trunk encapsulation <dot1q/isl>
+▪ Switch(config-if) #switchport mode trunk
+
+159.How can we change Native Vlan?
+▪ Switch(config)#interface fast Ethernet f0/0
+▪ Switch(config-if) switchport trunk native vlan 100
+
+160.Which command used to trunk interface?
+▪ Switch(config)#show interface trunk
+
+161.Which command is used to see all VLANs 
+▪ Switch(config)#show vlan
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vlan</tabTrigger>
+</snippet>

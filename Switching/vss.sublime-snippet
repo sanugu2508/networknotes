@@ -1,0 +1,47 @@
+<snippet>
+	<content><![CDATA[
+
+VSS is a way to virtually combine two switches as one. Cisco 4500, 6500 switches,etc support VSS.
+
+for VSS to work both switches domain name should match
+
+1. First setup domain and priority
+
+switch virtual domain <number>
+
+switch 1
+switch 1 priority 110
+switch 2 priority 100
+
+2. setup VSL link  using port channel.
+
+First create a port channel and tag it as a VSL link.
+
+interface port-channel 1
+switch virtual link 1
+
+ etherchannel mode must be set to ON
+
+ 3. Then convert the switch  and reboot.
+
+ switch convert mode virtual
+
+4. to verify VSS we can run commands like
+
+show run switch 1 will show the config of switch1
+show run switch 2 will show the config of switch2
+
+
+show switch virtual
+show switch virtual link
+show switch virtual role
+
+etc
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>switch vss</tabTrigger>
+</snippet>

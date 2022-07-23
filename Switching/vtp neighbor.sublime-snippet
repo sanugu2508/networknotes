@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+
+164.What are requirement to exchange VTP message between two switches?
+▪ A switch should be configured as either a VTP server or VTP client.
+▪ VTP domain name must be same on both switches.
+▪ VTP version must match.
+▪ The link between the switches should be a trunk link.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vtp neighbor</tabTrigger>
+</snippet>

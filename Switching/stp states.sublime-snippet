@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+▪ Disabled- A port in the disabled state does not participate in the STP.
+▪ Blocking- A blocking port does not forward frames. It only listens to BPDUs. The 
+purpose of the blocking state is to prevent the use of looped paths.
+
+▪ Listening - A port in listering state listens to BPDU and send BPDUs.
+
+▪ Learning- A port in Learning state populates the MAC address table but doesn’t 
+forward data frames. The port still sends and receives BPDUs as before.
+▪ Forwarding- The port now can send and receive data frames collect MAC addresses 
+in its address table, send and receive BPDUs. The port is now a fully functioning 
+switch port within the spanning-tree topology.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp states</tabTrigger>
+</snippet>

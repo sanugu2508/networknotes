@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+
+
+What is a Native VLAN and What type of traffic will go through Native VLAN?
+
+The trunk port is assigned a default VLAN ID, for a VLAN that all untagged traffic will travel on. This VLAN is called the Native VLAN and is always VLAN 1 by default (but can be changed to any VLAN number). 
+*so if any untagged or tagged traffic with unassigned VLAN ID is assumed to belong to the Native VLAN.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vlan native</tabTrigger>
+</snippet>

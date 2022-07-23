@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+There are 4 modes for lacap.
+on, passive, active, off.
+
+on - a port will not negotiate, but becomes part of etherchannel
+active - a port will actively want to be part of etherchannel, negotiate, and becomes part of etherchannel.
+passive - a port will negotiate to form a trunk.
+off - never forms a trunk.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>lacp modes</tabTrigger>
+</snippet>

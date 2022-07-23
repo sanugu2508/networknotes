@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+
+Loop Guard:
+Loop guard helps prevent bridging loops that could occur because of a unidirectional link failure on a point-to-point link.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp loopguard</tabTrigger>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+
+Lets say an interface is configured as portfast and if some BPDU comes on that interface, it can form loops.
+
+so BPDU Guard is used to prevent loops on portfast interfaces.
+When configured at the interface level, BPDU Guard shuts the port down as soon as the port receives a BPDU, regardless of the PortFast configuration.
+https://mrncciew.com/2013/04/19/configuring-bpdu-guard-filtering/
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp bpduguard</tabTrigger>
+</snippet>

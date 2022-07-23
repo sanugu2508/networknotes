@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+
+interface FastEthernet0/0
+ip address 10.0.1.2 255.255.255.0
+standby version {1 | 2}
+standby 1 ip 10.0.1.1
+standby 1 timers <hello> <dead>
+standby 1 priority <priority>
+standby 1 preempt
+standby 1 authentication md5 key-string <password>
+standby 1 track <interface> <value>
+standby 1 track <object> decrement <value>
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hsrp config</tabTrigger>
+</snippet>

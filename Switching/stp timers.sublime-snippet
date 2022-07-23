@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+▪ Hello timer- The timer interval between configuration BPDUs send by the root 
+bridge. Its 2 seconds by default.
+▪ Forward Delay timer- The time interval that a switch port spends in both the 
+Listening and Leaning states. The default value is 15 seconds.
+▪ Max (Maximum) Age timer- Maximum length of time a BPDU can be stored without 
+receiving an update. It can also be defined as a time interval that a switch stores a 
+BPDU before discarding it. It is 20 seconds by default.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp timers</tabTrigger>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+
+The bridge ID used to elect the root bridge in the STP domain. This ID is 8 bytes long and includes both the priority and the MAC address of the devices.
+Switch with the lowest Bridge ID is elected as the root bridge which means switch with the lowest priority will become root bridge if two or more switches have same priority then switch with lowest mac address will become root Bridge
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp election</tabTrigger>
+</snippet>

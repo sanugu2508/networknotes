@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+
+there are two versions of hsrp.
+
+version 1:
+it supports 255 groups. 
+it has virtual mac like 0000.0c07.acxx
+it uses multicast ip is 224.0.0.2 
+
+version2:
+it supports 4095 groups.
+it has virtual mac address like 0000.0c9f.fxxx
+it has mutlicast address 224.0.0.102
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hsrp versions v1 v2</tabTrigger>
+</snippet>

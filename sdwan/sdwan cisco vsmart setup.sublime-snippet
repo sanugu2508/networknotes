@@ -1,0 +1,61 @@
+<snippet>
+	<content><![CDATA[
+
+setup vsmart
+-------------
+
+admin/admin
+200GB
+
+show interface | tab
+confi t
+
+vpn 0
+no int eth0
+vpn 512
+interface eth0
+ip address 10.127.201.98/24
+no shutdown
+ip route 0.0.0.0/0 10.127.201.1
+
+
+ping 10.127.201.1 vpn 512
+
+do the same for vmanage.
+
+ 
+ check if all nms services are up.
+ #request nms all status 
+
+setup
+
+confi t 
+vpn 0
+int eth1
+no shutdown
+ip add 20.20.1.2/28
+Exit
+ip route 0.0.0.0/0 20.20.1.4
+
+int eth1
+tunnel-interface
+all-services all
+allow-service netconf
+
+show run vpn 0
+
+ping 20.20.1.4
+
+
+on vBond, ge0/0 is in vpn 0. others are eth0 etc.
+
+under tunnel-interface configure encapsulation ipsec.
+
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sdwan vsmart setup</tabTrigger>
+</snippet>

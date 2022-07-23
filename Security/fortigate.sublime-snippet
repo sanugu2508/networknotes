@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+Fortigate 
+
+
+#get router info routing-table all
+
+#get system session list
+
+#
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fortigate</tabTrigger>
+</snippet>

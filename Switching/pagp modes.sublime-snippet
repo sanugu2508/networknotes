@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+on - a port will not negotiate, but becomes part of etherchannel
+Desirable - a port will actively want to be part of etherchannel, negotiate, and becomes part of etherchannel.
+auto - a port will negotiate to form a trunk.
+off - never forms a trunk.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>pagp modes</tabTrigger>
+</snippet>

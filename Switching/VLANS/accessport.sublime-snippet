@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+SW1# configure terminal
+SW1(config)# interface Fa0/24
+SW1(config)# switchport mode access
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>accessp</tabTrigger>
+</snippet>

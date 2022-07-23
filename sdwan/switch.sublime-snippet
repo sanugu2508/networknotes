@@ -1,0 +1,43 @@
+<snippet>
+	<content><![CDATA[
+
+141.What is switching?
+The function of switching is to switch data packets between devices on the same network.
+
+142.What is switching?
+A switch is a device which is used to connect multiple devices inside Local Area Network 
+(LAN). Unlike hubs, a switch examines each packet and process it accordingly rather than 
+simply repeating the signal to all port. Switches operate at Layer Two (Data Link layer) of the 
+OSI model.
+
+144.What are functions of the switch?
+The Switch performs three major function: -
+▪ Address learning 
+▪ Packet forwarding.
+▪ Loop avoidance by Spanning Tree Protocol
+
+145.What is Sub interface?
+To support ISL or 802.1Q routing on a Fast Ethernet interface, the router’s interface is 
+divided into logical interface-one for each VLAN. These are called Sub interfaces.
+
+
+147.What is a MAC address table and how a switch will build a MAC table?
+The switch maintains an address table called MAC address table to efficiently switch frames 
+between interfaces. When the switch receives a frame, it associates the MAC address of the 
+sending device with the switch port on which it was received.
+
+148.How does switch learn Mac address?
+A switch can learn MAC address in two ways; statically or dynamically. In the static option, 
+we must add the MAC addresses in the CAM table manually. In the dynamic option, the 
+switch learns and adds the MAC addressesin the CAM table automatically. The switch 
+stores the CAM table in the RAM.
+
+149.Explain Flooding?
+If the destination MAC address is not found in the MAC address table, the switch forwards 
+the frame out all its ports except the port on which the frame was received. This is known as 
+flooding 
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>switch </tabTrigger>
+</snippet>

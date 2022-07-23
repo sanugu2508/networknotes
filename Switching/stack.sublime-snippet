@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+
+
+stack is veryuseful to because a single management interface can be used for all.
+we can avoid Spanning tree issues between switches.
+
+To form a stack, they all should have same OS version. Members of stack should be a compatible model as per cisco documentation. Then we need to connect the stack cables in the back side of the switch in a chain.
+
+Assign each switch with priority 
+
+switch 1 priority 15
+
+switch 2 priority 14
+
+switch 3 priority 13
+
+then power on switches one by one.
+
+we can run show switch command to verify stacking. also sh switch detail
+if you run show version, it will show stack mode, like install mode or bundle mode.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>switch stack</tabTrigger>
+</snippet>
