@@ -5,7 +5,11 @@ Then traffic is sent to DataPlane CPU and finally to jaguar chip for Signature m
 
 Lets say there is encrypted traffic such as facebook, there is no point to send the traffic to Jaguar chip for signature matching since it can not be decrypted.
 
-To save CPU, the traffic will be offloaded to Tiger/Liger Chip from Jaguar chip.
+To save CPU, the octean chip will offload traffic  to Tiger/Liger Chip from Jaguar chip.
+
+Only hardware models that has FPGA network processor supports the offloading.
+
+Such as 3250, 3260, 3200, 5000, 5200, 7000 series supports the session offloading.
 
 
 ]]></content>
