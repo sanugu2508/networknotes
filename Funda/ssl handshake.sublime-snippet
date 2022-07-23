@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+  Explain ssl handshake
+=======================
+
+After TCP 3 way handshake is complete, a client will send a client hello packet . It includes, supported TLS version, list of all cipher suites, client Random number, session ID 0, extensions, compression methods.
+
+server responds with server hello packet, which includes, selected cipher suite, selected tls version, session ID, selected extension, selected compression method and server random number.
+
+Server also sends a server hello done with full certificate chain(including cert, intermediate and root certificate) to client which includes public key.
+
+then client sends an encrypted pre-master secret. This is encrypted with public key from server certificate and can only be decrypted by servers private key.
+also change cipher spec message is sent from client
+
+by now, both client and server have client random key, server random key and pre-master key.
+
+Now client and server generates session keys using three keys. those session keys should be symmetric.
+
+client sends a finish message that is encrypted with session keys.
+
+server also sends change cipher spec message
+
+server sends a finish message that is encrypted with session keys.
+
+server may combine both change cipher spec and encrypted finish message.
+
+From here on all the data is encrypted.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ssl handshake</tabTrigger>
+</snippet>

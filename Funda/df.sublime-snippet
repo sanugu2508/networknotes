@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+
+If DF bit is set, and packet size is larger than MTU, then router will not fragment and then discard it.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>df</tabTrigger>
+</snippet>

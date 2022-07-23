@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+TCP/IP is four-layer standard model.
+The four layers of TCP/IP model are: -Application layer, Transport layer, internet layer, 
+Network access layer
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tcpip model</tabTrigger>
+</snippet>

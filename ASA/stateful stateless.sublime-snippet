@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+What is a Stateful Firewall?
+A stateful firewall maintains state table or session table. A state table contains source ip, destination ip, source port, destination port, interfaces, flags etc. State ful firewall monitors the inbound and outbound sessions. For stateful firewall, we need to write the ACL only near to source. Return traffic is by default allowed.
+
+
+What is a Stateless Firewall?
+
+A stateless firewall do not maintain any state table or session table. It will only allow the traffic if the ACL is present both inboud and outbound.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stateful stateless</tabTrigger>
+</snippet>

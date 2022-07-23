@@ -1,0 +1,93 @@
+<snippet>
+	<content><![CDATA[
+
+
+==============================
+SITE-TO-SITE POLICYBASED VPN
+==============================
+
+1) first create object-group for local and remote network
+------------------------------------------------ 
+object-group network VPN-LOCAL-300
+network-object 172.26.11.0 255.255.255.0
+network-0bject 172.126.1.0 255.255.255.0
+
+object-group network VPN-REMOTE-300
+network-object 192.168.10.0 255.255.255.0
+
+
+2) create ACL for interesting traffic/ encryption domain
+-------------------------------------------------------
+access-list 300 permit ip object-group VPN-LOCAL-300 object-group VPN-REMOTE-300
+
+
+3) then cofigure no nat configuration
+----------------------------------------- 
+nat (any,outiside) source static VPN-LOCAL-300 VPN-LOCAL-300 destination static VPN-REMOTE-300 VPN-REMOTE-300 no-proxy-arp route-lookup
+ 
+ 
+4) create phase1 policy set
+------------------------------- 
+Crypto ikev1 policy 300
+authuntication pr-shared
+encrption aes
+hash sha
+group 2
+lifetime 86400
+
+
+
+5) create phase2 transform-set
+----------------------------- 
+crypto ipsec ikev1 transform-set AES256-SHA esp-ase esp-sha-hmac
+ 
+crypto ipsec ikev2 ipsec-proposal IKE-V2-ESP-AES-256-cbc-SHA2
+protocol esp encryption aes-256-cbc
+protocol esp integrity sha-256
+
+
+6) WARNING: make sure you are not using existing number crypto map to bind peer ip, interesting traffic and transformset
+------------------------------------------------------------------
+
+crypto map VPNMAP 300 match address 300 
+crypto map VPNMAP 300 set peer 46.46.46.46
+crypto map VPNMAp 300 set ikev1 transform-set  AES256-SHA
+ 
+
+7) configure PSK and optional group policy in tunnel-group
+-------------------------------------------------------
+
+tunnel-group 46.46.46.46 type ipsec-l2l 
+tunnel-group 46.46.46.46 ipsec attributes 
+ikev1 pre-shared-key Rack$pac3
+
+tunnel-group <PEER IP> type ipsec-l2l
+tunnel-group <PEER IP> ipsec-attributes
+ikev2 local-authentication pre-shared-key <RANDOM 13 ALPHANUMERIC CHARACTERS OR CUSTOMER SPECIFIED>
+ikev2 remote-authentication pre-shared-key <RANDOM 13 ALPHANUMERIC CHARACTERS OR CUSTOMER SPECIFIED>
+
+
+8) create ACL for vpn-filter
+---------------------------
+access-list VPN300 extended permit tcp object-group VPN-REMOTE-300 object-group VPN-LOCAL-300  eq 443 ----> Note: Source is remote here
+ 
+
+9) call the vpn-filter in group policy
+------------------------------------- 
+group-policy 46.46.46.46 internal
+group-policy 46.46.46.46 attributes
+vpn-filter value VPN300 
+
+
+10) call the group policy in tunnel-group
+------------------------------------- 
+
+
+tunnel-group 46.46.46.46 general-attributes
+default-group-policy 46.46.46.46
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa site to site</tabTrigger>
+</snippet>

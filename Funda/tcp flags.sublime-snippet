@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+Explain different packet tcp packets.
+======================================
+    SYN (synchronize) used to initiate a connection.
+    ACK (acknowledgment)
+    RST (reset): Signify the connection is down or maybe the service is not accepting the requests. Abrupt connection closure
+    FIN (finish): Indicate that the connection is being closed. graceful connetion closure.
+    PSH (push): data should be sent to application directly instead of keeping it in interface buffers.
+    URG (urgent): this packet should be prioritized from other packets.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tcp flags</tabTrigger>
+</snippet>

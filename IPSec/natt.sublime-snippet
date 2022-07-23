@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+when setting IPSec tunnel using ESP, the original payload is wrapped in ESP packet. ESP usually contains an IP header, ESP header, ESP trailer and ESP authenticated data. But it do not contain port numbers.
+If there are any NAT devices in the middle, they cant do NAT, since there are no port numbers in it. so to work around this. the ESP packet is wrapped with UDP 4500.
+
+We need to adjust the MTU to 1400 if we enable NAT-T.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa natt</tabTrigger>
+</snippet>

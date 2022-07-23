@@ -1,0 +1,115 @@
+<snippet>
+	<content><![CDATA[
+
+
+==============================
+client-TO-SITE POLICYBASED VPN
+==============================
+1) configure IP Pool for VPN Users
+--------------------------------
+ip local pool IPPOOL 192.168.255.1-192.168.255.254 mask 255.255.255.0
+
+2) configure object-group for source and destination
+--------------------------------------------------
+object-group network CLIENT-VPN-IPPOOL
+network-object 192.168.255.0 255.255.255.0
+
+object-group network FW-LOCAL
+network-object 172.26.11.0 255.255.255.0
+network-object 172.26.1.0 255.255.255.0
+
+3) configure split tunnel acl
+-----------------------------
+access-list CLIENTVPN extended permit ip object-group FW-LOCAL object-group CLIENT-VPN-IPPOOL  --SPLIT TUNNEL
+
+4) configure optional vpn-filter
+-------------------------------
+access-list filter-ANYCONNECT-VPN extended permit tcp object-group CLIENT-VPN-IPPOOL host 192.168.255.20 eq 3389  --- vpn filter acl
+
+5) configure no nat
+-----------------
+nat (any,outside) source static FW-LOCAL FW-LOCAL destination static CLIENT-VPN-IPPOOL CLIENT-VPN-IPPOOL no-proxy-arp route-lookup --- no nat
+
+
+6) create group policy for ip pool, vpn protocol, split tunnel and vpn-filter
+---------------------------------------------------------------------------
+
+
+group-policy Team-BLUEaccountants attributes
+vpn-tunnel-protocol ssl-client 
+client-bypass-protocol enable 
+split-tunnel-policy tunnelspecified
+split-tunnel-network-list value CLIENTVPN
+address-pools value IPPOOL
+
+
+ 
+group-policy Team-ORANGEadministrators attributes
+vpn-tunnel-protocol ssl-client 
+client-bypass-protocol enable 
+split-tunnel-policy tunnelspecified
+split-tunnel-network-list value CLIENTVPN
+address-pools value IPPOOL
+
+
+group-policy Team-REDmanagers attributes
+vpn-tunnel-protocol ssl-client 
+client-bypass-protocol enable 
+split-tunnel-policy tunnelspecified
+split-tunnel-network-list value CLIENTVPN
+address-pools value IPPOOL
+
+vpn-filter value filter-ANYCONNECT-VPN
+
+
+group-policy Team-BLUEaccountants attributes 
+vpn-filter value filter-Team-BLUEaccountants 
+
+
+group-policy Team-ORANGEadministrators attributes 
+vpn-filter value filter-Team-ORANGEadministrators 
+
+
+group-policy Team-REDmanagers attributes 
+vpn-filter value filter-Team-REDmanagers
+
+
+7) call the group policy under dynamic tunnel group, type should be remote-access
+--------------------------------------------------
+
+tunnel-group Team-BLUEaccountants type remote-access 
+tunnel-group Team-BLUEaccountants general-attributes
+default-group-policy Team-BLUEaccountants 
+tunnel-group Team-BLUEaccountants webvpn-attributes
+group-alias Accountants enable
+
+
+tunnel-group Team-ORANGEadministrators type remote-access 
+tunnel-group Team-ORANGEadministrators general-attributes
+default-group-policy Team-ORANGEadministrators 
+tunnel-group Team-ORANGEadministrators webvpn-attributes
+group-alias Administrators enable
+
+tunnel-group Team-REDmanagers type remote-access 
+tunnel-group Team-REDmanagers general-attributes
+default-group-policy Team-REDmanagers 
+tunnel-group Team-REDmanagers webvpn-attributes
+group-alias Managers enable
+
+
+8) enable anyconnect on outside interface under webvpn configuration
+----------------------------------------------------------------
+
+webvpn
+enable outside
+anyconnect image disk0:/anyconnect-win-4.9.05042-webdeploy-k9.pkg 1
+anyconnect enable 
+tunnel-group-list enable
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa remote vpn</tabTrigger>
+</snippet>

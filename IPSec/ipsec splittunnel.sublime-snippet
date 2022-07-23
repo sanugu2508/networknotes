@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+In Remote access VPN, we can setup which traffic to send to internet and which traffic to send to corporate network by using split tunnel. 
+If we setup tunnel all, all the user traffic will be sent to corporate network. 
+If we want to send Specific subnets, back to corporate network, then we can setup split tunnel with specified networks.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa splittunnel</tabTrigger>
+</snippet>

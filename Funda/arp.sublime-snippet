@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+
+ARP types
+============
+
+ARP : ARP stands for Address resolution protocol. It is one of the building block of IP networks. Its purpose is to get a mac address for an ip by sending a layer2 broadcast.
+Proxy ARP : in ARP, usually a target which has requested ip will respond to arp broadcast with its own mac. But incase of proxy arp, some other device will respond on behalf of target.
+We configure proxy arp in NAT devices, so they can respond on behalf of DMZ servers.
+
+Gratious ARP: It is used to detect the ip conflicts in some systems. Whenever we assign a static ip address to a device, it can send an ARP broadcast with sender and receiver ip as same IP. If any active device is present in the network with same ip, it will create a conflict and will not accept the static ip.
+
+RARP: RARP is reverse ARP server which actively maintains table with mac against an ip address. Whenever we send RARP request with mac, the RARP server will respond with ip address. This protocol is replaced by bootp and we use DHCP.
+
+InverseARP is used to find ip address using DLCI in framerelay.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>arp</tabTrigger>
+</snippet>

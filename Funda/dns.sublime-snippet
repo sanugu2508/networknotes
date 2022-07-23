@@ -1,0 +1,31 @@
+<snippet>
+	<content><![CDATA[
+
+DNS is domain naming system. 
+
+it is used to resolve hostname to ip and  also ip to hostname.
+
+It uses UDP port 53 for query and response.
+
+It uses TCP port 53 for zone transfer etc.
+
+DNS record types
+================
+
+A Record - maps a FQDN with ip address
+CNAME - its an Alias Name that points to another domain or subdomain.
+ANAME (alias) = A+CNAME - it can point to another domain or ip.
+SOA startof Authority - contains serial number of a zone, ttl and dns cache expiry for a zone.
+NS (Name Server) - points to which server is authoritative to a domain. ( for example cloudflare)
+PTR - matches ip address to a domain name.
+
+What is zone transfer?
+
+Lets say if we have a single dns server and it is down, then there is a big issue. To avoid it we usually add two or more dns servers in a cluster and they exchange information through zone transfer AXFR record 
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>dns</tabTrigger>
+</snippet>

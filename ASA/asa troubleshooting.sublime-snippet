@@ -1,0 +1,178 @@
+<snippet>
+	<content><![CDATA[
+
+
+Every computer has ip address, subnetmask, default gateway, dns, wins, netbios, proxy server, ntp.
+
+
+Collect Source IP Address from user
+============================
+
+windows:
+
+windows+r -> then type cmd and enter , they you get command prompt
+
+type ipconfig -> then you get  machine ip address, subnetmask, gateway.
+
+linux:
+
+open terminal -> type ifconfig, then you will get ip address, subnetmask.
+
+Printer/Camera: 
+
+
+what if you have multiple source ip ?
+
+
+widnows:
+cmd -> powershell -> test-netconnection <destination> -port <port>
+
+check for source and result :
+
+Linux:
+
+traceroute <target ip>
+
+check first hop, and find the ip in fist hop.
+
+can we manipulate routing ?
+
+yes, usually any interface with gateway, will take the precedence. 
+
+route manipulation or persistent routes. 
+
+
+windows:
+
+open admin cmd,
+
+>route add -p <subnet> MASK <subnet mask> <gateway> metric <number>
+
+
+to delete a route:
+
+>route delete -p <subnet>
+
+to check routes,
+
+>route print
+
+
+Linux:
+
+route add -net <192.168.10.10> netmask <255.255.255.255> gw <10.91.20.1>
+
+#ifconfig -> ip, mask, mac address
+
+
+#netstat -rn -> it will tell you gateway.
+
+
+Collection Destination IP address from user:
+===========================================
+
+it may be in the form of URL, ip address. they dont know.
+
+* URL
+
+https://netbrain.att.com/desktop.html 
+
+https - is protocol
+> netbrain.att.com - fqdn , fully qualified domain name.
+desktop.html - URI
+
+
+https://usibjqntp01
+> here usibjqntp01 is hostname. 
+
+cmd -> nslookup <fqdn/hostname> 
+
+* There might be local entry. for hostname/url that is not resolving to ips.
+
+to flush the dns run 'ipconfig /flushdns'
+to check ttl 'nslookup then "set debug"'
+
+run -> type drivers -> etc -> hosts
+
+what is name resolution preference.
+====================================
+
+dns cache.
+dns server.
+Local entry.
+
+
+Collection port from user:
+==========================
+well known tcp/udp/ip
+
+
+Check Layer1 connection in network devices.
+===========================================
+
+* Check if there are any physical layer issue.
+
+#show interfaces ether0/2 | i drop
+
+#show interfaces ether0/2 | i error
+
+#show interfaces ether0/2 | i CRC
+
+#clear counters eth0/2  ---> to clear the interface counters
+
+to test the cable
+
+test cable-diagnostics tdr interface <gi0/2>
+
+show cable-diagnostics tdr interface
+
+
+
+Section 2: Check Layer2 connectivity
+=====================================
+
+
+collect the mac address from user.
+
+windows: from user, ifconfig /all, check for specific ip address. collect physical address.
+linux: ifconfig
+
+to find yourself as network admin.
+
+login to core switch where svi is configured.
+
+# show arp address <ipaddress>
+
+
+
+==============================
+Troubleshooting with ASA firewall
+==============================
+
+1) Collect the source and destination ip addresses
+--------------------------------------------------
+
+Source:
+Destination:
+Port:
+
+2) Check routing for source ip
+--------------------------------------------------
+
+asa# sh route w.x.y.z 
+
+! here locate the <interface>
+
+2) run packet tracer command
+--------------------------------------------------
+
+packet-capture input <interface> tcp 
+
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>troubleshooting</tabTrigger>
+</snippet>

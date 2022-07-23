@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+
+DHCP works on DORA Process (DISCOVER – OFFER – REQUEST -ACKNOWLEDGEMENT)
+
+UDP 67
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>dhcp dora</tabTrigger>
+</snippet>

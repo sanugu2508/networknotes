@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+Sure, there is a command in ASA firewall. I think it is like
+more system:running-config | b tunnel-group.*remote-peer-ip
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa psk</tabTrigger>
+</snippet>

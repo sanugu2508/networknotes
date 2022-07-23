@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+Yes, we can do the load balancing of two tunnels using hsrp. for that we need to source phase1 and phase2 messages using hsrp vip.
+
+for that we need to run command like 
+
+crypt-map VPN redundancy vlanname.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ipsec hsrp</tabTrigger>
+</snippet>

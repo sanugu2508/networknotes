@@ -1,0 +1,41 @@
+Topics
+VPC
+	CIDR
+	Subnets
+	IGW
+	Route Tables
+	IPs - Private, Public, Elastic
+	NAT - Gateway, Instance
+
+Firewalls
+	Security Groups
+	NACL
+Private Connectivity Options
+	VPC Peering
+	VPC Endpoint - Gateway
+	VPC PrivateLink
+	VPN Connection
+	Direct Connect
+DNS Management
+	Route53
+
+
+AWS Components
+===============
+Account is top level in the heirarchy
+VPC is the supernet within a Region
+Subnets
+Region - you can choose regions based on your audiences
+You can have one or more VPCs within Region
+
+Route53 works at TopLevel
+S3, CDN works at Region level
+ELB works at VPC level
+EC2, RDS works at AZ level.
+
+each VPC comes with a default route table.
+Route table control the traffic within VPC and between VPC.
+IGW is needed for VPC to communicate with Internet
+VGW is a component that needs to be attached to your onprem datacenter to establish a private connection between onprem and VPC
+CGW - is customer gateway.
+

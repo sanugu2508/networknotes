@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+MSS 
+=====
+
+
+
+MSS stands for maximum segment size, it is the maximum tcp payload that can be transferred in a packet. if we need to send 10KB file, and if the MSS is 1000bytes, then it will be sent in 10 packets. MSS is negotiated in 3 way handshake. (generally 1460bytes).
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mss</tabTrigger>
+</snippet>

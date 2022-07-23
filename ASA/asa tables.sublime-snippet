@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+1. Connection tables
+2. NAT table 
+3. ARP table 
+4. MAC table
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa tables</tabTrigger>
+</snippet>

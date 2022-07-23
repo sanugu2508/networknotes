@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+
+Sure, in ASA firewall, we have an option called vpn-filter. Basically this filter will be applied to the post decrypted packets, so that way we can filter the vpn traffic.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa vpnfiltering</tabTrigger>
+</snippet>

@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+
+
+Traceroute explain
+===================
+
+Traceroute works on the concept of TTL. TTL is time to live, that defines how far a packet can be sent.
+when traceroute starts, a client will send an ICMP, UDP or TCP packet with TTL value 1.
+the first hop that recieved it decreases the TTL by 1 (to 0) and sends back ICMP error message TTL expired with its ip address.
+now client knows first hop, and sends another message with TTL 2, the first hop will make TTL 2to 1, and the second hop will make it 1 to 0 and sends back TTL expired message with ip.
+this process continues till 30 hops based on operating system.
+
+Firewalls usually dont respond with TTL expired messages, thats why we see * in traceroute.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>traceroute</tabTrigger>
+</snippet>

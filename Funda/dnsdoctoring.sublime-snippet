@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+Using DNS Doctoring we can change the embedded response in DNS PTR or A or TXT records.
+Lets say if a user is accessing a company portal from internet, he will get a public destination ip and this is fine. Lets say now he want to connect from inside the company, then there is no point to send the traffic to internet since we have the same server in DMZ.
+Using DNS doctoring we can direct this traffic to DMZ.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa dnsdoctoring</tabTrigger>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+MSS clamping
+==============
+when connected through VPN, TCP MSS clamping is used to reduce the maximum segment size (MSS) value in TCP session.  it is negotiated in 3 way handshake.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mss clamping</tabTrigger>
+</snippet>

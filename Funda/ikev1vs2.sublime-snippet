@@ -1,0 +1,42 @@
+<snippet>
+	<content><![CDATA[
+IKev1 vs Ikev2
+================
+
+Purpose of IKE is to generate and exchange keys needed for encryption and hash over public network 
+
+In IKEv1,
+
+there are 6 messages  in Phase1
+
+1,2 for security association 
+3,4 for key exchange
+5,6 authenticating peers
+
+for phase2, there are 3 messages to negotiate IPSec SAs
+
+In IKEV2,
+
+for phase1, there are only 4 messages.
+1,2 combines security association and key exchange
+3,4 for authentication.
+
+for phase2, there are only 2 messages to negotiate IPSec SAs.
+
+
+in IKEv1, we should use the same preshared key on both ends.
+in IKev2, we can setup a seperate local key and remote key.
+
+Ikev2 has support for more encryption algorithms than ikev1.
+
+Ikev2 support EAP authentication type 
+so we can use preshared key, certificate and AAA server.
+
+Ikev2 supports Mobile IKE(mobike), meaning if a work from home user once connected to VPN, he can change to different  internet connection without disconnecting the VPN.
+
+IKev2 by default supports NAT-T and in IKEv1 it is optional. meaning, if a VPN gateway is behind a NAT device, it can automatically detect and encapsulate the traffic in UDP 4500.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa ikev1v2</tabTrigger>
+</snippet>

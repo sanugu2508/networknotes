@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+
+MM_WAIT_MSG2 (Initiator)
+if tunnel stuck at MSG2, the most common issue is ISP blocking UDP 500 port or routing issues between two peers.
+
+MM_WAIT_MSG3 (Responder)
+if tunnel stuck at MSG3, the most common issue is ISP blocking UDP 500 port or reverse routing issues between two peers.
+
+MM_WAIT_MSG4 (Initiator)
+if tunnel is stuck at MSG4, it means tunnel-group issue. meaning they dont have matching peer ips.
+
+MM_WAIT_MSG5 (Responder)
+if it is stuck at MSG5, it means it already completed Message 4. means policies are matched. 
+
+This may be Pre-shared keys between the 2 peers do not match. 
+
+MM_WAIT_MSG6 (Initiator)
+if stuck in MSG6, it means Pre-shared keys do not match between the peers.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa mmwait</tabTrigger>
+</snippet>

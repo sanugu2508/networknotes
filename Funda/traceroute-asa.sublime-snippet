@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+Using traceroute we can determine the number of hops to reach the destination
+It works on the concept of TTL.
+What happens is, first client will send a ICMP packet with TTL of 1, the next hop receives the packet and reduces the TTL by 1. So it will be come zero. Whenever any device that receives a packet with TTL 0, it will send back ICMP unreachable message with its ip address.
+Next time, client will send the message with TTL of 2. It will go to first-hop and then to second hop. But at second hop TTL is zero. So second hop will respond with ICMP unreachable message. This process will continue till 32 hops.
+ASA firewall do not respond to ICMP unreachable message. We can modify this in MPF settings.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa traceroute</tabTrigger>
+</snippet>

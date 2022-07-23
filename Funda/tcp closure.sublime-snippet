@@ -1,0 +1,31 @@
+<snippet>
+	<content><![CDATA[
+
+TCP has two type of connection closures methods
+1) Graceful connection closure.
+2) Abrupt connection closure.
+
+Graceful Closure 
+=================
+In Graceful connection closure, the connection is open until both end points like client and server have closed their connections.
+This is called 4-way hand shake.
+client will first send FIN packet. then server respond with ACK. Then server will send FIN packet, and client will respond with ACK packet.
+
+Abrupt closure 
+===============
+In Abrupt close, any device can close both side connections by sending a RST.
+
+A reset can be sent for many reasons, one that i remember is, 
+
+* lets say  a client is sending an ACK or PUSH flag for already closed connection.
+
+* or if the port is not open on the other end
+
+* or if server do not have resources like cpu and memory.
+
+in such cases a RST is sent.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tcp closure</tabTrigger>
+</snippet>

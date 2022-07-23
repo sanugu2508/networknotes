@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+
+MTU
+====
+
+MTU stands for maximum transmission Unit. It is the maximum size of the whole packet that a device can transmit or receive. It includes all the headers and payload.
+If MTU is bigger than expected, two things can happen.
+Packet will be fragmented if df bit is off in the packet
+packet will be dropped if df bit is on in the packet and an icmp fragmentation needed message will be sent.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mtu</tabTrigger>
+</snippet>

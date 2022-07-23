@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+
+Proxy:
+
+In corporate networks, we use proxy to provide internet access to users, to hide internal ips, to do url filtering, to block access for users, etc. It is basically used to protect clients from internet based virus, malware, etc. 
+
+Reverse Proxy:
+
+Reverse proxy is used when we want to access a server in dmz securely but without using static NAT for each server. from internet we will access the reverse proxy server and use URI headers to direct the traffic to backend servers. in simple words, it is used to protect servers from inbound access from internet.
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>proxy reverse proxy</tabTrigger>
+</snippet>

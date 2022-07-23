@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+
+There are basically three types of NATs
+
+Static NAT , Dynamic NAT, PAT
+
+In cisco ASA firewall, we can configure all NAT types in three options
+
+Twice NAT
+Auto NAT
+After Auto NAT.
+
+In Twice NAT , we can change the source, or source+destination or source+destination+port
+IN Auto NAT, we can only change either source or destination
+In After Auto NAT, we can change the source, or source+destination or source+destination+port
+NAT order is Twice NAT is highest priority, Then Auto NAT finally After Auto NAT.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa nattypes</tabTrigger>
+</snippet>

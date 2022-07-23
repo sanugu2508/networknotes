@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+
+Time to Live.It defines how long a packet can travel in the network. It is the number of hops that the IP 
+datagram will go through before being discarded. At every hop, the TTL value is 
+decremented by 1. When this field become zero, the datagram is discarded. It helps avoiding routing loops. The typical value for a TTL field is 32 or 64.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ttl</tabTrigger>
+</snippet>

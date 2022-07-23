@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+In SSL offloading, we install the certificate on F5 instead of server, so the decryption load can be relieved from the server. Here we only use client-ssl profile.
+
+In SSL proxy, certificate is installed on F5 and End server both. Here we use client-ssl and server-ssl profile.
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm ssl offloading</tabTrigger>
+</snippet>

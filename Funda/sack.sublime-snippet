@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+Selective acknowledgment (SACK). It is a technique ic TCP. Lets say there is a congestion in data transfer. Some of packets are dropped due to congestion. In such case a client can, specifically ask for specific piece of packets, that are missing. only the missing pieces need to be retransmitted.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sack</tabTrigger>
+</snippet>

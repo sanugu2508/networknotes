@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+
+All switches dynamically update mac addresses in to CAM table, aka mac address table. 
+its aging time is 300 seconds. 
+
+#show mac address-table
+
+#show mac-address-table 
+
+#show mac-address-table address xxxx.yyyy.zzzz
+
+#show mac-address-table interface fast0/1
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mac table </tabTrigger>
+</snippet>

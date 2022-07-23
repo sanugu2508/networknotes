@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+
+in IKE phase1 there are two modes, Main Mode, agressive mode.
+
+Main mode is or agressive mode are used for authenticating peers securely using encrypted communication.
+
+In phase1, Main mode is more secure but slow, aggressive mode is very fast but first four messages are in plain text, thats why it is not so secure. 
+
+Quick mode, is part of phase2, and it is used to encrypt the user traffic. 
+
+Phase-1 – Main mode
+
+▪ MESSAGE 1- Initiator offers policy proposal which includes encryption, authentication, 
+hashing algorithms (like AES, or 3DES, PAK or PKI, MD5 or RSA).
+▪ MESSAGE-2- Responder presents policy acceptance (or not).
+▪ MESSAGE-3- Initiator sends the Diffie-Helman key.
+▪ MESSAGE-4 Responder sends the Diffie-Helman key.
+▪ MESSAGE-5 Initiator sends ID, preshare key or certificate exchange for authentication.
+▪ MESSAGE-6 Responder sends ID, preshare key or certificate exchange for authentication.
+Only first four messages were exchanged in clear text. After all message are encrypted.
+
+then Phase-2-Quick mode
+▪ MESSAGE-7 Initiator sends Hash, IPsec Proposal, ID, nonce.
+▪ MESSAGE-8 Responder sends Hash, IPsec Proposal, ID, nonce.
+▪ MESSAGE-9 Initiator sends signature, hash, ID.
+All messages inQuick mode are encrypted
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ipsec messages</tabTrigger>
+</snippet>

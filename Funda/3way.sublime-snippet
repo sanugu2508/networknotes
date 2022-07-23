@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+3WAY handshake is used to setup a TCP session.
+
+tcp exchanges 3 packets to setup a reliable connection. They are SYN, SYNACK and ACK. during this process, MSS is mutually agreed. based on Round Trip time, window size is calculated.
+
+To close a 3-way handshake connection,
+
+    First, the client requests the server to terminate the established connection by sending FIN.
+    After receiving the client request, the server sends back the FIN and ACK request to the client.
+    After receiving the FIN + ACK from the server, the client confirms by sending an ACK to the server.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>3way</tabTrigger>
+</snippet>

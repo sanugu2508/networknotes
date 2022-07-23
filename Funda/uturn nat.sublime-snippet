@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+Uturn NAT (Hairpin)
+====================
+
+In certain design considerations, we access an internal server using its external address.
+For example a guest wifi user need access to authentication server which is in the internal network. But to access DMZ server, guest wifi user will use external ip address. In the firewall we setup the U-Turn NAT.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>uturnnat</tabTrigger>
+</snippet>

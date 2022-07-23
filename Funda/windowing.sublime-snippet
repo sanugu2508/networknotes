@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+What is TCP Window size?
+========================
+
+it is the size of the data after receiving which the receipient should send an ACK. for example, if a server is sending a 10MB file to a client, and if the window size is 1MB, there will be an ACK send for every 1MB data. it will be dynamically changing throughout the session based on client and server receive capacitiy and round trip time.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>windowing</tabTrigger>
+</snippet>

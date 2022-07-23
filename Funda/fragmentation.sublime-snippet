@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+Fragmentation is a breaking a packet into smaller pieces (fragment). 
+Fragmentation is required when the datagram is larger than the MTU. 
+Each fragment then becomes a datagram and transmitted independently from source. These datagrams are 
+reassembled by the destination.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fragmentation</tabTrigger>
+</snippet>
