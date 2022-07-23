@@ -9,8 +9,18 @@ Tiger/Liger chip is connected with Octeaon Chip which is Dataplane CPU. process 
 
 Octean chip is connected with Jaguar Chip which is signature match FPGA.  app id and content id is done here.
 
+Jaguar has AHO and DFA algorithms. 
+
 Dune  chip is switch fabric
 
+
+AHO: Pattern/signature matching the algorithm for identifying threats and for DLP (Data Loss Prevention) processing.
+DFA: Pattern/signature matching the algorithm for identifying applications.
+PSCAN: Pattern/signature matching the algorithm for identifying threats. PSCAN is designed to replace AHO.
+
+– On the PA-3000 series platform, DFA and PSCAN are done in the software and AHO is done on the hardware. We can force this to software if we suspect some issue with hardware.
+
+- Running AHO on hardware will reduce the load on dataplane CPU  which is software based.
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
