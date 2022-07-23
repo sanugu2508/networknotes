@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+Persistence is a way to send the connections from a particular client to a particular pool member.
+Let me give this in an example
+Lets say a client is accessing an e-commerce website and he added items in the cart. All his items in the cart are basically saved in a backend pool member. After some time if he tries to connect again and due to algorithm like ratio method if this connection is sent to another server, the cart will be lost.In such cases we can set up persistence. Now the traffic from that client will always go to a pool member. It is of two types, source IP and Cookie Based Persistence.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm persistence</tabTrigger>
+</snippet>

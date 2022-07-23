@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+If we configure X-Forwarding, server team can check the real ip address of client since real ip address will be preserved in headers.
+
+
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm xforwarding</tabTrigger>
+</snippet>

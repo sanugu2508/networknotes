@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+SAN is subject alternate Name.
+In SSL, SAN field allows adding multiple different domains to a same Virtual server. For example if you look at youtube.com certificate, it will have subject alternate name field that will cover many google domains.
+But wildcard certificate is usually issued for a  domain and it can be used to cover all subdomains in that domain.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm san</tabTrigger>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+We can use redirection if you want to redirect traffic from http to https. Basically you can do that with iRule or iApp.
+Lets say a company has a web server support.xyz.com. Now management decided to bind this website with certificate. But some users may still come on http instead of https. In such cases we can setup a redirect rule so that all traffic from http will be redirected to https.
+There are two type of http redirects 301 and 302.
+ 301 is a permanent redirect, if you use 301, search engines like google removes old page and loads new page in cache store
+302 is a temporary redirect, if you use 302, search engines will keep old pages since it is temporary.
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm redirection</tabTrigger>
+</snippet>

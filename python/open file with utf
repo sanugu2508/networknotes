@@ -1,0 +1,32 @@
+try:
+   f = open("test.txt",encoding = 'utf-8')
+   # perform file operations
+finally:
+   f.close()
+
+
+
+   10.52.35.29, 
+
+   10.184.85.3
+
+
+   Source: 10.52.35.29
+   Destination: 172.20.173.74 ,10.89.34.136 ,10.19.7.190, 10.184.85.3
+Ports: TCP and UDP 5001 - 5999
+
+   Source: 172.20.173.74
+   Destination: 10.89.34.136 ,10.19.7.190, 10.184.85.3,10.52.35.29
+Ports:   
+
+   Source: 10.184.85.3
+   Destination: 172.20.173.74 ,10.89.34.136 ,10.19.7.190, 10.52.35.29
+Ports: TCP and UDP 5001 - 5999
+
+Source: 10.48.192.15
+Destination: 172.20.173.74 ,10.89.34.136 , 10.52.35.29,  10.184.85.3 
+Ports: TCP and UDP 5001 - 5999
+
+Source: 10.89.34.136
+Destination: 172.20.173.74 ,10.48.192.15, 10.52.35.29,  10.184.85.3 
+Ports: TCP and UDP 5001 - 5999

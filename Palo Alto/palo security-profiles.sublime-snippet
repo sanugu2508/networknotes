@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+
+Vulnerability Protection : scans vulnerabilities in software transferring in a session
+
+URL Filtering : URL filtering will group web traffic into categories, and filter it based on the payload of web traffic
+
+Anti-Spyware: if any user downloads the spyware, this profile will block it.
+
+Antivirus: this profile scans the virus infected files if somebody is downloading them.
+
+File Blocking: using this profile, palo alto can block files such as exe etc. 
+
+Data Filtering: this profile is used to filter any senstive information such as confidential documents etc.
+
+WildFile Analysis : if a user is download a file and if it is unknown to palo alto, it will send the file to WildFire service for malware analysis
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo security profiles</tabTrigger>
+</snippet>

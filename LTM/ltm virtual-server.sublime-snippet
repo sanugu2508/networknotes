@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+
+Standards Virtual server
+Performance L4
+Performance HTTP virtual server
+IP Forwarding
+L2 Forwarding
+DHCP Relay
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm virtual server types</tabTrigger>
+</snippet>

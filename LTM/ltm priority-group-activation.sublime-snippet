@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+In f5 , lets say you have a pool of five servers. And 3 of them are active.   You want to active the fourth server     only if one server fails in active servers. In such cases, you can do that using priority group activation.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm priority group activation</tabTrigger>
+</snippet>

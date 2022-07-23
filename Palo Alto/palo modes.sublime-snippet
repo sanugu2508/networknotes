@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+palo alto interfaces we can configure in 
+    Tap Mode
+    Virtual Wire
+    Layer 2
+    Layer 3
+    Aggregate Interfaces
+    HA
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo deployment modes</tabTrigger>
+</snippet>

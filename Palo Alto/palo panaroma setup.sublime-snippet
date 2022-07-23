@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+
+There are multiple steps to add a palo alto firewall to panororma.
+
+1) first step is we login to panororma select Panaroma > managed device > and click on Add, then enter serial number of firewall.
+
+2) then we need to setup connection between firewall and panaroma. for that login to firewall, go to device > setup > and edit panaroma settings > then enter the ip address of panaroma management server ip. then click commit.
+
+3) then we need to import the firewall configuration into panaroma. For that we need to login to Panaroma > setup > operations.  then we need to import the configuration. Important things is, it should not be part of any existing device group or template.
+
+4) then we need to verify the configuration, whether it is imported completely or not. we can compare the running config with candidate config. we have an audit option for that in panaroma.
+
+5) Then we need to push the config to firewall and commit.
+
+6) Finally we need to select the group or template.
+
+
+it uses many ports actually, i dont remember, we basically give ip level access. but i know it uses 22, 443, 3978 all are TCP.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo panoroma setup</tabTrigger>
+</snippet>

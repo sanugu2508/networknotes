@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+
+sympathy is all about saying sorry and being concerned when we cant help our customer.
+
+But Empathy is really trying to be in their shoes and sense what it means to them and put all my experience into play and being out of box to support that customer.
+
+I would like to quote my recent experience with my current organization where i put the customer first, empathised and provided an out of the box solution.
+
+on a saturday afternoon, my supervisor asked me to look into a high priority request and mentioned that anything i could do to  fix  will be a great help. I looked at the work logs in the ticket and here is the summary. We have a customer who moved his servers to a datacenter over the weekend. Customer complained that the access from our new datacenter to his onpremise server failed. priliminary investigation in worklog showed that customer did not whitelist our new datacenter ip addresses in his firewalls which we had already shared in advance. Customer mentioned that their firewall expert was on vacation and wont be returned till monday. Customer expressed that this will cause an issue with invoice processing and delay in payment to their suppliers. On the surface this is not our fault and the last engineer who worked on the ticket told that there is nothing we could do to fix a customer firewall issue and that in fact true. 
+
+I empathised the situation and realized how bad the reputation of my customer goes, if they wont be able to clear the invoices before month end. I decided to help and did my research. Luckily i realized the old firewalls are still alive. That prompted me to comeup with a solution out of the box. 
+
+The idea is if somehow i can route the traffic from new datacenter via old one and still  be able to send it to customer this issue will be resolved since the old ips are already whitelisted. I quickly discussed this with my supervisor and also with customer and they were more than welcome to do anything to fix it. I quickly submitted an expedite change and tried out my idea using network address translation. and gladly it worked. When he saw the traffic is flowing again back to the server, Customer shouted hurray ! 
+
+I felt good that i saved a customer from a crisis.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>empathy</tabTrigger>
+</snippet>

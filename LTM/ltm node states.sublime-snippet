@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+ltm node states are enabled, disabled, forced offline.
+
+in enabled state, all connections are allowed.
+in disabled, only persistence and active connections are allowed.
+forced offline, only active connections are allowed.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm node states</tabTrigger>
+</snippet>

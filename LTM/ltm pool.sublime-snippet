@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+Basically a node is a single ip. A pool member is a combination of node + port. You can add multiple pool members in a pool and use this pool under a virtual server. We can setup LB algorithm in pool.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm pool</tabTrigger>
+</snippet>

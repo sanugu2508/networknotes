@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+traffic logs 
+threat logs 
+url filtering logs 
+wildfire logs 
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo logs</tabTrigger>
+</snippet>

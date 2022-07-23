@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+
+first i will collect the source ip, destination ip or URL, port number from user
+
+then i need to find zones for source and destination.
+
+I will go to policy tab, then security, then i willl go to interzone policies. traffic is denied by default between zones.
+
+there i can either clone the existing policy or  add a new policy.
+
+there i need to select rule type as interzone and give a name to acl. then i will add source ip, source zone, destination ip, destination zone and we have option to add an application and service.
+
+finally in action tab, we need to select allow and commit.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo create policy</tabTrigger>
+</snippet>

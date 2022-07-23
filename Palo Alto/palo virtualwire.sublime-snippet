@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+Using V-Wire deployment we can insert firewall in to  existing network without changing IP addresses.
+
+It is like transparent mode in cisco firewall
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo virtualwire</tabTrigger>
+</snippet>

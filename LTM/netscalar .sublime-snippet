@@ -1,0 +1,248 @@
+<snippet>
+	<content><![CDATA[
+
+show ns info
+
+show version
+
+show interface
+
+show ns ip
+
+show route
+
+show vlan
+
+
+show hardware
+
+show lb vserver
+
+show persistentsession
+
+
+show ha node
+
+
+show vpn server
+
+
+show aaa stats 
+
+
+show aaa session
+
+show service
+
+
+show connectiontable | grep IPAddress
+
+
+ping
+telnet
+traceroute
+curl
+show techsupport
+cat /var/log/ns.log
+
+show node 
+show info 
+show info 
+show license 
+show cs vserver 
+show service 
+show route 
+show ip 
+show dns addrec -type proxy 
+
+
+Network Packet captures – Are usefull when you are troubleshooting connectivity problems such as 
+firewalls between your Netscalers and backend VDA’s
+can start a nstrace.sh or a nstcpdump.sh (for more low level debugging)
+nstrace –time 30
+I will store trace data for 30 seconds in each a new cap file
+
+
+I could use –filter “SOURCEIP == 10.0.0.1” –time 30
+
+nstcpdump.sh host 192.168.3.219 and port 2598
+
+start nstrace -size 0 -filter “connection.ip.ne(127.0.0.1) && connection.ip.eq(192.168.3.210)”
+
+packet captures can be found in cd /var/nstrace and pulled off with winscp
+
+
+If you connected to the netscaler console you can run the command nsconmsg you have to run the 
+command shell first.
+And after you start it the console might get spammed.
+
+
+cd /var/log
+
+cd /var/nslog
+
+cd /var/crash
+
+cd /var/core
+
+cd /nsconfig
+
+
+cd /nsconfig/ssl
+
+
+cd /nsconfig/license
+
+You can also open log files from –> /root/var/nslogs (and there are some useful logs there) 
+Httperror.log 
+cron 
+Dr_error.log 
+Httpaccess.log 
+log file locations
+28 May 2021 01:50
+ Netscelar Citrix Page 194 
+Dr_error.log 
+Httpaccess.log 
+License.log 
+Nscollect.log 
+Nsvpn.log 
+Nsvpnd.log 
+Snmpd.log
+and you can use the same command to view archived logs. For instance if you have a newnslog.100 
+file. 
+cd /var/nslog
+tar xvfz newnslog.100.tar.gz
+/netscaler/nsconmsg -K /var/nslog/newnslog
+(Remember to use K not k in the command a small k is used to write logs not read)
+if a vserver goes down or up you will see it with this command.
+Every 2 days, the NetScaler makes a new log file. Go to /var/nslog/ and do a ls -l to show the 
+timestamp information.
+Also you can can use the PIPE and GREP commands to get specific information that you want to see. 
+It also works with files that are compressed like tar.gz.
+For example:
+ /netscaler/nsconmsg -K /var/nslog/newnslog.63.tar.gz -d event | grep 
+exchange 
+Use the nsconmsg command to only display a span of time within the given file, as shown in the 
+following example:
+ /netscaler/nsconmsg -K /var/nslog/newnslog -s time=22Mar2007:20:00 -T 
+7 -s ConLb=2 -d oldconms
+Where
+ s time=22Mar2007:20:00 is start at March 22, 2007 at exactly 8 p.m.
+ T 7 is display seven seconds of data
+ s ConLb=2 is a detail level for load balancing statistics
+ d oldconmsg is display statistical information
+Here is also a short Citrix article how to get some statistics from the newnslog.
+Uncompress an archived log file:
+ gunzip newnslog.21.gz
+Discover the time period covered by the log: 
+ Netscelar Citrix Page 195 
+ nsconmsg -K newnslog.21 -d setime
+View load-balancing statistics from the archived log: 
+ nsconmsg -K newnslog.21 -s ConLb=2 -d oldconmsg
+Extract logging information for a shorter duration: 
+ nsconmsg -K newnslog.21 -s time=12Jan2006:00:00 -k short_log.nsl -T 
+1200 -d copy
+Start the log process for newnslog: 
+ nsconmsg -k /var/nslog/newnslog -T 172800 &
+View the time span of the current newnslog file: 
+ nsconmsg -K newnslog -d setime
+View the time span of the archived newnslog file: 
+ zcat filename | nsconmsg -K pipe -d setime
+View events in the current newnslog file: 
+ nsconmsg -K newnslog -d event
+View console messages in the current newnslog file: 
+ nsconmsg -K newnslog -d consmsg
+View counter values in the current newnslog file: 
+ nsconmsg -K newnslog -d stats
+View counter values in the current newnslog file: 
+ nsconmsg -K newnslog -d stats -d current
+View non-zero counter values in the current newnslog file: 
+ nsconmsg -K newnslog -d statswt0 -d current
+to display event information, such as entity up/down, alerts and configuration saves in the shell:
+ nsconmsg -K newnslog -d event
+Display CPU usage in the shell:
+ nsconmsg -K newnslog -s totalcount=200 -g cpu_use -d current
+ Netscelar Citrix Page 196 
+Display memory utilization in the shell:
+ nsconmsg -s ConMEM=1 -d oldconmsg
+Display established HTTP connections in the shell:
+ nsconmsg -j server_NSSVC_HTTP_vserver -d current
+Display load balancing statistics in the shell:
+ nsconmsg -K newnslog -s ConLb=x -d oldconmsg
+This command gives basic information when x=1 and detailed information when x=2.
+use the following command to view traffic distribution from the shell.
+ nsconmsg -K /var/nslog/newnslog -s time -s ConLB=2 -2 distrconmsg
+to display load-balancing information in the shell.
+ nsconmsg -s ConLb=1 -d oldconmsg
+Display monitoring statistics in the shell.
+ nsconmsg -K newnslog -s ConMon=x -d oldconmsg
+This command gives basic information when x=1 and gives detailed information when x=2.
+View SSL stats for front-end connections: 
+ nsconmsg -K newnslog -s ConSSL=1 -d oldconmsg
+View SSL stats for back-end connections: 
+ nsconmsg -K newnslog -s ConSSL=2 -d oldconmsg
+View SSL stats for front and back-end connections: 
+ nsconmsg -K newnslog -s ConSSL=3 -d oldconmsg
+Display content switching statistics in the shell.
+ nsconmsg -K newnslog -s ConCSW=1 -d oldconmsg
+ Netscelar Citrix Page 197 
+ nsconmsg -K newnslog -s ConCSW=1 -d oldconmsg
+Display compression statistics in the shell.
+ nsconmsg -K newnslog -s ConCMP=x -d oldconmsg
+This command gives old compression method related statistics when x=1 and gives new compression 
+method related statistics when x=2
+Display integrated caching statistics in the shell.
+ nsconmsg -K newnslog -s ConIC=1 -d oldconmsg
+
+
+
+Stat ns 
+Stat cpu 
+Stat interface 
+Common stat commands for vserver and service: 
+Stat lb vserver 
+Stat cs vserver 
+Stat service 
+Other common stat commands: 
+Stat dns 
+Stat ssl 
+Stat http
+
+Create  a New VIP 
+==================
+
+
+==============
+Add Servers:
+==============
+add server 10.110.1.138 10.110.1.138
+add server 10.110.1.148 10.110.1.148
+=========================================
+Create servicegroup and bind servers:
+=========================================
+add serviceGroup SVG-209.18.64.10-443 SSL_BRIDGE -maxClient 0 -maxReq 0 -cip ENABLED XForwarded-For -usip NO -useproxyport YES -cltTimeout 360 -svrTimeout 360 -CKA NO -TCPB NO -
+CMP NO
+bind serviceGroup SVG-209.18.64.10-443 -monitorName tcp
+bind serviceGroup SVG-209.18.64.10-443 10.110.1.138 443
+bind serviceGroup SVG-209.18.64.10-443 10.110.1.148 443
+add serviceGroup SVG-209.18.64.10-80 HTTP -maxClient 0 -maxReq 0 -cip ENABLED XForwarded-For -usip NO -useproxyport YES -cltTimeout 360 -svrTimeout 360 -CKA NO -TCPB NO -
+CMP NO
+bind serviceGroup SVG-209.18.64.10-80 -monitorName tcp
+bind serviceGroup SVG-209.18.64.10-80 10.110.1.138 80
+bind serviceGroup SVG-209.18.64.10-80 10.110.1.148 80
+=========================================
+Create VIP and bing the service-group: 
+=========================================
+(Need to Upload cert)
+add lb vserver VIP-209.18.64.10-443 SSL_BRIDGE 10.110.99.10 443 -persistenceType SOURCEIP -
+timeout 60 -cltTimeout 180
+bind lb vserver VIP-209.18.64.10-443 SVG-209.18.64.10-443
+add lb vserver VIP-209.18.64.10-80 HTTP 10.110.99.10 80 -persistenceType SOURCEIP -timeout 
+60 -cltTimeout 180
+bind lb vserver VIP-209.18.64.10-80 SVG-209.18.64.10-80
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>netscalar</tabTrigger>
+</snippet>

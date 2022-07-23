@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+Palo Alto Templates are generally used to push network and device settings to a firewall, like adding an ntp server, or dns server, making routing changes etc.
+
+But Device groups are used to push policies, objects configurations to firewalls.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo template vs device groups</tabTrigger>
+</snippet>

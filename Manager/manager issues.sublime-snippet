@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+
+many times, it happens that our managr is not agreeing our idea, the best thing i can do is only to convince him with all rational details, like why this idea should be implemented, what are benefits with this, who will get the benefit and what is the business value etc. if i show these details in a clear way, i think no manager will object good ideas.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>manager issue</tabTrigger>
+</snippet>

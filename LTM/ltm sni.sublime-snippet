@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+
+SNI is service name Indication. Lets say you want to use multiple web servers on a single virtual server by creating alias names. And you want to terminate all ssl certificates on a single Virtual server, then we can use SNI to achieve this.
+
+we can enable sni using command
+#tmsh modify ltm virtual virtualserver-name serverssl-use-sni enabled
+
+For example you have a virtual server 1.1.1.1 on port 443. But you have many alias names like web1.xyz.com , web2.xyz.com, web3.xyz.com etc etc. all of these webservers are pointing to same virtual server ip. Without SNI, we can only install one certificate, but using SNI, we can assign multiple certificates to same virtual server.
+
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm sni</tabTrigger>
+</snippet>

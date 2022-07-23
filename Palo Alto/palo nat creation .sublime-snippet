@@ -1,0 +1,33 @@
+<snippet>
+	<content><![CDATA[
+
+There are different type of nat options are there in palo alto.
+
+dynamic-ip-port
+
+dynamic - ip.
+
+static ip.
+
+to create nat, first we need to find the zone for source and destination.
+
+then go to policy > NAT > new nat.
+
+
+for inbound traffic, the source and destination zone will be same.
+
+Original Packet (tab):
+add Source Zone = untrust
+Destination Zone = untrust
+Destination Address = Public address
+
+Translated Packet (tab):
+Translated address = Private address
+
+in the acl, destination zone will be Post-Nat zone which is inside and destination ip will be pre-nat ip.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo nat creation</tabTrigger>
+</snippet>

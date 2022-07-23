@@ -1,0 +1,34 @@
+Load balancing topics
+======================
+
+INTRODUCTION
+==============
+
+1.What is load balancing ?
+2.LB advantages and dis advantages?
+3.how does Basic traffic flow through f5?
+4.LB componenents?
+5.IP forwarding virtual servers
+6. Heigh availbility
+=======================
+
+CONFIGURATION
+================
+
+7.Meet Bob
+8.Create a basic HTTP vrtual Server
+9.Add a health check monitor
+10.Configure the LB algorithem
+11.Enable SNAT
+12.Configure Persistance
+13.Create a HTTPS virtual Server
+14.Configure on HTTP to HTTPS Redirect
+15.HA Failover and Vlan Failover
+===================================
+
+TROUBLESHOOTING
+=================
+
+
+
+

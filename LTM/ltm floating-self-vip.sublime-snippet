@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+Self IP - F5 physical interface IP is called Self IP - Used for health monitoring the backend pool members
+Floating IP - This is a cluster IP like HSRP - Used for routing, management, SNAT etc.
+VIP - Virtual Server IP ( this is used for application hosting)
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm floating,self,vip</tabTrigger>
+</snippet>

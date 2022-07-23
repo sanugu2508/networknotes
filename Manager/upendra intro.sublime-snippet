@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+Hello, My name is Upendra, i have 2.5 years of experience in Routing, switching as well as security.
+
+My day to day work includes switch port activation,
+ cofiguring vlans, vtp, spanning tree protocols and routing.
+ and also  i have experience in asa firewalls like configuring acls, checking access, checking NAT, checking VPNs etc.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>upendra intro</tabTrigger>
+</snippet>

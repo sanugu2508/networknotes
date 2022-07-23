@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+When two palo alto firewalls in ha mode, Preemption option must be enabled on both Palo Alto firewalls, If the primary firewall fails, then the secondary firewall will take the active role and start to forward the traffic.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo preempt</tabTrigger>
+</snippet>

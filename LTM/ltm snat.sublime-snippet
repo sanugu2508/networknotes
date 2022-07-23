@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+SNAT is source NAT. This is used to avoid Asymmetric Routing in F5 load balancer. Lets say a client is accessing a web server hosted on a VIP. When the traffic reaches VIP, usually destination IP will be replaced with one of the pool member IP based on load balancing algorithm and health checks. Once traffic reaches the backend server, it may or may not send the traffic to load balancer. This will become an issue if there are firewalls in the path.
+To avoid this, we can configure SNAT, so that traffic will come back in the same path it received.
+source ip address can be changed with snat pool ip or a floating IP
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm snat</tabTrigger>
+</snippet>

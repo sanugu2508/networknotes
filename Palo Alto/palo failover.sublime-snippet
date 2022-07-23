@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+first Login to the active device through GUI
+Go to Device Tab, Click on high availability 
+Click on operational commands 
+Click "Suspend local device" 
+Now secondary firewall will move to Active status.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo failover</tabTrigger>
+</snippet>

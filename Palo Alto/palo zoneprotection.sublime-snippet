@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+Zone protection profiles are used to protect the network from attacks, syn flood protection, icmp flood, udp flood,  DDOS, etc.
+
+Zone Protection Profile is configured from GUI using Network > Network Profiles > Zone Protection.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo zoneprotection</tabTrigger>
+</snippet>

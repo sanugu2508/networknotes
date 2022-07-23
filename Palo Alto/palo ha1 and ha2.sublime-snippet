@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+
+HA1 is called CONTROL LINK
+ is used to exchange hellos, heartbeats, and HA state information, and management plane synching for routing, and User-ID information. The HA1 link is a Layer 3 link and we need to configure it with an IP address.
+
+ICMP ping  is used to exchange heartbeats between HA peers.
+
+it uses ports 28769 and 28260 for sending hello ; port 28 for synching state information, routing etc.
+
+HA2 is called DATA LINK
+
+HA2 link is used to synchronize sessions, forwarding tables, IPSec security associations and ARP tables between firewalls in the HA pair. Data always move from active to standby. The HA2 link is a Layer 2 link and do not need an ip address.
+
+But if the firewalls are aways from each other, then we can actually configure HA2 with ip address. We can use either IP port 99 or UDP 29281).
+
+HA3: PACKET-FORWARDING LINK
+
+if we use palo alto in active/active mode then we need HA3 link. The firewalls use this link for forwarding packets to the peer during session setup and asymmetric traffic flow. The HA3 link is a Layer 2 link.
+
+there is also HA1 & HA2: BACKUP LINKS
+if HA1 and HA2 ports have any issue and want to use as backup, then we can use data ports as HA ports.
+
+
+
+
+< ref https://cordero.me/palo-alto-h1-ha2-and-ha3>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo ha1 ha2</tabTrigger>
+</snippet>

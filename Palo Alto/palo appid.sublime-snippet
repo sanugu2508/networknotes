@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+App-ID is very unique feature in  Palo Alto Firewalls. Normal firewalls block traffic based on protocol and/or ports, but palo alto firewalls uses multiple identification mechanisms to determine the exact identity of applications.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo appid</tabTrigger>
+</snippet>

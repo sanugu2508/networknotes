@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+Sure, 
+
+I recollect solving a certificate issue, where server supports only TLS v2 but client is sending TLS v3.
+
+Nat issues, reverse routing issues, VPN phase1 and phase2 mismatch issues. latency issues. etc.
+
+
+In my humble opinion, if we have strong foundational knowledge in TCP/IP, if we have right tools like wireshark, tcpdump and if we follow packet flow of each device in the transit path between source and destination, we can solve any complex issue.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>complex issues</tabTrigger>
+</snippet>

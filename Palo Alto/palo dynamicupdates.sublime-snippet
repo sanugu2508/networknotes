@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+actually Palo Alto company regularly develops updates for any new applications, new threats, GlobalProtect data files etc. and they post it through dynamic updates. 
+
+we can configure palo alto firewall to download them using device tab and dynamic updates
+
+i think we set it to download and install daily.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo dynamic updates</tabTrigger>
+</snippet>

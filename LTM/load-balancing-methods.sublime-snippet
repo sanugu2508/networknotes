@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+Round Robin : in Round Robin method, each new connection will be sent to  the next server in the pool, so that all members get load equally. This is the default load balancing method.
+
+Ratio:  in ratio method, connections are send to pool members based on assigned ratio weight.You set a ratio weight when you create each pool member or node.
+
+Least connections
+Weighted Least connections
+Predictive
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm load balancing methods</tabTrigger>
+</snippet>

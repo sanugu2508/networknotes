@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+Escalation:
+
+I would like to share an escalation experience. I was updating an SSL certificate on a load balancer and while doing it i found that vip went down due to a custom setting  . I quickly realized the vip is down and immediately brought it up. I called my supervisor and updated him that there was brief disruption to service while i was doing the change and with his approval i updated the customer that the change caused a brief outage. Customer said the impact was very negligible and its barely noticable. But it was my duty to inform my supervisor and customer. I update the documentation about this typical change and ensured that the team is aware of it while they do it next time.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>escalation</tabTrigger>
+</snippet>

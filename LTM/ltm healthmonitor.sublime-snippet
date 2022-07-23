@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+Using health monitor, a load balancer basically checks if backend pool members are active and healthy. There are different type of health monitors. Like 
+Reachability - uses icmp to check reachability of server.
+L4 monitor- uses port information to check health status
+L7 monitor - uses application like http to check health status
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm healthmonitor</tabTrigger>
+</snippet>

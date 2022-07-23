@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+
+Hello, my name is Triveni, i have 6+ years of experience in managing Firewalls such as Cisco ASA 5510, 5520, 5545 etc and also Palo Alto firewalls like PA220, PA600, PA800. I have experience in managing load balancers such as LTM 1600, 3600. 
+
+My day to day work includes creating ACLs, configuring NAT, PAT, VPNs, troubleshooting VPN issues, connectivity issues etc.
+
+In load balancers vip creation, adding pool members, configuring snat, configuring certificate, SNI, SAN, wildcard certificate, irules.
+
+I have experience in Routing aswell as switching.
+
+I used troubleshooting tools such as wireshark, tcpdump for troubleshooting connectivity issues.
+
+In My team, i am currnetly working as SME. My job includes, understanding the requirement from customer, breaking it down into actionable tasks, creating changes, doing peer reviews, creating testing plans, back out plans, etc.
+
+i work on service management tools, like snow for incident and change management.
+
+
+For recurring issues, we create problem tickets and investigate the root cause and create remediation plans.
+
+For P1 issues, we create RCAs and share it with customer.
+
+We also maintain network diagrams, IP planning sheets, support audit requirements. 
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>intro</tabTrigger>
+</snippet>

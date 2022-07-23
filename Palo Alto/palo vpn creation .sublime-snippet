@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+
+First we need to prepare vpn template in excel sheet, with our side configuration and also customer side cofiguration.
+
+there are multiple steps to configure site to site vpn.
+
+Tunnel Zone - we need to create a zone as type Layer3
+
+Tunnel Interface - then create a tunnel interface.
+
+IKE Crypto (phase 1)
+IPSec Crypto (phase 2)
+IKE Gateway
+IPSec Tunnel
+Routes
+Security Policy
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo vpn creation</tabTrigger>
+</snippet>
