@@ -1,0 +1,55 @@
+<snippet>
+	<content><![CDATA[
+
+PAN-OS uses the following algorithms for content and application inspection:
+
+AHO: Pattern/signature matching the algorithm for identifying threats and for DLP (Data Loss Prevention) processing.
+DFA: Pattern/signature matching the algorithm for identifying applications.
+PSCAN: Pattern/signature matching the algorithm for identifying threats. PSCAN is designed to replace AHO.
+
+On the high end PA models, AHU is done on hardware but we can force it on software if we suspect issue with hardware. But this will increase the load on software.
+
+> debug dataplane fpga state 
+
+aho offload setup
+        Use offload
+        Minimum Threshold for using offload: 32 bytes
+        Maximum Threshold for using offload: 9900 bytes
+        Max. outstanding request to offloading: 500
+        Current outstanding request to offloading: 0
+        bitmask in offload 0x10000(cur idx 1)
+        DLP is available in offload
+        DLP is in offload
+
+dfa offload setup
+        HFA offload only (no sw DFA)
+        Minimum Threshold for using offload: 0 bytes
+        Maximum Threshold for using offload: 0 bytes
+        Max. outstanding request to offloading: 3500
+        Current outstanding request to offloading: 0
+        hfa graphs downloaded to HTE:
+
+To force AHO in software:
+
+> debug dataplane fpga set sw_aho yes
+  
+> debug dataplane fpga state
+
+aho offload setup
+        Use software only 
+       
+dfa offload setup
+        HFA offload only (no sw DFA)
+        Minimum Threshold for using offload: 0 bytes
+        Maximum Threshold for using offload: 0 bytes
+        Max. outstanding request to offloading: 3500
+        Current outstanding request to offloading: 0
+
+Enforcing AHO to software may increase the dataplane CPU. Upon careful observation, this may be retained or reverted:
+
+> debug dataplane fpga set sw_aho no
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo content on software</tabTrigger>
+</snippet>
