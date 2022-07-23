@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+86. What is leak map in EIGRP?
+By using a leak-map we can allow a specific prefix within the range of a summary route and also summary route. for example we have a subnet 10.0.0.0/8. Using leak map, we can send 10.10.10.0/24 and also 10.0.0.0/8 both.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp leak map</tabTrigger>
+</snippet>

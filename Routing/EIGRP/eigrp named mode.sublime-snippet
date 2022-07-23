@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+81.What is the EIGRP named mode?
+The named mode is the new way of configuring EIGRPthis mode allows EIGRP configurations to be 
+entered in a hierarchical manner under the router mode. Each named mode configuration can have 
+multiple address families and autonomous system number combinations.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp named mode</tabTrigger>
+</snippet>

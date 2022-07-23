@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+
+
+▪ Direct connect 0
+▪ Static route - →1
+▪ EIGRP (summary route) →5
+▪ eBGP route →20
+▪ EIGRP route →90
+▪ OSPF route →110
+▪ RIP route →120
+▪ Exterior EIGRP →170
+▪ iBGP →200
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ad value</tabTrigger>
+</snippet>

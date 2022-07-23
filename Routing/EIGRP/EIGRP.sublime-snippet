@@ -1,0 +1,34 @@
+<snippet>
+	<content><![CDATA[
+
+1 65535
+
+90.How Configure EIGRP?
+▪ Router (Config)#router eigrp 100
+▪ Router (Config-router) #network 172.16.1.0 0.0.0.255
+▪ Router (Config-router) #network 10.16.1.0 0.0.0.255
+▪ Router (Config-router) #no auto-summary
+
+
+▪ Router (Config)#router eigrp 200
+▪ Router (Config-router) #network 172.16.1.0 0.0.0.255
+▪ Router (Config-router) #network 10.16.1.0 0.0.0.255
+▪ Router (Config-router) #no auto-summary
+
+91.How to configuration EIGRP named mode?
+▪ R1(Config)# router eigrp name IBM Hyd
+▪ R1(Config-router) #address-family ipv4 autonomous-system 12
+▪ R1(Config-router-af) # Network 192.168.12.0
+▪ R1(Config-router-af)#af-interface Fastehternet 0/0
+
+92.Tell me some commands to troubleshoot EIGRP?
+▪ #show ip route → It Shows full Routing Table, global routing table.
+▪ #show router ip eigrp → It Shows only EIGPR Routes
+▪ #show ip eigrp neighbours → It Shows EIGPR Neighbours Table
+▪ #show ip eigrp topology → It Shows EIGPR Topology Table
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp commands</tabTrigger>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+75.What is the Feasible distance?
+Feasible distance is the total distance  to reach the destination network.
+
+76.What is advertised Distance & Reported Distance?
+distance advertised by a neighbour router to reach the destination network. 
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp distance</tabTrigger>
+</snippet>

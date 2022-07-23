@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+
+▪ Idle-the initial BGP state.
+
+▪ Connect- The BGP process is waiting for the TCP Connection to be completed. If it is 
+successful, it will be continuing to the Open Sent State. In case it fails, it will be 
+continuing to active state.
+
+▪ Active -BGP will try another TCP three-way handshake to establish a connection with 
+the remote BGP neighbour. If it successful, it will be move to the Open Sent State.
+
+▪ Open sent- BGP has both established the TCP connection and sent an OPEN Message 
+and is awaiting a reply OPEN Message. Once it receives a reply OPEN Message, the 
+BGP peer will send a KEEPALIVE message.
+
+▪ Open confirm- BGP listens for a reply KEEPALIVE message
+
+▪ Established- All neighbour parameters matched, the neighbour relationship has 
+been established and the peers can now exchange update message. 
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bgp states</tabTrigger>
+</snippet>

@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+
+Routers should match 
+▪ Autonomous System number
+▪ K-values.
+▪ Authentication.
+
+to form neighborship
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp neighbor</tabTrigger>
+</snippet>

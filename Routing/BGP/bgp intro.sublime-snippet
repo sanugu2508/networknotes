@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+
+Border Gateway Protocol (BGP) is used to exchange routing information between different autonomous systems like Internet. It is a path-vector routing protocol, it makes routing decisions based on paths, network policies, or rule-sets that we configure.
+
+It uses port TCP 179 for communication.
+
+There are two type of BGPs.
+
+BGP used for routing within an autonomous system is called Interior Border Gateway 
+Protocol, Internal BGP (iBGP). 
+
+And the BGP used between two AS is called Exterior Border Gateway Protocol, External BGP (eBGP).
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bgp explain</tabTrigger>
+</snippet>

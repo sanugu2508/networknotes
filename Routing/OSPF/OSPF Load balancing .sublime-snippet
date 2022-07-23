@@ -1,0 +1,33 @@
+<snippet>
+	<content><![CDATA[
+
+
+OSPF can do equal cost load balancing.
+▪ Paths must have equal cost.
+▪ 4 equal cost paths will be placed in routing table.
+▪ Maximum of 16 paths
+▪ To make the paths equal cost, change the "cost" of a link.
+▪ IOS 15 supports, a maximum of 32 paths for ospf.
+▪ use maximum-paths command to change the maximum limit.
+
+router ospf 100
+maximum-paths <0-32>
+
+▪ The default type of load balancing is "per-destination" load balancing.
+▪ traffic from same source and destination are guaranteed to take same path.
+▪ Per-packet load balancing - it uses round robin for each packet. This is not recommended.
+
+you can check ospf load balancing type using "show ip cef" command.
+
+you can change it under interface.
+
+interface eth0/0
+ip load-sharing ?
+  per-destination  Deterministic distribution
+  per-packet       Random distribution
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ospf load balancing</tabTrigger>
+</snippet>

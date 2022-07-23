@@ -1,0 +1,72 @@
+<snippet>
+	<content><![CDATA[
+
+BGP uses  attributes to determine the best path to a destination.
+▪ Next Hop - it should be reachable.
+▪ Weight - Highest is preferred
+▪ Local Preference - Highest is preferred.
+▪ Locally injected routes - routes advertised using network command are better compared to learned routes
+▪ AS Path - smaller path is preferred.
+▪ Origin - preference is internal (like routes injected using network command, external is routes injected by redistributing OSPF, EIGRP etc  and incomplete routes means the origin is unknown.
+▪ Multi-Exit Discriminator (MED) - lower MED is better
+▪ Neighbour type- eBGP is preferred over iBGP
+▪ IGP metric- Route with nearest IGP neighbour (lowest IGP metric) is preferred.
+▪ eBGP route- Oldest (longest known) route is preferred.
+▪ Neighbour Router ID- Lowest is preferred.
+▪ Neighbour IP Address- Lowest is preferred.
+
+=========================
+
+Route manipulation
+
+
+To influence the inbound traffic path, we can use attributes as MED, AS-PATH, BGP communities or send longest prefixes to neighbor.
+
+To influence the outbound traffic path, we an use local preference.
+
+=======================================
+
+BGP utilizes several attributes to determine the best path to a destination.
+▪ Next Hop- It lists the next-hop IP address used to reach a prefix. If next hop is 
+reachable? If no route to reach Next hop, the router cannot use this route.
+▪ Weight- The Weight attribute is applied to inbound routes, dictating the best 
+outbound path. It is a Cisco-proprietary attribute, and is only locally significant (and 
+thus, is never passed on to BGP neighbours). The weight value can range from 0 –
+65535, and the highest weight is preferred. By default, a route originated on the 
+local router will be assigned a weight of 32768. All other routes will be assigned a 
+weight of 0, by default. 
+▪ Local Preference- The Local Preference attribute is applied to inbound external 
+routes, dictating the best outbound path. Unlike the Weight attribute, Local 
+Preference is passed on to iBGP peers when sending updates. Local Preference 
+informs iBGP routers how to exit the AS if multiple paths exist. Local Preference is a 
+32-bit number and can range from 0 to 4294967295. The highest Local Preference is 
+preferred, and the default preference is 100.
+▪ Locally injected routes- Locally injected routes (routes injected using network 
+command) are better than iBGP/eBGP learned.
+▪ AS Path- The AS-Path attribute is applied to outbound routes, dictating the best 
+inbound path. Two things can be accomplished with the AS-Path attribute, prepend 
+or filter. Smaller is preferred.
+▪ Origin- The Origin attribute identifies the originating source of the route. The origin 
+codes are as follows (listed in order of preference for route selection): • i (IGP) –
+Originated from an interior gateway protocol, such as OSPF. This usually indicates 
+the route was injected into BGP via the network command under the BGP process. 
+An origin code of “i” is most preferred. • e (EGP) – Originated from an external 
+gateway protocol. • ? (incomplete) - Unknown origin. This usually indicates the route 
+was redistributed into BGP (from either connected, static, or IGP routes). An origin 
+code of “?” is the least preferred.
+▪ Multi-Exit Discriminator (MED)- The MED (MultiExit Discriminator) attribute is 
+applied to outbound routes, dictating the best inbound path into the AS (assuming 
+multiple paths exist). The MED is identified as the BGP metric when viewing the BGP 
+routing table. A lower metric is preferred, and the default MED value is 0. Smaller is 
+preferred.
+▪ Neighbour type- eBGP is preferred over iBGP
+▪ IGP metric- Route with nearest IGP neighbour (lowest IGP metric) is preferred.
+▪ eBGP route- Oldest (longest known) route is preferred.
+▪ Neighbour Router ID- Lowest is preferred.
+▪ Neighbour IP Address- Lowest is preferred.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bgp attributes</tabTrigger>
+</snippet>

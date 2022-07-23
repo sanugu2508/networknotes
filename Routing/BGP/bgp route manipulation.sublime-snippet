@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+Route manipulation
+
+
+To influence the inbound traffic path, we can use attributes as MED, AS-PATH, BGP communities or send longest prefixes to neighbor.
+
+To influence the outbound traffic, we an use local preference and wight.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bgp route manipulation</tabTrigger>
+</snippet>

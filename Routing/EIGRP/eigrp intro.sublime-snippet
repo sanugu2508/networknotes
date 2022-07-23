@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+
+Enhanced Interior Gateway Routing Protocol (EIGRP Protocol). 
+It is a distance vector routing protocol
+It uses Diffused Update Algorithm (DUAL) to calculate the shortest path. 
+EIGRP support classless routing & VLSM, route summarization, incremental updates, load balancing futures.
+it uses multicast address 224.0.0.10
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp intro</tabTrigger>
+</snippet>

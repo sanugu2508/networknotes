@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+87. What is the EIGRP stub router?
+If we configure a router as a stub  router, it will reduce number of eigrp packets on that router.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp stub</tabTrigger>
+</snippet>

@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+
+IBGP- neighborship is formed between routers within the same AS (autonomous 
+system)
+default AD value is 200
+ibgp routes cant be sent to another ibgp peer, but we can send it to ebgp peer.
+it requires full mesh
+it uses split horizon for loop prevention
+ibgp routers can send local preference
+next_hop is not changed here
+
+
+EBGP-neighborship is formed between routers different AS (autonomous system)
+default AD value is 20
+routes from ebgp peer can be sent to another ebgp peer and ibgp peer.
+it does not requires full mesh
+it uses AS_PATH for loop prevention
+ebgp routers do not send local preferene
+next_hop is changed here.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bgp ebgp vs ibgp</tabTrigger>
+</snippet>

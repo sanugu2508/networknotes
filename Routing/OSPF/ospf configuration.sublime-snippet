@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+
+• Router (Config)#router ospf 100
+• Router (Config-router) #network 172.16.1.0 0.0.0.255 area 0
+• Router (Config-router) #network 10.16.1.0 0.0.0.255 area 1
+• Router (Config-router) #exit
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ospf configuration</tabTrigger>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+EIGRP calculated its metric by using Bandwidth, Load, Delay, Reliability and MTU.
+these are called K values
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp k value</tabTrigger>
+</snippet>

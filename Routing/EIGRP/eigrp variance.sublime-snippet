@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+83.What is EIGRP variance values?
+EIGRP can do unequal cost load balance over unequal cost paths through Variance Command. Variance is a number (1 to 128), multiplied by the local best metric then includes the routes with the lesser or equal metric. 
+The default Variance value is 1, which means equal-cost load balancing.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp variance</tabTrigger>
+</snippet>

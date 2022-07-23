@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+85. How do I fix EIGRP stuck in active?
+EIGRP maintains a timer called “active timer” which has a default value of 3 minutes (180 
+seconds). EIGRP waits half of the active timer value (90 seconds) for a reply. If the router 
+does not receive a response within 90 seconds, the originating router sends a stuck in active 
+(SIA) query to EIGRP neighbours that did not respond
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp stuck in active</tabTrigger>
+</snippet>

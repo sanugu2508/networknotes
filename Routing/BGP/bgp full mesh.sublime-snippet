@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+actually in iBGP, we need to have a full mesh between all ibgp routers, so that all routes can be learned. we can avoid full mesh if we setup route reflector, because route reflector can send routing information from one ibgp to other ibgp without full mesh.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bgp full mesh</tabTrigger>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+▪ Hello Timer- Router will send a hello to its neighbours every 5 seconds (hello time)
+▪ Hold Timer- If Router does not receive hello for 15 seconds (hold timer) then it will assume that link down and it will drop neighborship. 
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp hello</tabTrigger>
+</snippet>

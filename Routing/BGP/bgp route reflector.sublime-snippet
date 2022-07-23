@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+In BGP, route learned from an iBGP neighbour will not be advertised to another iBGP 
+neighbour. To overcome this situation route reflector is used. It is acts as a route reflector 
+server and makes iBGP neighbours as route reflector client enabling route advertisements 
+between them.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bgp route reflector</tabTrigger>
+</snippet>

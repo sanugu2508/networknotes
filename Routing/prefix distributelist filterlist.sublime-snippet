@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+access-list basically is used to match traffic based on source ip, destination ip and port number. and we can take a decision either to permit or deny.
+
+when we combine acl with route-map we can use it in routing protocols like, BGP, policy based routing, eigrp, ospf etc.
+
+in distribute list actully we can do route filtering, in routing protocol updates, based on ip address and mask. This can be applied for inbound or outbound updates.
+
+filterlist do not filter based on ip address, but it actually filters values like AS_PATH, local origin etc.
+
+https://www.networkgalaxy.org/2013/07/filtering-routes-in-bgp-using-route.html
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>prefix distribute filter access</tabTrigger>
+</snippet>

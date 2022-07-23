@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+80.What is the EIGRP packet types?
+
+Hello
+Request 
+Update
+Query 
+Reply 
+
+Hello— Used for discovery of EIGRP neighbours and for detecting when a neighbour is no 
+longer available 
+Request— Used to get specific information from one or more neighbours
+Update— Used to transmit routing and reachability information with other EIGRP neighbours
+Query—Sent out to search for another path during convergence
+Reply—Sent in response to a query packet
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp packets</tabTrigger>
+</snippet>

@@ -1,0 +1,65 @@
+<snippet>
+	<content><![CDATA[
+
+cost = reference bandwidth / interface bandwidth
+
+reference bandwidth is in Mbps which we can always set. by default this is 100 Mbps.
+
+
+verification:
+
+
+R1
+----
+hostname R1
+!
+interface FastEthernet0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+!
+
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+
+!
+end
+
+R2
+--
+
+hostname R1
+!
+interface FastEthernet0/0
+ip address 192.168.1.2 255.255.255.0
+no shutdown
+!
+
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+
+!
+end
+
+
+R1#show ip ospf | include Reference
+Reference bandwidth unit is 100 mbps
+
+
+R1#show ip ospf interface FastEthernet 0/0 | include Cost
+Process ID 1, Router ID 192.168.1.1, Network Type BROADCAST, Cost: 1
+
+
+manually change the reference bandwidth
+
+R1(config)#router ospf 1
+R1(config‐router)#auto‐cost reference‐bandwidth 1000
+
+R1#show ip ospf | include Reference
+Reference bandwidth unit is 1000 mbps
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ospf cost bandwidth</tabTrigger>
+</snippet>

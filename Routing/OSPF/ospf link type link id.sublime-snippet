@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+
+
+There are 4 types of links.
+
+Link Type    Description										Link ID.
+1    		 Point to Point connection to other routers         Neighbor router ID.
+2            Connection to transit network    					IP Address of DR
+3 			 Connection to stub network     					IP network
+4    		 Virtual Link    									Neighbor router ID.
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ospf link types link id</tabTrigger>
+</snippet>

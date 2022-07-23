@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+
+ This is the prefered path list that OSPF uses:
+
+    Intra-Area (O)
+    Inter-Area (O IA)
+    External Type 1 (E1)
+    NSSA Type 1 (N1)
+    External Type 2 (E2)
+    NSSA Type 2 (N2)
+
+After the path selection it will look at the lowest cost path.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ospf route selection</tabTrigger>
+</snippet>

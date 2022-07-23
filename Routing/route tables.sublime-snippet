@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+OSPF tables:
+▪ Neighbour table – stores information about OSPF neighbours
+▪ Topology table – stores the topology structure of a network
+▪ Routing table – stores the best routes
+
+EIGRP tables:
+▪ Neighbour table – stores information about EIGRP neighbours
+▪ Topology table – stores the best routes and alternate routes to destination
+▪ Routing table – all best routes means successor are copied into routing table
+
+BGP tables:
+
+Adj-RIBs-In – routes received from neighbor without applying any filtering
+Adj-RIBs-Out – these are routes from Loc-RIB after applying outbound routing/filtering policies.
+Local-RIB - this table contains best routes after applying the policies and rules on Adj-RIBs-In
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>routing tables</tabTrigger>
+</snippet>

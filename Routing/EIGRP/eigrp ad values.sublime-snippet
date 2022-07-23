@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+79.What is the Different Administrative Distance that EIGRP used?
+▪ Internal-90
+▪ Extranal-170
+▪ Summary -5
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp ad values</tabTrigger>
+</snippet>

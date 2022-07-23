@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+82.What is the EIGRP Passive interface?
+if we configure an interface as passive-interface command stops both outgoing and 
+incoming routing updates on that interface.
+
+83. How can i stop an interface to form EIGRP neighbours ?
+
+We can configure an interface as passive-interface, that way it wont form any neighbors on that interface.
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp passive</tabTrigger>
+</snippet>

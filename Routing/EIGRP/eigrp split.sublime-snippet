@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+88.What is split horizon in EIGRP?
+Split horizon is used by distance vector routing protocols to avoid routing loops. 
+it says a router will not advertise a route back onto the interface from which it was 
+learned. Split horizon is enabled on interfaces by default.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp split horizon</tabTrigger>
+</snippet>

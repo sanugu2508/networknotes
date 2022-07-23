@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+84. What is the EIGRP Convergence?
+actually EIGRP maintains a backup route to each destination wherever possible. In case the current path to the 
+destination network fails, it can immediately switch over to using the backup route, the 
+feasible successor leading to faster convergence.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp convergence</tabTrigger>
+</snippet>

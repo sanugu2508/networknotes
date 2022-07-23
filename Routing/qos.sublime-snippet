@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+
+* bandwidth command - atleast bandwidth, if that needed that much, and give it more if needs more, if more is available. It is not available for others.
+* priority command 768 - low latency command.  Give this traffic as much as 768kbps but no more. This can be used for someone else if not used.
+	wred will not work here.
+wred will work with bandwidth and police command.
+
+polic: during traffic peak, excess traffic is dropped. can be applied inbound and outbound direction, avoids delays due to quening. configured in bytes.
+
+shape: retains excess traffic in a queue, then schedules it for later transmission. when traffic reaches maximum, additional packets are queued, instead of being dropped, applied on outbound interfaces. It sets the maximum limit - its in bits per second.
+
+http://what-when-how.com/ccnp-ont-exam-certification-guide/congestion-avoidance/
+https://www.ccexpert.us/qos-implementing/configuring-dscpbased-cbwred.html
+https://www.digitaltut.com/?s=qos
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>QoS</tabTrigger>
+</snippet>

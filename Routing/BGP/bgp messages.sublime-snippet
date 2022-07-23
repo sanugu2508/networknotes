@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+▪  Open-It is Used to establish a neighbour relationship and exchange parameters, 
+including autonomous system number and authentication values.
+
+▪ Keepalive- it is like hello packet, if a keep alive is not received in 180 seconds, the peer is dead.
+
+▪ Update- useful for exchange routing updates.
+
+▪ Notification-  used to notify if a bgp peer has any issue.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bgp messages</tabTrigger>
+</snippet>
