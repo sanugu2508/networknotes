@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+
+Palo Alto interfaces are connected to Marvell or Petra chip. 
+
+Marvell will have direct connection with Tiger/Liger chip using Joyal links or lanes. Marvell chip is network processor and hardware accelaration. 
+
+Tiger/Liger chip is connected with Octeaon Chip which is Dataplane CPU. process the packet accordign to life of the packet.
+
+Octean chip is connected with Jaguar Chip which is signature match FPGA.  app id and content id is done here.
+
+Dune  chip is switch fabric
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo architecture</tabTrigger>
+</snippet>
