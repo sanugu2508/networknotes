@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+sender and receiver are phones.
+when we dial, first they do sip signalling, this is called call registration, it is called control connection.
+after that RTP stream starts,  this is called data stream
+
+palo alto creates first parent session then for data stream, it uses predict session.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sip</tabTrigger>
+</snippet>

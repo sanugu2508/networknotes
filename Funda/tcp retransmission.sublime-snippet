@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+
+tcp can retransmit the packet when RTO is reached. RTO (retranmission timeout)
+RTO is generally 3 times the RTT. each operating system has their own RTO, for example linux has default 200ms as minimum rto and 120 seconds as max rto.
+
+RTO also depends on the links.
+
+retransmission can also trigger after receiving 3 duplicate acks, without waiting for a time-out this is known as fast retransmission.
+
+https://datatracker.ietf.org/doc/html/rfc6298
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tcp retranmission</tabTrigger>
+</snippet>

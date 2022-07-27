@@ -1,0 +1,41 @@
+<snippet>
+	<content><![CDATA[
+
+Out-of-window (late) collisions
+--------------------------------
+Out-of -window collisions occur when a station receives a collision signal while still transmitting but more than 51.2 microseconds (the maximum Ethernet propagation delay) after transmission began.
+
+Cause: There are two conditions that cause this type of error to occur. Either the network segment’s physical length exceeds IEEE 802.3 specifications (100 meters) or a node on the net is transmitting without first listening for carrier sense (and beginning its illegal transmission more than 51.2 microseconds after the first station began transmitting).
+
+Giants
+-------
+Giants are packets that are longer than the maximum Ethernet size of 1,518 bytes (excluding preamble).
+
+Cause: Giant packets usually occur when you have a jabbering node on your network, indicating a bad network card. That is a node that is continuously transmitting or transmitting improperly for short bursts, probably due to a bad transmitter on the NIC. Giants can also be caused by packets that are corrupted as they are transmitted, either by the addition of garbage signals or by the corruption of the bits that indicate frame size.
+
+Misalignment
+------------
+Misaligned packets are those that contain any unit of bits that’s less than a byte.
+
+Cause: Misaligned packets can result from a MAC layer packet formation problem or from some transmission medium (cabling) problem that is corrupting or losing data. They can also result from packets passing through more that two cascaded multiport transceivers (a network design that does not meet the Ethernet spec). Alignment packet errors typically also have CRC errors.
+
+CRC
+---
+Cyclic redundancy check (CRC) errors occur when the packets are somehow damaged in transit. When each packet is transmitted, the MAC layer of the transmitting device computes a frame check sequence (FCS) value based on the contents of the packet. The receiving station performs the same calculation. If the FCS values differ, the packet is assumed to have been corrupted and is counted as a CRC error.
+
+Cause: CRC errors can result from a MAC layer hardware problem’s causing an inaccurate computation of the FCS value or from another transmission problem that has garbled the original data.
+
+Runts
+-----
+A runt packet is one that is smaller that the minimum Ethernet frame size of 64 bytes (excluding preamble). This minimum size is tied to the maximum propagation time of an Ethernet network segment (51.2 microseconds), and it takes approximately 51.2 microseconds to transmit 64 bytes of data. Therefore, every node on the segment should be aware that another node is transmitting before the transmission is complete, providing for more 
+
+accurate collision detection.
+-----------------------------
+Cause: Runts can sometimes result from collisions, so they may be the natural byproduct of a busy Ethernet segment. However, they can also indicate a problem with hardware (packet formation), transmission (corrupted data), or network design (more than four cascaded repeaters).
+
+https://datatracker.ietf.org/doc/html/rfc6298
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tcp problems</tabTrigger>
+</snippet>

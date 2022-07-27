@@ -1,0 +1,59 @@
+<snippet>
+	<content><![CDATA[
+
+tcp packet header is heavier than udp.
+it mainly has
+source port - 16bit
+destination port - 16bit.
+sequence number - 32bit
+ack number -32bit
+flags
+windowing
+tcp options
+checksum
+reserved field
+data offset (header length)
+urgent pointer
+padding
+data
+
+
+ Sequence Number is the first  byte of data in the current message. 
+
+ Ack Number is how many bytes the receiver succesfully received.
+
+ Data Offset (Header Length) field (variable length) tells how many 32-bit words are contained in the TCP header. this usually 5 meaning 20bytes.
+
+ Reserved field (6 bits) must be zero. This is for future use.
+ 
+ Flags field (6 bits) contains the various flags:
+    URG—this packet should be prioritized from other packets.
+    
+    ACK—Indicates that acknowledgement number is valid.
+    
+    PSH— tells that the data should be sent to application directly instead of keeping it in interface buffers
+
+    RST—Resets the connection.
+    
+    SYN—Synchronizes sequence numbers to initiate a connection.
+    
+    FIN—Means that the sender of the flag has finished sending data.
+ 
+ Window field is the size of the sender’s receive window (that is, buffer space available for incoming data).
+
+ Checksum field tells us if the whole tcp header is damaged or not. 
+
+ Urgent pointer field  points to the first urgent data byte in the packet.
+
+ Options field is for options.
+
+ Data field contains the data that needs to be send.
+
+in those options, data offest or header length, options and data fields length is variable.
+
+https://www.techrepublic.com/article/exploring-the-anatomy-of-a-data-packet/
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tcp packet detail</tabTrigger>
+</snippet>

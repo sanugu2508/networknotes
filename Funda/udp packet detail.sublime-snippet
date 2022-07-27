@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+udp packet contains four fields.
+source port - 16bit
+destination port - 16bit
+checksum - 16bit
+length.- 16bit
+
+https://www.techrepublic.com/article/exploring-the-anatomy-of-a-data-packet/
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>udp packet detail</tabTrigger>
+</snippet>

@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+
+two modes of ftp
+
+active and passive.
+
+active
+
+client sends the connection on tcp 21, this is called control channel.
+client will send port command to server. (port 4001)
+then server will then start a new connection with source port tcp 20 and destination port tcp 4001
+this is called data channel.
+
+passive
+
+client sends the connection on tcp 21, this is called control channel.
+client will send passv command to server. (port 4001)
+server will start listening on 4001 port
+client will setup a new data channel with source random and destination 4001 port.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ftp</tabTrigger>
+</snippet>

@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+
+ip packet mainly has
+
+source address
+destination address
+version field - ipv4 or ipv6
+ttl
+flags - dfbit, etc.
+protocol - like tcp, udp protocol number
+type of service - like dscp for qos.
+header checksum 
+identification - sequence of number for each packet.
+ip header legth
+total length
+data
+options  - 
+
+https://www.techrepublic.com/article/exploring-the-anatomy-of-a-data-packet/
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ip packet detail</tabTrigger>
+</snippet>

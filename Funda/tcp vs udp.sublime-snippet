@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+
+tcp:
+====
+* tcp is transmission control protocol. it is generally used for communications that needs to be reliable, error free.
+* tcp  opens, maintains and closes the connections reliably.
+* it sends data using sequence numbers.
+* it can also do retransmission incase data is lost in transit.
+* it uses flags for error checking and retransmission.
+* it is slower than udp.		
+* tcp used in communications that send the data reliably and error free.
+
+udp:
+====
+* coming to udp, it is user datagram protocol.
+* it does not maintain connections, thats why it can not guarantee reliability of data.
+* very basic error checking is available in udp using checksum numbers.
+* it is faster than tcp.
+* it is used in applications that are timesensitive and need to be in synch.
+* for example, voice, video, gaming, dns, streaming applications etc.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tcp vs udp</tabTrigger>
+</snippet>

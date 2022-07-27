@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+
+23 - Telnet
+22 - secure shell
+53 - dns
+80 - http
+443 - https
+21 - ftp control
+20 - ftp data
+67/68 - dhcp
+123 - ntp udp
+25 - smtp
+3389 - rdp
+161/162 - snmp
+69 - tftp udp
+137/138/139 - netbios
+143 - imap
+179 - bgp
+636 - ldaps
+389 - (LDAP)	TCP/UDP
+		
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ports</tabTrigger>
+</snippet>
