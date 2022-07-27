@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+lets say a client setup 3 way handshake and start downloading  a file from server, so a session key is generated, slow path is complete and session is in active state. lets say firewall found that file as a threat and there is a rule to drop that packet, the session will be immediately moved to discard state.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo session state transition</tabTrigger>
+</snippet>

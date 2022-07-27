@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+
+two types of sessions
+
+Flow session
+------------
+
+in palo alto firewall if the flow information is same between client 2 server and server 2 client, it will be treated as flow session.
+
+
+Predictive sessions
+-------------------
+
+For certain applications such as ftp active/passive, voice protocols, bit torrents, skype traffic the c2s information is not same as s2c
+
+for such traffic first PA reads the control channel, based on that it predicts the return session and creates a predict session.
+If a single packet matches the predict session, the predict session will be moved to flow session. 
+
+for example ftp active mode. 
+
+palo alto creates a parent session for control channel .
+based on the control channel port command, PA predicts return session for data channel and if traffic is hit, then it associates this predict session to flow session.
+
+so the rule of thumb is first flow lookup happens always in predict table only then lookup happens in flow table.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo session types</tabTrigger>
+</snippet>

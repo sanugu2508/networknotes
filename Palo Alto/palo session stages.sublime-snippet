@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+
+0 Init - session is in free pool,about to retrun to free pool. session will go to session setup state.
+
+1 Open - session is borrowed from free pool, allocated the session, but we have not installed it in flow table and ager process. matching traffic will go to active state.
+
+2 active	- policy is allowed, session setup is complete, zone protection is there, routing, nat, authentication policy, dos, security policies, session id is installed in flow table and agre process. timer is activated. traffic matching this stage is in fast path.
+
+3 discard - if policy is not allowed, discard timer will be associated. it is still part of flow table and ager process. firewall drops this traffic.
+
+4 closing - client or server sent RST or FIN session. session is expired but session is in flow lookup table and part of ager process.  matching traffic will go to session setup state
+
+5 closed - session is expired, removed from ager process, but still in flow lookup table. matching traffic will go to session setup state
+
+6 free - session is removed from ager proces, and flow lookup table, return to the free pool.
+
+Init, active, discard are called stable states, "show session id 200"
+remain states are transient states. they only exist fraction of seconds.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo session life cycle</tabTrigger>
+</snippet>

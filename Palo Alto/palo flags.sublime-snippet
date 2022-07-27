@@ -1,0 +1,34 @@
+<snippet>
+	<content><![CDATA[
+
+
+    NS ==>There has been Source NAT applied on the session.  
+
+    ND ==> There has been Destination NAT applied on the session.  
+
+    NB ==> There has been Both Source and Destination NAT applied on the session.  
+
+    No flag ==> There is no NAT applied on the session. 
+
+admin@PA-3020> show session all filter source 192.168.116.140 destination 52.114.132.22
+
+ 
+
+--------------------------------------------------------------------------------
+
+ID          Application    State   Type Flag  Src[Sport]/Zone/Proto (translated IP[Port])
+
+Vsys                                          Dst[Dport]/Zone (translated IP[Port])
+
+--------------------------------------------------------------------------------
+
+83277        ssl            ACTIVE  FLOW  NS   192.168.116.140[63823]/LAN/6  (213.9.159.129[61479])
+
+vsys1                                          52.114.132.22[443]/INTERNET  (52.114.132.22[443])
+
+admin@PA-3020>
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo flags</tabTrigger>
+</snippet>

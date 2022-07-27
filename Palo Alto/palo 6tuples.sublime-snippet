@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+
+c2s and s2c
+1) Source and Destination IP address.
+2) Source and destination port for tcp/udp
+3) non-tcp/udp,
+	icmp - icmp id and sequence number
+	ipsec - spi
+	gre - caller id
+4) Protocol: Ip protocol number
+5) Ingress zone
+6) c2s or s2c
+
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo 6tuples</tabTrigger>
+</snippet>

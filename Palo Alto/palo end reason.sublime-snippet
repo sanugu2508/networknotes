@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+
+
+ end-reason ==> The reason because the session has been closed, could be aged-out, policy-deny, tcp messages (fin, rst), threat, etc. 
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo end reason</tabTrigger>
+</snippet>

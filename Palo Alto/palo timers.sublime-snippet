@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+tcp 3600 sec
+udp 30 sec
+icmp 6 sec
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo timers</tabTrigger>
+</snippet>
