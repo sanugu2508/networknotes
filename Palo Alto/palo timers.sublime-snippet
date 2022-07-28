@@ -4,6 +4,9 @@
 tcp 3600 sec
 udp 30 sec
 icmp 6 sec
+syn - 5sec
+before 3 way - 10sec
+tcp half-closed after 6.1 - 120sec
 
 
 ]]></content>
