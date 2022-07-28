@@ -23,7 +23,16 @@ What is zone transfer?
 
 Lets say if we have a single dns server and it is down, then there is a big issue. To avoid it we usually add two or more dns servers in a cluster and they exchange information through zone transfer AXFR record 
 
+The standard order in which Windows resolves names to IP addresses is as follows:
+1. Host name (the host itself)
+2. DNS resolver cache (the Windows service “DNS Client”)
+3. Local hosts file (located in c:\windows\system32\drivers\etc\hosts)
+4. DNS server
+5. NetBIOS cache (can be checked with nbtstat –r)
+6. WINS server
+7. Broadcasting (yell in the network if someone responds ...)
 
+https://assets.cdn.sap.com/sapcom/docs/2015/08/ee7fbc89-5b7c-0010-82c7-eda71af511fa.pdf
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
