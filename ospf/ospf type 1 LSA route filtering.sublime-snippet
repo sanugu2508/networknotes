@@ -1,3 +1,8 @@
+
+
+<snippet>
+	<content><![CDATA[
+
 R3(config)#ip access‐list standard R1_L0
 R3(config‐std‐nacl)#deny host 1.1.1.1
 R3(config‐std‐nacl)#permit any
@@ -7,3 +12,9 @@ R3(config)#router ospf 1
 R3(config‐router)#distribute‐list R1_L0 in
 
 distribute list prevents an LSA to install into routing table. But still sends to other routers.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ospf typ1 route filtering</tabTrigger>
+</snippet>
