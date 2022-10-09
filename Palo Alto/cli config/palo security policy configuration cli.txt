@@ -1,0 +1,33 @@
+admin@FPA-VM(active)> configure
+
+Entering configuration mode
+
+
+
+[edit]
+
+admin@FPA-VM(active)# set rulebase security rules ALLOW-PING-952559-TO-952557 to FW-DMZ from FW-INSIDE source 192.168.1.244 destination 192.168.2.242 application ping service application-default action allow
+
+
+
+[edit]
+
+admin@FPA-VM(active)# set rulebase security rules ALLOW-PING-952557-TO-952559 to FW-INSIDE from FW-DMZ source 192.168.2.242 destination 192.168.1.244 application ping service application-default action allow
+
+
+
+[edit]
+
+admin@FPA-VM(active)# set rulebase security rules ALLOW-HTTP-952559-TO-952557 to FW-DMZ from FW-INSIDE source 192.168.1.244 destination 192.168.2.242 application web-browsing service application-default action allow
+
+
+
+[edit]
+
+admin@FPA-VM(active)# set rulebase security rules ALLOW-HTTPS-952557-TO-952559 to FW-INSIDE from FW-DMZ source 192.168.2.242 destination 192.168.1.244 application ssl service service-https action allow
+
+
+
+[edit]
+
+admin@FPA-VM(active)# commit

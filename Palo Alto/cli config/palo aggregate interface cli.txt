@@ -1,0 +1,27 @@
+!! THIS IS EXAMPLE CONFIGURATION !!
+set network interface aggregate-ethernet ae8 layer3 lacp mode active
+set network interface aggregate-ethernet ae8 layer3 lacp transmission-rate slow
+set network interface aggregate-ethernet ae8 layer3 lacp enable yes
+set network interface aggregate-ethernet ae8 layer3 lacp fast-failover yes
+set network interface aggregate-ethernet ae8 layer3 lldp enable no
+set network interface aggregate-ethernet ae8 comment TEST-LACP-BUNDLE
+set network interface aggregate-ethernet ae8 layer3 lacp high-availability use-same-system-mac enable no
+
+set network interface ethernet ethernet1/8 aggregate-group ae8
+set network interface ethernet ethernet1/8 comment "CONNECTION TO T8-J15.SAT6"
+set network interface ethernet ethernet1/8 lacp port-priority 32768
+
+set network interface ethernet ethernet1/9 aggregate-group ae8
+set network interface ethernet ethernet1/9 comment "CONNECTION TO T8-J15.SAT6"
+set network interface ethernet ethernet1/9 lacp port-priority 32768
+
+set network interface aggregate-ethernet ae8 layer3 units ae8 ip 192.168.2.1/24
+set network interface aggregate-ethernet ae8 layer3 units ae8 mtu 1500
+set network interface aggregate-ethernet ae8 layer3 units ae8 interface-management-profile ALLOWED-PROTOCOLS
+
+set network virtual-router default interface ae8
+set import network interface ae8
+
+set zone TEST-ZONE network layer3 ae8
+
+commit partial admin <YOUR  USERNAME>

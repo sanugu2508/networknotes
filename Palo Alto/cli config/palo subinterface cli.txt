@@ -1,0 +1,14 @@
+!! THIS IS EXAMPLE CONFIGURATION !!
+
+set network interface ethernet ethernet1/3 comment "Tagged - FW-DMZ and FW-TEST"
+set network interface ethernet ethernet1/3 layer3 units ethernet1/3.3235 tag 3235
+set network interface ethernet ethernet1/3 layer3 units ethernet1/3.3235 comment FW-DMZ
+set network interface ethernet ethernet1/3 layer3 units ethernet1/3.3235 ip 192.168.2.1/24
+set network interface ethernet ethernet1/3 layer3 units ethernet1/3.3235 interface-management-profile ALLOWED-PROTOCOLS
+
+set network virtual-router default interface ethernet1/3.3235
+set import network interface ethernet1/3.3235
+
+set zone TEST-ZONE network layer3 ethernet1/3.3235
+
+commit partial admin <YOUR USERNAME>

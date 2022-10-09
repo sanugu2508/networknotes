@@ -1,0 +1,12 @@
+!! THIS IS EXAMPLE CONFIGURATION !!
+
+set network interface ethernet ethernet1/1 comment OUTSIDE
+set network interface ethernet ethernet1/1 layer3 ip 184.106.123.20/25
+set network interface ethernet ethernet1/1 layer3 interface-management-profile ALLOWED-PROTOCOLS
+
+set network virtual-router default interface ethernet1/1
+set import network interface ethernet1/1
+
+set zone TEST-ZONE network layer3 ethernet1/1
+
+commit partial admin <Your User>
