@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 
-Using V-Wire deployment we can insert firewall in to  existing network without changing IP addresses.
+We also call it as bump in the wire. Using V-Wire deployment we can insert firewall in to  existing network without changing IP addresses. Using virtual wire, we can allow two interfaces on palo alto to logically bind together. All the traffic that passes through the interfaces will be inspected. 
 
 It is like transparent mode in cisco firewall
 
