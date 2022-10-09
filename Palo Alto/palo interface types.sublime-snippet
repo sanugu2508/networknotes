@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+
+
+Palo Alto has different type of interfaces
+
+Most popular ones are Layer3, Tunnel Interface, Aggregate Ethernet, HA. 
+
+Layer 3: By using Layer3 interface, we can assign ip addresses and configure zones. then we can filter the traffic between zones.
+
+Aggregte Ethernet : Its like LACP in switching, we can bundle multiple physical interfaces into one logical interface.
+
+HA: in HA most of the hardware models have dedicated physical HA interfaces, but incase of VM, we need to configure HA interfaces.
+
+Virtual Wire : it is also called bump in the wire. Lets say a router is connect to switch and there is no firewall. But now we decided to bring a firewall in between. here we can connect the palo alto directly between the router and switch without making any changes in the network.
+
+Layer2: In Layer2 mode, PA firewall acts like a layer2 switch. Generally switches only forward the packets based on the mac address. but here, palo alto will check all security features like application, antivirus, antispyware, DOS and then foreward the packets.
+
+Tap interface:  lets say there is a server and we think it is infected with some malware and we want to inspect all the traffic coming in and out of that server. we can configure the RSPAN on the interface connect to the server and send the traffic to Palo Alto Tap interface for monitoring. Palo Alto will give all the information of the traffic coming in and out the server using TAP interface.
+
+Tunnel Interface: We use tunnel interface for VPN connections.
+
+Loopback: we can use loopback interface for BGP connections.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo interface types</tabTrigger>
+</snippet>

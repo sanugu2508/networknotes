@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+
+
+Palo also in addition to filter the traffic based on 6 tuples, it can also evaluate the traffic based on profiles.
+
+HIP Profiles : This profile can be used check work station related information such as anti virus version, OS version, etc. based on the information palo alto can allow the access or block it.
+
+Application: Palo alto firewall can read the packet headers and identify application by using signature matching. Based on application identified, PA can take action.
+
+URL category: Palo alto can inspect the traffic based on URL category for web traffic. These URL categories are actually downloaded during dynamic updates.
+
+Antivirus: Palo alto can read the payload and do a signature matching to see if a user is downloaded any type of virus. based on this, PA can take action.
+
+Anti-Spyware: Palo alto can read the payload and do a signature matching for spyware which generally gives command control to a remote server. PA can take action on this.
+
+Vulnerability Protection: PA can read the payload of a packet and identify if any one is exploiting vulnerabilities and take action on this.
+
+File Blocking: PA firewall can read the file contents and see if the file contains any sensitive information about the company and block it.
+
+DoS protection: PA firewall can block Deniel of Service attack.
+
+URL category, Antivirus, Anti-Spyware, Vulnerability Protection features requires license. Other are free.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo profiles</tabTrigger>
+</snippet>
