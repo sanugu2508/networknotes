@@ -8,6 +8,23 @@ it has globalprotect portal where we setup configuration for users also manage t
 
 it also has globalprotect gateway, where we setup security policies, ip pool, authentication, url filtering, etc.
 
+
+verification commands
+---------------------
+
+show log system direction equal backward subtype equal globalprotect
+show global-protect-gateway flow
+show global-protect-gateway flow tunnel-id
+show global-protect-gateway current-user
+show global-protect-gateway gateway name
+show user ip-user-mapping
+show user ip-user-mapping type GP
+show user ip-user-mapping ip
+debug device-server dump hip-profile-database
+debug device-server dump hip-report computer user ip
+tail follow yes mp0log devsrv-log
+tail follow yes mp-log authd.log
+
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>palo globalprotect</tabTrigger>
