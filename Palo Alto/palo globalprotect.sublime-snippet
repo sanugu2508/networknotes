@@ -2,8 +2,11 @@
 	<content><![CDATA[
 
 Global protect is remote access vpn in palo alto firewall. its like anyconnect in cisco firewall.
-it has global protect client that we can install in laptop or phones.
+it has global protect client or app that we can install in laptop or phones.
 
+it has globalprotect portal where we setup configuration for users also manage the certificates.
+
+it also has globalprotect gateway, where we setup security policies, split tunnel, ip pool, authentication, url filtering, etc.
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
