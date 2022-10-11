@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+
+there are three type of NATs.
+
+Static NAT - we use static nat for one to one private ip to public ip. we use when we want to publish some web servers into internet.
+and  using Dynamic NAT we can nat a pool of private ips with a pool of public ips.
+there is dynamic PAT also which we use to provide internet access for inside users. here lot of private ips will be natted with a single public ip.
+
+
+There is Policy NAT also there. in regular nat  only source ip address is natted. in policy nat we can specify which source and destination will be natted. 
+
+in auto nat there is only source 
+in manual nat we can nat both source and destination.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa nat types</tabTrigger>
+</snippet>

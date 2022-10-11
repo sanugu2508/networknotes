@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[
+Sure, There are four main phases in Cisco ASA packet flow.
+Ingress Process
+Connection setup state
+Fast Path processing
+EEgress Process
+Let me explain each step.
+
+Ingress Process
+
+In Ingress process, when a packet is received on ASA interface, it will be put into the interface buffer. to Increase the interface counters,next it check CRC, ip header errors, fragment reassembly and parsing  etc.
+If it is IPSec/SSL VPN traffic then Apply decryption and hashing.
+Afterwords Perform lookup in connection table,to  check either it is a new connection or old connection. If new connection, then forward to connection setup stage, if existing connection then put to fast path processing.
+
+Conn Setup
+First step is to check routing. First preference is PBF (Policy Based Forwarding)  table and then routing table to identify egress interface
+Second step is to translate the destination IP. So it will lookup in xlate table for destination. If NAT rule found, then translate  the destination and finally find the egress interface again.
+If source matches with NAT table, then no translation happens here.
+Third step is to do ACL check - Check if traffic is matching any ACL. If traffic is allowed then enter the information in connection table.
+
+Fast Path
+Deep packet inspection ( MPF (Modular Policy Framework, CSM etc)
+Then Apply the Source NAT
+IPS module/AMP module.
+
+Egress Process
+L3 processing ( VPN encryption, Hashing etc)
+L2 Processing (MAC lookup, L2 header creation)
+Send the packet to exit interface
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa packetflow</tabTrigger>
+</snippet>

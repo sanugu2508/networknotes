@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+dmz stands for demilitarized zone. we configure dmz between inside to outside zones in the asa firewall. in DMZ we usually deploy the public servers such as company website, mail server etc. we need to configure acls and NAT for dmz to work.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa dmz</tabTrigger>
+</snippet>

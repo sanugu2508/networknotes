@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+Cisco asa firewall works based on security levels. there are two default security levels. level 100 is inside and level 0 is outside.
+in between there are 1-99 levels which we can use for different zones.
+
+By default traffic from high security level to low security level is allowed. we  can change this by writing the acl and access-group.
+by default traffic from low security level to high security level is dropped. we can change this with acl and access-group.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa security levels</tabTrigger>
+</snippet>

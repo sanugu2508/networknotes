@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+When cisco firewall recieves the traffic and if the traffic is allowed, it will enter the connection information in connection table. It will aslo tag some flags with that.
+
+UIO meaning the 3 way handshake is complete.
+SaAB meaning the SYN is sent, but no response from server.
+U meaning 3 way  is just completing.
+aB meaning SYN+ACK is coming from outside.
+
+some times we also see f meaning finish.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa flags</tabTrigger>
+</snippet>

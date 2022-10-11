@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+router reads mac address and ip address and based on destination ip, it can do routing.
+
+but firewall can read layer2, layer3, layer4 and layer7 information. Based on that information it will filter the traffic. Then it will do the routing.
+
+router do not maintain state table 
+
+firewall will maintain state table 
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>firewall vs router</tabTrigger>
+</snippet>

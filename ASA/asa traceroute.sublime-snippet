@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+
+By Default asa firewall do not respond to icmp packets that are hitting its interface ip. so if you do a traceroute from inside pc to internet, if there is firewall between, it will respond with its ip.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa traceroute</tabTrigger>
+</snippet>

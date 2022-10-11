@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+
+To upgrade the cisco ASA firewall, we need to first take the configuration backup of firewall running configuration.
+
+then check what is the hardware model and current software version.
+
+For example if we are running 9.x version and directly want to upgrade 10.x version, sometimes we  can not do that directly.
+
+we may need to do that in steps. like first we go to 9.10 and then 10.1 something like that.
+
+then we can Download the software from cisco software portal.
+
+then we need to copy the software into cisco ASA firewall using tftp or winscp. we also need to check, if there is space in flash or not.
+
+then we need to verify the md5 checksum to see if the OS is corrupt or not.    
+
+then we need to set the image to boot. using boot system command.
+
+finally we need to  Reboot ASA firewall.
+
+If we are running the ASA firewall in High Availability then we need to reload the standby unit first.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa flags</tabTrigger>
+</snippet>

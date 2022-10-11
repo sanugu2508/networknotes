@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+we can deploy cisco asa firewall in two modes, routed mode and transparent mode. we mostly deploy the firewall in routed mode. in rotued mode we can assign ip addresses to interfaces and do the routing.
+
+
+In transparent mode, firewall works like a  layer 2 switch but can permit or block the traffic. we can use transparent mode if we dont want to disturb the existing environment.
+
+
+command from transparent to routed is  "no firewall transparent"
+command from routed to transparent is "firewall transparent"
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa modes</tabTrigger>
+</snippet>

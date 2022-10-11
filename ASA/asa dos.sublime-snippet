@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+DOS stands for denial of service. There is also DDOS which is nothing but distributed denial of service.
+
+we generally publish our servers like company website on the internet. sometimes attackers will try to bring them down by continously sending SYN packets. Server things all the requests are genuine and keep on responding to the requests.
+
+In the mean time if some genuine user comes, server will not respond. because it is already responding to attacker. and genuine user will not get access to server. this is called denial of service attack.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa DOS</tabTrigger>
+</snippet>

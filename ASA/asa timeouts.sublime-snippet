@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+tcp 60 minutes
+udp timeout is 2 minutes.
+icmp timeout is 2 seconds.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa timeouts</tabTrigger>
+</snippet>

@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+Same-security-traffic permit inter-interface
+
+
+
+Same-security-traffic permit intra-interface
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa same</tabTrigger>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+we can split the asa firewall into seperate firewalls using contexts. we can divide the number of interfaces, cpu, ram, memory etc.
+each firewall will act like a seperate firewall. we can write acls for each firewalls seperately.
+
+
+
+mode multiple
+
+mode single
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa multicontext</tabTrigger>
+</snippet>

@@ -2,7 +2,8 @@
 	<content><![CDATA[
 
 What is a Stateful Firewall?
-A stateful firewall maintains state table or session table. A state table contains source ip, destination ip, source port, destination port, interfaces, flags etc. State ful firewall monitors the inbound and outbound sessions. For stateful firewall, we need to write the ACL only near to source. Return traffic is by default allowed.
+A stateful firewall maintains state table or session table. A state table contains source ip, destination ip, source port, destination port, interfaces, flags which is nothing but sequence number and tcp flags etc. State ful firewall monitors the inbound and outbound sessions. For stateful firewall, we need to write the ACL only near to source. Return traffic is by default allowed.
+
 
 
 What is a Stateless Firewall?

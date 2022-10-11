@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+Sure, when the packet comes to firewall, it will check if there is an existing session or not.
+
+If there is already an existing connection, then it will bypass ACL check and send to fast path processing
+
+if it is a new connection, First step is to check routing. First preference is PBF (Policy Based Forwarding)  table and then routing table to identify egress interface
+
+Second step is to translate the destination IP. So it will lookup in xlate table for destination. If NAT rule found, then translate  the destination and finally find the egress interface again.
+
+Third step is to do ACL check - Check if traffic is matching any ACL. If traffic is allowed then enter the information in connection table.
+
+Then it will check the source NAT and translate the source ip if needed.
+
+It will also check if the traffic needs to go through VPN or not.
+
+Fast Path
+Deep packet inspection ( MPF (Modular Policy Framework, CSM etc)
+Then Apply the Source NAT
+IPS module/AMP module.
+
+Egress Process
+L3 processing ( VPN encryption, Hashing etc)
+L2 Processing (MAC lookup, L2 header creation)
+Send the packet to exit interface
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa packetflow</tabTrigger>
+</snippet>
