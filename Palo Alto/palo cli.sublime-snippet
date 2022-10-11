@@ -1,0 +1,48 @@
+<snippet>
+	<content><![CDATA[
+
+to see the software sw-version
+===============================
+
+ > show system info | match sw-version 
+
+ to see all the configuration in set format
+ ===========================================
+
+ > set cli config-output-format set
+
+to see all the interface ip and zone
+ =========================================== 
+
+ > show interface logical
+
+
+ to see all the routing
+ =====================
+
+ > show routing route
+
+to see matching routes
+ =====================
+> test routing fib-lookup ip 8.8.8.8 virtual-router default
+
+
+to check the policy
+====================
+
+> test security-policy-match source 172.16.2.9 destination 8.8.8.8 destination-port 22 protocol 6 from FW-DMZ to OUTSIDE show-all yes
+ 
+to check NAT policy
+====================
+
+> test nat-policy-match from FW-DMZ source 172.16.2.9 destination 8.8.8.8 destination-port 22 protocol 6
+ 
+to check all sessions
+======================
+
+> show session all
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo cli</tabTrigger>
+</snippet>
