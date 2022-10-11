@@ -5,6 +5,8 @@ We also call it as bump in the wire. Using V-Wire deployment we can insert firew
 
 It is like transparent mode in cisco firewall
 
+it supports app-id, content-id, user-id and NAT.
+
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>palo virtualwire</tabTrigger>

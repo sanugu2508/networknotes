@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+waf is web application firewall. general firwalls filter traffic based on network ip, port etc. but sometimes we want to protect our company websites. like if some one sending lot of requests to webserver, if we have waf firewall, we can challenge them with captcha, etc.
+
+So waf can protect from such DDOS, sql injection, session hijacking attacks. 
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>waf</tabTrigger>
+</snippet>

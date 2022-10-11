@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+first we need to go to device tab, then setup, then operations.
+then click on save named configuration option is there.
+then click on export named configuration. it will be downloaded to local pc.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo backup</tabTrigger>
+</snippet>

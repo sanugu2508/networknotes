@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+
+
+Uturn NAT is also called Hairpin NAT. 
+
+lets say there is a guest wifi user who is on the inside. and he want to access the webserver which is also in the inside. since guest user will not have access to our dns servers, he will need to access the inside web server using the public ip.
+
+so here the source is inside, public destination ip is on the outside. but when the traffic reaches firewall, we need to write u-turn nat. the traffic will be sent back to inside ip.
+
+to configure u-turn nat we  need to change both source and destination ip.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo uturn</tabTrigger>
+</snippet>

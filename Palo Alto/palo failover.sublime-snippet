@@ -7,6 +7,22 @@ Click on operational commands
 Click "Suspend local device" 
 Now secondary firewall will move to Active status.
 
+
+HA firewall states:
+
+Initial
+Passive
+Active
+active-primary
+active-secondary.
+
+Device ID 0 is primary, Device ID 1 is secondary.
+
+
+Condition for HA:
+
+Both firewall shoud have same model, same OS version, same interfaces and same licenses.
+
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>palo failover</tabTrigger>

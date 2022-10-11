@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+when we configure application override for some traffic, palo alto will not check for app-id and bypass the app-id check.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo applicationoverride</tabTrigger>
+</snippet>

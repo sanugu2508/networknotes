@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+wildfire is used to detect malware in palo alto firewall. lets say we are downloading a software from internet and it has some malware code hidden in it. when we download the software, palo alto firewall read the data and creates a hashing for the software. if the software hash is matched with any known hash in the local database, firewall will immediately will block it. sometimes, if the software is new and palo alto do not know the hash for the software, it will send the file to palo alto cloud for verification. in the cloud it is called sandboxing. in the cloud it will be verified and checked for any malwares. if the malware is there in it,  it will create a hash and update this to all the palo alto firewalls in the world using dynamic updates within few minutes. 
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo wildfire</tabTrigger>
+</snippet>

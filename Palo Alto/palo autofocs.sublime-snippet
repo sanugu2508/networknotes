@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+
+auto focus is actually a cloud tool in palo alto. we can login to autofocus portal and check for major attacks.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo autofocus</tabTrigger>
+</snippet>

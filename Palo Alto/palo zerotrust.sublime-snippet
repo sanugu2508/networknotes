@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+
+in cisco firewall traffic from high security level to lower security level is by default allowed. because cisco trusts inside networks. but palo alto firewall, it will not trust any zone and we must need a policy to allow the traffic. its called zero trust approach
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo zerotrust</tabTrigger>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+in Palo Alto firewall small models like PA 200  have small hardware. so to setup HA in those small models, we will use HA lite. In HA lite, it has basic high availability features like config syc, routing table sync. 
+
+i think it wont support session sync.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo halite</tabTrigger>
+</snippet>

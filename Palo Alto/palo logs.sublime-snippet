@@ -1,10 +1,15 @@
 <snippet>
 	<content><![CDATA[
 
+there are many logs if we go to monitor tab, but i remember 
+
 traffic logs 
-threat logs 
-url filtering logs 
 wildfire logs 
+url filtering logs 
+threat logs
+system logs
+config logs
+
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

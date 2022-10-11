@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+palo alto acc is application command center. here we can get summary of threats, applications,  urls and export them to pdf and share it with management.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo acc</tabTrigger>
+</snippet>

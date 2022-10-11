@@ -22,7 +22,7 @@ there is also HA1 & HA2: BACKUP LINKS
 if HA1 and HA2 ports have any issue and want to use as backup, then we can use data ports as HA ports.
 
 
-
+There is also HSCI port in higher palo alto models like PA 5250
 
 < ref https://cordero.me/palo-alto-h1-ha2-and-ha3>
 

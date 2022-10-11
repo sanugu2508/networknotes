@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+
+its actually DNS sercurity feature. lets say  a user is trying to resolve a malware website like malware.com and if the dns traffic goes through palo alto firewall, it will read the dns query and insead of malware.com ip it will put some dummy ip in the dns query and send it back to user computer. 
+
+user computer will try to access the invalid ip and it will not access malware.com website. this we can prevent user to access a malware website.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo sinkhole</tabTrigger>
+</snippet>

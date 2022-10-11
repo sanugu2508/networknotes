@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+
+vrouter or virtual router is nothing but like VRF concept in routing. we can split the palo alto routing table into multple seperate routing tables. So each table can not be shared with other tables. we do this for specific banking customers.
+
+vsys or virtual system is like multi context mode in cisco firewalls. we can split one physical firewall into multiple firewalls and we can divide the interfaces, memory, cpu, etc. they will behave like seperate firewalls.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo vrouter vsys</tabTrigger>
+</snippet>

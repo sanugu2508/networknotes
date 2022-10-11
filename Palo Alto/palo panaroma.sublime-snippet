@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+Panaroma is management  and reporting server for palo alto firewalls. lets say if customer has many palo alto firewalls, we can not individually manage the logs, configuration, policies. for example if we want to block china ip or russia ip in all firewalls, we need to do it manually. but using panaroma, we can push the policies to all firewalls.
+
+in panaroma, we can see reports from all firewalls in single place. 
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo panaroma</tabTrigger>
+</snippet>

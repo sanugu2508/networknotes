@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+I think there is block option, which will give block page to user.
+allow option is there , which will allow the acecss to website.
+continue option is also there, which will give warning but give "do you want to continue? " option
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo url-fitlering</tabTrigger>
+</snippet>

@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+palo alto uses sp3 architecture, which is single pass parellel processing. it has two components which is single passs software architecture and parallel processing hardware architecture.
+
+by using both architectures, palo alto can filter lot of traffic and achieve good throughput.
+
+in single pass once the packet comes to firewall, all the policy check, nat, app-id, content-id, user-id everything happens at a time. 
+in parallel processing we have dedicated hardware for control, management plane and dataplane. and each of them have seperate CPU, RAM. etc.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo sp3</tabTrigger>
+</snippet>

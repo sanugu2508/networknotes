@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+Palo alto is called next-generation firewall because it has advanced features like app-id, user-id, content-id. and also it has features like malware filtering, antivirus filtering, ddos protection, file blocking, etc.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo intro</tabTrigger>
+</snippet>
