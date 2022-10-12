@@ -3,8 +3,9 @@
 
 
 
-87. What is the EIGRP stub router?
-If we configure a router as a stub  router, it will reduce number of eigrp packets on that router.
+ EIGRP stub router
+ 
+Some times the link between two eigrp routers has less bandwidth. EIGRP routers generally exchange lot of packets. So if we leave like that, link will be full with eigrp packets only. So if we configure a router as a stub  router, it will reduce number of eigrp packets on that router.
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

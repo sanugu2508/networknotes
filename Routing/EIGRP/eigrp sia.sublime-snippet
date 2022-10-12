@@ -1,7 +1,9 @@
 <snippet>
 	<content><![CDATA[
 
-
+Stuck in active
+================
+lets say an eigrp router lost one route and ask for the route using query message. this message will reach to all its neighbors and goes to active state for that route. if for some reason, the neighbors do not respond to query message, eigrp will drop the nieghbor relation with the router. and remain in stuck in active state. this is a problem because if one route is missing, we can not drop all the routes from the neighbor.
 
 85. How do I fix EIGRP stuck in active?
 EIGRP maintains a timer called “active timer” which has a default value of 3 minutes (180 
