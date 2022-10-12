@@ -1,8 +1,11 @@
 <snippet>
 	<content><![CDATA[
 
-two modes of ftp
+ftp is file transfer protocol. it is used to transfer files between  a client and server.
+ftp uses tcp 20 which is for data and udp 21 for control packets.
 
+
+ftp has two modes of ftp
 active and passive.
 
 active

@@ -8,24 +8,26 @@ DHCP works on DORA Process (DISCOVER – OFFER – REQUEST -ACKNOWLEDGEMENT)
 
 source port udp 68, destination port  udp 67
 
-DHCP Discover is a broadcast to locate DHCP servers, destination mac is ffff.ffff.ffff
+DHCP Discover message  is actually a broadcast message with mac addrss  ffff.ffff.ffff. Its purpose is to locate DHCP servers in the network.
 
-DHCP offer  is also a broadcast since client has not got an ip yet. This tells the clients that dhcp server is available. The message contains client ip, subnetmask, default gateway, dns ip, lease time and dhcp server ip. this message is delivered to all clients on the network.
+If there is a DHCP server in the network, it will respond with DHCP offer to clients. it means there is a DHCP server available in the network. The offer message will have client ip, subnetmask, default gateway, dns ip, lease time and dhcp server ip. this message will reach to all clients on the network. This is also a broadcast message.
 
-DHCP request - client recognizes the server is available on same subnet and receives the message. client will send another broadcast dhcp request message to the server requesting the network information for itself. if more than one dhcp server responds on the same network, client will have multiple offers. client will select one of the server and enters the server id (option 54) in the broadcast. This way, all dhcp servers know about selected server and the offer.
-unselected servers will remove the offer from their memory.
+third message is DHCP request. once the client receives the offer message, client will select offer and send a request to give the information. if more than one dhcp server on the same network, client will have multiple offers. client will select one of the offers and enters the server id (option 54) in the broadcast. This way, all dhcp servers know about selected server and the offer.
+This is also a broadcast message.
 
-DHCP ACK- server validates the server id (option 54) with its own ip. if it matches, it again broadcasts a dhcp ack message with network data.
+once DHCP request is received, other servers will remove the offer.
+
+DHCP ACK server cheks the server id (option 54) and verify with its own ip. if it matches, it again broadcasts a dhcp ACK message with network data.
 
 Once receiving the ack, client will configure the network data to the interface.
 
 Option 1 - Subnet mask
 Option 2 - 
-Option 3 - router
+Option 3 - router / gateway
 Option 6 - DNS
 Option 51 - lease time
 Option 54 - server id.
-
+Option 57 - Controller IP.
 
 Release process.
 ===============

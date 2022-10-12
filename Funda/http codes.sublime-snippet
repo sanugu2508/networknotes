@@ -1,6 +1,16 @@
 <snippet>
 	<content><![CDATA[
 
+commonlsy seen
+===============
+200 - OK
+Code 301 - Permanent Redirect
+Code 302 - Temporary Redirect
+404 - Not Found
+Code 500 - Internal Server Error
+Code 503 - Service Unavailable
+
+
 important http codes
 ====================
 100 series codes – Informational responses
@@ -13,14 +23,6 @@ important http codes
 
 500 series codes – Server errors
 
-commonlsy seen
-===============
-200 - OK
-Code 301 - Permanent Redirect
-Code 302 - Temporary Redirect
-404 - Not Found
-Code 500 - Internal Server Error
-Code 503 - Service Unavailable
 
 
 

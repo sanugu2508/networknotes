@@ -4,13 +4,20 @@
 ARP types
 ============
 
-ARP : ARP stands for Address resolution protocol. It is one of the building block of IP networks. Its purpose is to get a mac address for an ip by sending a layer2 broadcast.
-Proxy ARP : in ARP, usually a target which has requested ip will respond to arp broadcast with its own mac. But incase of proxy arp, some other device will respond on behalf of target.
-We configure proxy arp in NAT devices, so they can respond on behalf of DMZ servers.
+ARP : ARP stands for Address resolution protocol. It is used to get a mac address for an ip address. It will send a layer2 broadcast which is ffff.ffff.ffff within the network.
 
-Gratious ARP: It is used to detect the ip conflicts in some systems. Whenever we assign a static ip address to a device, it can send an ARP broadcast with sender and receiver ip as same IP. If any active device is present in the network with same ip, it will create a conflict and will not accept the static ip.
+Proxy ARP :  usually a device responds with its mac address for arp request. But for proxy arp, other device will respond on behalf of target.
 
-RARP: RARP is reverse ARP server which actively maintains table with mac against an ip address. Whenever we send RARP request with mac, the RARP server will respond with ip address. This protocol is replaced by bootp and we use DHCP.
+for example, if We access any website with public ip, the firewall which is doing NAT will respond for arp request.we use it in one to one nat for DMZ servers and for also PAT.
+
+Gratious ARP is used to find the ip conflicts in the network. for example if we assign a static ip address to a laptop, it will send an arp request with same ip as source and destination in the body. if there is any other computer with same ip, it will respond. that way a computer can detect a duplicate ip.
+
+RARP or reverse arp was used to allocate ip address for clients. basically RARP server has a table with mac address to ip address mapping. Whenever we send RARP request with a mac address, the RARP server will respond with ip address. RARP is very old technology and  we are no longer using it. RARP was replaced by bootp and bootpc. and that is also replaced by DHCP.
+
+
+
+
+
 
 InverseARP is used to find ip address using DLCI in framerelay.
 

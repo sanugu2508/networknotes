@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 
-If DF bit is set, and packet size is larger than MTU, then router will not fragment and then discard it.
+DF stands for do not fragment. it is part of ip header. If DF bit is set in the ip header and packet size is bigger than MTU size, then router will not fragment the packet and it will drop it. also it will send icmp fragmentation needed message to the source.
 
 
 ]]></content>

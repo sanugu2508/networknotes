@@ -1,9 +1,10 @@
 <snippet>
 	<content><![CDATA[
 
-Using DNS Doctoring we can change the embedded response in DNS PTR or A or TXT records.
-Lets say if a user is accessing a company portal from internet, he will get a public destination ip and this is fine. Lets say now he want to connect from inside the company, then there is no point to send the traffic to internet since we have the same server in DMZ.
-Using DNS doctoring we can direct this traffic to DMZ.
+I remember it is used in ASA firewall. Using DNS Doctoring we can change the DNS PTR or A or TXT records.
+Lets say there is a company website in DMZ zone. and if a user is accessing a company server from the LAN, he will get a public destination ip. And now he want to connect from inside the company, then there is no point to send the traffic to internet. Since we have the same server in DMZ we can directly access using dmz ip.
+
+Using DNS doctoring we can direct this traffic to DMZ server.
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

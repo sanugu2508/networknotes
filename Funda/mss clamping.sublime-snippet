@@ -3,7 +3,7 @@
 
 MSS clamping
 ==============
-when connected through VPN, TCP MSS clamping is used to reduce the maximum segment size (MSS) value in TCP session.  it is negotiated in 3 way handshake.
+lets say a user is connected to vpn and transfering some data to  a server in the data center. normally his default MTU is 1500 bytes. since it is vpn traffic, it will add additional ipsec headers. so to avoid fragmentation, we need to reduce the mss size in the client computer. so that client will send data lower than 1500 bytes and ipsec headers can be added to it. it is normally negotiated in 3way handshake.
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

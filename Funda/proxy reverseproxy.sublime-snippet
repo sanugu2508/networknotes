@@ -3,11 +3,13 @@
 
 Proxy:
 
-In corporate networks, we use proxy to provide internet access to users, to hide internal ips, to do url filtering, to block access for users, etc. It is basically used to protect clients from internet based virus, malware, etc. 
+In corporate networks, we use proxy to provide internet access to users. we generally use the proxy for url filtering, to block access for users, etc. It can also used to block clients from downloading virus, malware, etc. 
 
 Reverse Proxy:
 
-Reverse proxy is used when we want to access a server in dmz securely but without using static NAT for each server. from internet we will access the reverse proxy server and use URI headers to direct the traffic to backend servers. in simple words, it is used to protect servers from inbound access from internet.
+lets say we want to access lot of web servers in dmz. generally we need to use static public ip for each server. For that we need lot of public ips. sometimes we will not have lot of ips. what we can do is, we can setup reverse proxy server and nat it with a single public ip and we need to setup http forwarders using URI.
+
+from internet we will access the reverse proxy server. traffic will be re-directed to backend servers.
 
 
 

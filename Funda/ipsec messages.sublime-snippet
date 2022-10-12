@@ -11,8 +11,7 @@ Quick mode, is part of phase2, and it is used to encrypt the user traffic.
 
 Phase-1 – Main mode
 
-▪ MESSAGE 1- Initiator offers policy proposal which includes encryption, authentication, 
-hashing algorithms (like AES, or 3DES, PAK or PKI, MD5 or RSA).
+▪ MESSAGE 1- Initiator offers policy proposal which includes encryption (like AES, or 3DES), authentication like PSK, hashing algorithms   SHA and MD5.
 ▪ MESSAGE-2- Responder presents policy acceptance (or not).
 ▪ MESSAGE-3- Initiator sends the Diffie-Helman key.
 ▪ MESSAGE-4 Responder sends the Diffie-Helman key.
@@ -21,10 +20,10 @@ hashing algorithms (like AES, or 3DES, PAK or PKI, MD5 or RSA).
 Only first four messages were exchanged in clear text. After all message are encrypted.
 
 then Phase-2-Quick mode
-▪ MESSAGE-7 Initiator sends Hash, IPsec Proposal, ID, nonce.
-▪ MESSAGE-8 Responder sends Hash, IPsec Proposal, ID, nonce.
+▪ MESSAGE-7 Initiator send its  Hash, IPsec Proposal and ID.
+▪ MESSAGE-8 Responder will send its  Hash, IPsec Proposal and ID.
 ▪ MESSAGE-9 Initiator sends signature, hash, ID.
-All messages inQuick mode are encrypted
+All messages in Quick mode are encrypted
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

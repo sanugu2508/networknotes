@@ -5,10 +5,14 @@
 MTU
 ====
 
-MTU stands for maximum transmission Unit. It is the maximum size of the whole packet that a device can transmit or receive. It includes all the headers and payload.
-If MTU is bigger than expected, two things can happen.
-Packet will be fragmented if df bit is off in the packet
-packet will be dropped if df bit is on in the packet and an icmp fragmentation needed message will be sent.
+MTU stands for maximum transmission Unit. It is the maximum size of the whole packet. Basically it includes all the headers and payload.
+
+If MTU is bigger than 1500 bytes, there are two things can happen.
+
+either Packet will be fragmented if df bit is off,
+or packet will be dropped if df bit is on
+
+if the packet is dropped, an icmp fragmentation needed message will be sent to the source computer.
 
 
 ]]></content>

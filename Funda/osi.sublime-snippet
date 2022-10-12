@@ -2,22 +2,27 @@
 	<content><![CDATA[
 
 
+Basically OSI stands for Open System Interconnect. it is actually a framework for computers to communicate.
 
-▪OSI is a framework for computer networks.
-▪ It’s a consists of seven layers
-▪ Application layer, Presentation layer, Session layer, Transport layer, Network layer, 
-Data link layer, Physical layer
+OSI framework has 7 layers
 
+▪ Application layer, Presentation layer, Session layer, Transport layer, Network layer, Data link layer and Physical layer
 
 ===============
 
-Application layer : It’s responsible for providing an interface for the user to interact with application services or network services. Ex-Web browser (HTTP), Telnet
-Presentation layer: It’s responsible for defining a standard format to the data. like jpeg also Encryption-Decryption
-Session layer: It’s responsible for establishing, maintaining, and terminating the sessions.
-Transport Layer: It provides data delivery mechanism between applications in the network.
-Network Layer: It provides logical addressing path determination (routing)
-Data link layer: Mac (media access control) it provides reliable transit of data across a physical link. 
-Physical layer: It defines the electrical, mechanical functional specification for communication between the network devices. 
+Application layer : In application layer, we have applications like ssh, ftp, telnet, http etc, etc.
+
+Presentation layer: usually in presentation layer, encryption and compresion are decided here. lets say like if we are uploading photos to facebook, they will be compressed in this layer.
+
+Session layer: This layer computers establishes amd maintaining the sessions.
+
+Transport Layer: in this layer packet will be send either as tcp or udp. source and destination ports are used in this layer.
+
+Network Layer: In this layer, source and destination ip addresses are added. these ip addresses are used for routing.
+
+Data link layer: In this layer, source and destination mac addresses are added to the packet. Trunking is supported in this layer.
+
+Physical layer: rj45 cables, fiber connections are in this layer and they provide physical connectivity to the devices.
 
 
 ]]></content>

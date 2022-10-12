@@ -1,10 +1,9 @@
 <snippet>
 	<content><![CDATA[
 
-Fragmentation is a breaking a packet into smaller pieces (fragment). 
-Fragmentation is required when the datagram is larger than the MTU. 
-Each fragment then becomes a datagram and transmitted independently from source. These datagrams are 
-reassembled by the destination.
+Fragmentation is a breaking a packet into smaller pieces (fragment). a packet is fragmented, when the packet is larger than the MTU. 
+
+when we do the fragmentation, each small packet will have the same source and destiation ip address. These small packets are collected and reassembled by the destination.
 
 
 ]]></content>
