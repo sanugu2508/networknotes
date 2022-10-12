@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+
+lets say we have a layer 2 switch and a router. and there is no layer 3 switch. if you want to do intervlan routing, since we dont have layer 3 switch, we can use router for inter vlan routing.
+
+we will first connect the switch with router.
+
+configure switch side as trunk.
+
+on router side, we need to create sub interfaces and tag each sub interface with vlans.
+
+lets say if a  source from vlan 10, wants to communicate with destination in vlan 10, first it will go to switch. from there it will go to rotuter. from router, it will come back to switch and then go to destination.
+
+this design is called router on a stick.
+
+there are some issues with this. lets say if the link is highly unitilzed, it will impact other vlans. since there is only one link, if that goes down, all the connections will go down.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>router on a stick</tabTrigger>
+</snippet>

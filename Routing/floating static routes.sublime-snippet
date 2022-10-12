@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+
+normally Static routes have a very low administrative distance which is 1
+
+and dynamic routing protocols have higher AD values.
+
+if you want to use a static route as a backup to dynamic routing protocol, we can use floating static route. 
+
+Lets say you are learning a route via OSPF protocol. its AD value is 110. we can setup a backup static route with AD value 111.
+ 
+ 
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>floating static route</tabTrigger>
+</snippet>
