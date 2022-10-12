@@ -12,6 +12,9 @@ Feasible successor
 
 Feasible successor is the second-best path to reach a destination after successor. It acts as a backup for the successor.
 
+feasible successor formula
+
+Advertised distance of feasible successor < Feasible distance of successor.
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

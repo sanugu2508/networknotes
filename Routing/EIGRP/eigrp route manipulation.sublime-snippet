@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+to manipulate the routing path, we can change bandwidth or delay on the interfaces that is connected to neighbor.
+
+There is also an option to use offset list. by using offset list we can change the metric of the routes.
+
+We can also manipulate the path using AD value by using distance command.
+
+
+https://ipwithease.com/eigrp-preferred-path-manipulation/
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp route manipulation </tabTrigger>
+</snippet>

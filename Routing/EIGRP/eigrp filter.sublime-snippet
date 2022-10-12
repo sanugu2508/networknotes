@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+In EIGRP we can do inbound and outbound filtering using distribute list.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp filter</tabTrigger>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+Eigrp uses multicast ip address 224.0.0.10. by using multicast address, routers can dynamically form neighborship with routes. but we can also use unicast to form neighbors. but when we do that, eigrp will disable eigrp multicast and only use unicast.
+
+I think that is used in framerelay
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp static neighbor </tabTrigger>
+</snippet>

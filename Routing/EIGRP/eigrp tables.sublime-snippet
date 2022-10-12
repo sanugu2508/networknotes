@@ -1,0 +1,36 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+Eigrp has three tables.
+
+Neighbor Table 
+
+Topology Table
+
+Routing Table
+
+
+Neighbor Table:
+===============
+List of all directly connected neighbors
+Next hop router
+interface
+
+Topology Table
+==============
+List of learned routes from all eigrp neighbours
+destination
+metric
+
+Routing Table
+=============
+Best Routes from EIgrp topology table will be copied to the routing table.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp tables</tabTrigger>
+</snippet>

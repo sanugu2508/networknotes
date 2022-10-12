@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+
+Eigrp is a distnace vector protocol and it will use the 
+
+split horizon
+route poisoning
+poison reverse
+
+to avoid the loops.
+
+split horizon:
+
+split horizon rule says, whatever we learn on an interface, we dont advertise back out of the same interface.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp loop avoidance</tabTrigger>
+</snippet>

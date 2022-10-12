@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+
+just like rip, ospf, eigrp can also do equal cost load balancing
+
+in addition to that eigrp  can also do un-equal cost loadbalancing both.
+
+we need to use variance to do un-equal load balancing. variance is a number that we need to multiply with feasible distance of successor.
+
+In order to load-balance, the feasible successor needs to have a lower feasible distance
+than the successor X multiplier.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp loadbalancing</tabTrigger>
+</snippet>

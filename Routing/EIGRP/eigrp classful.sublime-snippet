@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+
+
+
+
+By default EIGRP behaves like a classful routing protocol which means it does not advertise the subnet mask information along with the routing information.
+
+Then we need to use no auto-summary command to send the subnet mask information along with the routing information.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp classful</tabTrigger>
+</snippet>

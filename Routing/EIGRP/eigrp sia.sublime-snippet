@@ -5,11 +5,10 @@ Stuck in active
 ================
 lets say an eigrp router lost one route and ask for the route using query message. this message will reach to all its neighbors and goes to active state for that route. if for some reason, the neighbors do not respond to query message, eigrp will drop the nieghbor relation with the router. and remain in stuck in active state. this is a problem because if one route is missing, we can not drop all the routes from the neighbor.
 
-85. How do I fix EIGRP stuck in active?
-EIGRP maintains a timer called “active timer” which has a default value of 3 minutes (180 
-seconds). EIGRP waits half of the active timer value (90 seconds) for a reply. If the router 
-does not receive a response within 90 seconds, the originating router sends a stuck in active 
-(SIA) query to EIGRP neighbours that did not respond
+
+EIGRP has a timer called “active timer”  i think it has 3 minutes. EIGRP waits half of that time  active timer value (90 seconds) for a reply. 
+If the router do not receive a response within 90 seconds, the first router sends a stuck in active 
+(SIA) query.
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

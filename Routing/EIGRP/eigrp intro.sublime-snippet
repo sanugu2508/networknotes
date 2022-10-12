@@ -9,6 +9,7 @@ It is a distance vector routing protocol
 It uses Diffused Update Algorithm (DUAL) to calculate the shortest path. 
 EIGRP support classless routing & VLSM, route summarization, incremental updates, load balancing futures.
 it uses multicast address 224.0.0.10
+EIGRP also uses RTP (Reliable Transport Protocol) protocol to exchange messages.
 
 
 ]]></content>

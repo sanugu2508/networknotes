@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+
+we can send a default route in eigrp.
+
+first we need to create a static route or "ip default-network " command 
+then write in network command into eigrp.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp default route </tabTrigger>
+</snippet>

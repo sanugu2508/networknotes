@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+
+Default TTL for eigrp packet is 2, this will help to communicate between spoke to spoke routers.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp ttl2 </tabTrigger>
+</snippet>

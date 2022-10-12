@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+
+EIGRP router selects the highest loopback ip address as router id.
+if there are no loopback ips, then it will select highest active physical ip.
+we can also give router id manually.
+
+router id is not important in eigrp. meaning two routers with same router id can still form neighbor ship.
+
+but if a router recieves a redistributed eigrp route from the neighbor and if the neighbor also has same router id, it will not accept the route.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eigrp router id </tabTrigger>
+</snippet>

@@ -18,6 +18,8 @@ Update— Used to transmit routing and reachability information with other EIGRP
 Query—Sent out to search for another path during convergence
 Reply—Sent in response to a query packet
 
+EIGRP also uses RTP (Reliable Transport Protocol) protocol to exchange messages.
+
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>eigrp packets</tabTrigger>
