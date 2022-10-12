@@ -1,8 +1,7 @@
 <snippet>
 	<content><![CDATA[
 
-▪  Open-It is Used to establish a neighbour relationship and exchange parameters, 
-including autonomous system number and authentication values.
+▪  Open- It is Used to establish a neighbour relationship and exchange parameters, including autonomous system number and authentication values.
 
 ▪ Keepalive- it is like hello packet, if a keep alive is not received in 180 seconds, the peer is dead.
 

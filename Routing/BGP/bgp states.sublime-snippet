@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 
-▪ Idle-the initial BGP state.
+▪ Idle - the initial BGP state.
 
 ▪ Connect- The BGP process is waiting for the TCP Connection to be completed. If it is 
 successful, it will be continuing to the Open Sent State. In case it fails, it will be 
