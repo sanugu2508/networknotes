@@ -8,7 +8,7 @@ SaAB meaning the SYN is sent, but no response from server.
 U meaning 3 way  is just completing.
 aB meaning SYN+ACK is coming from outside.
 
-some times we also see f meaning finish.
+some times we also see F which means finish.
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

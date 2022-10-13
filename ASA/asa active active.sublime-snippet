@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 
-we use active active failover only in multi context mode. Here we will split the firewall into  seperate firewalls. we can also divide interfaces, memory, ram, etc. we can split the network traffic into groups and make one firewall active for each group. 
+we use active active failover only in multi context mode. Here we will split the firewall into  seperate firewalls. we can also divide interfaces, memory, ram. we can split the network traffic into groups and make one firewall active for each group. 
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

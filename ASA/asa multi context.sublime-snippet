@@ -7,7 +7,6 @@ each firewall will act like a seperate firewall. we can write acls for each fire
 
 
 mode multiple
-
 mode single
 
 ]]></content>
