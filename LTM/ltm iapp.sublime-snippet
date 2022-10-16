@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+using iApp we can configure virtual server like http to https redirection and control the applications http requests and based on that we can configure load balancing.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm iApp</tabTrigger>
+</snippet>

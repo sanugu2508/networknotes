@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+there are three ssl methods we can use on F5 LTM.
+
+SSL Offloading: It means that client to load banancer traffic is encrypted, from load balancer to back end server the traffic is in plain text. we need to use ClientSSL profile and http monitor for monitoring. (You can also add http profile and optimize traffic according to Layer 7 traffic. Cookie persistency can be used. )
+ 
+
+SSL Bridging: In SSL Bridging client to F5 traffic is encrypted, and F5 to server traffic is encrypted. so end to end is encrypted. But each side has separate SSL profile. we need both ClientSSL and ServerSSL profile. Also needs to use https monitor  for servers. (You can also add http profile and optimize traffic according to Layer 7 traffic. Cookie persistency can be used. )
+ 
+
+SSL passthrough: in SSL Passthroughload balancer only check the traffic at TCP level and certificate shoudl be installed on Servers. We should NOT add clientSSL and serverSSL profile. (You CANNOT use http profile, therefore you CANNOT optimize layer 7 traffic. Cookie persistency CANNOT be used.)
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm ssl methods</tabTrigger>
+</snippet>

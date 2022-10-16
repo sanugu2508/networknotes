@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+
+to configure ssl certificate on F5, first we need to create CSR. we can create CSR either from F5 load balancer or from openssl tool from our laptop. in CSR we need to give CN Common Name, country , state details etc. once certificate is generated, we will get private key and CSR request.
+
+If we want to use public signed CA to sign it, then we need to go to public CAs like Go Daddy, Comodo, DigiCert, Verisign.
+
+If we want to use private CA, then we can use our company CA server.
+
+we need to share the CSR with them, then they will sign the CSR and give us public key.
+
+once we have signed certificate, public key, we also need full root certificate chain. like root certificate, intermediate certificate.
+
+so far we have collected, signed certificate, certificate chain and private key.
+
+now we need to go to F5 LTM, there we need to create an SSL profile  like client ssl profile. here we need to import certificate, key and chain.
+
+then we need to go to virtual servers and add the ssl profile to the VIP.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm ssl install</tabTrigger>
+</snippet>

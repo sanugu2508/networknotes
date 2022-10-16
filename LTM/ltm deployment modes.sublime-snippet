@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+
+we can configure LTM load balancer in three deployments.
+
+One Arm deployment:
+
+Two Arm deployment:
+
+N Path deployment:
+
+One arm deployment : this is very simple method, we only use one interface for doing load balancing. virtual ip should be in the same network as the pool members. but because of this asysmmetric routing can also happen, so we configure SNAT to fix this asysmmetric routing issue. for pool members, we can use a L3 switch as gateway.
+
+
+in Two Arm deployment, we configure two interfaces, one for incoming traffic and other for communicating with backend servers.  here VIP ip can be different from pool members ip. for pool members, we should  use LTM as gateway.
+
+
+in the "N Path method "  we will use one interface like one arm method. Here VIP ip should be in the same network as the pool members. for pool members, we can use a L3 switch as gateway.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm deployment modes</tabTrigger>
+</snippet>

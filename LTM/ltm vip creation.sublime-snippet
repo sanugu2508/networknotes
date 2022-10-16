@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+First we need to collect the basic information from the user. Like what is the application, backend pool member ip addresses, their port numbers. what health monitor we need to enable. what load balancing method we shoud use. do we need to install the certificate on F5, do they need persistence, do we need to use SNAT, etc. 
+
+Once we collect all the information, first we need to add the nodes and then we need to create a pool with pool members. here we need to set which type of health monitor we need to use. Like TCP, ICMP, etc.
+
+then we need to create a VIP also called as virtual server with port number. then we need to add the pool to VIP. if we need to add SSL certificate, we also need to use clientSSL profile.
+
+then we need to check if the VIP is showing up or not.
+
+we can aslo test it using "CURL" command or "telnet" command.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ltm vip creation</tabTrigger>
+</snippet>
