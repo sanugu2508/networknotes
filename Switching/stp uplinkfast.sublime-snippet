@@ -2,6 +2,12 @@
 	<content><![CDATA[
 
 
+
+when we configure uplinkfast, backup port in the loop will go into farwarding state immediately. it will bypass all listening, learning states. so instead of 30 seconds, link will become up immediately.
+
+
+
+
 In STP, if the available path to the Root Switch (Root Bridge) goes down, there will be a 50-second delay due to STP MaxAge timer and ForwardDelay timer. before the currently blocked path will be available.
 
 When a switch loses connectivity, alternate paths are used for communication. By enabling UplinkFast we can speed-up the selection of a new Root Port. when a link or switch fails or when STP reconfiguration happens. UplinkFast is used for direct link failures.

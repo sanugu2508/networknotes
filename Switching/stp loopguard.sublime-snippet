@@ -3,7 +3,7 @@
 
 
 Loop Guard:
-Loop guard helps prevent bridging loops that could occur because of a unidirectional link failure on a point-to-point link.
+Loop guard helps to stop bridging loops that usually happen due to unidirectional link failure on a point-to-point link. like a bad optical fiber cable.
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

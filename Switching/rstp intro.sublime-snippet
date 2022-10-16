@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+
+RSTP is rapid spanning tree
+
+stp protocol has 5 states. like disabled, listening, learning, forwarding, blocked. because of this, if the port goes down, it takes 50 seconds to bring the other port up. 
+
+same thing happens if we connect a network cable with laptop. it takes 50 seconds to forward the data. 
+
+This is actually slow as we have protocols like ospf, rigrp they work fast.
+
+in order to reduce the 50 seconds, we use RSTP protocol.
+
+RSTP has Discarding, learning and forwarding state.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rstp intro</tabTrigger>
+</snippet>

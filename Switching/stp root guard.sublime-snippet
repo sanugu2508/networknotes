@@ -3,7 +3,10 @@
 
 
 Root Guard:
-The STP root guard feature prevents a port from becoming root port or blocked port. If a port configured for root guard receives a superior BPDU, the port immediately goes to the root-inconsistent (blocked) state.
+
+If we configure root guard on a switch, it will stop a port to become a root port.
+
+If a port configured for root guard receives a superior BPDU, the port immediately goes to the root-inconsistent (blocked) state.
 
 Usually STP root guard is configured on primary & secondary root switches.  You can configure this per interface level as shown in the below.
 

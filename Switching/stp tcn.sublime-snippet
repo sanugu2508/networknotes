@@ -2,8 +2,10 @@
 	<content><![CDATA[
 
 Topology change Notification
-When a non-root switch detects a change in its link status, it sends a TCN upstream on all root ports, till it reaches root bridge.
+When a non-root switch detects a change in its link status, it sends a TCN packet upstream on all root ports, till it reaches root bridge.
+
 Once a switch receives TCN, it sends TCA (topology change Acknowledgement) on all designated ports towards downstream switches
+
 When a root switch receives a TCN, it will send BPDU with TC bit on, to every port it has. The switches that receive TC BPDU  will reduce the mac address table age to 10 seconds on that interface.
 
 

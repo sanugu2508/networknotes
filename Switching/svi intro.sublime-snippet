@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+
+SVI stands for Switch Virtual Interface
+
+generally to do the routing between two networks we use router. but we can also use a multi layer switch like cisco 3850, cisco 4500 for routing between vlans. this is called inter vlan routing. 
+
+For this to work, we need to do two things.
+
+first create vlan interface for each vlan 
+
+then configure "ip routing" command.
+
+we should also need to add vlans on the trunk for this to work.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>svi intro</tabTrigger>
+</snippet>

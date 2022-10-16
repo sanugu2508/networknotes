@@ -1,6 +1,8 @@
 <snippet>
 	<content><![CDATA[
 
+Backbone fast is used to recover the blocked port into forwarding  state, if a trunk port goes down on other switches in the loop, which are not directly connected. 
+
 
 The BackboneFast uses to decrease the convergence time of the Spanning Tree Protocol if there is a Indirect link failure, anywhere in the STP.Backbone Fast is pro-active and when Backbone fast is implemented, it can minimize the max age timer interval. By enabling Backbone fast the max age timer can be skipped and the delay is minimized from 50 seconds to 30 seconds.
 

@@ -1,0 +1,31 @@
+<snippet>
+	<content><![CDATA[
+
+
+spanning truee protocol is used to avoid loops in layer 2 switches. ususally TTL value is there in ip packet, but switches only read upto layer2. so if there is a layer 2 loop in the network, switches performance will be hit. 
+
+to avoid loops in switches, we can configure spanning tree protocol.
+
+stp avoids loops, by electing a root bridge.
+then, we need to find, shortest path to root bridge.
+One port should be blocked, per each loop.
+other switches find, shortest path, based on port cost.
+
+for ethernet, cost is 100
+for fastethernet, cost is 19 
+for gig ethernet, cost is 4
+
+Based on cost, switches will identify root port and designated ports.
+
+Lowest bridge ID: the switch with the, lowest bridge ID, becomes the root bridge.
+
+Lowest path cost to root bridge: when the switch receives multiple BPDUs it will select the interface that has the lowest cost to reach the root bridge as the root port.
+
+Lowest sender bridge ID: when a switch is connected to two switches, that it can use to reach the root bridge. and the cost, to reach the root bridge is the same, then it will select the interface connecting to the switch with the lowest bridge ID as the root port.
+
+Lowest sender port ID: when the switch has two interfaces connecting to the same switch, and the cost to reach the root bridge is the same it will use the interface with the lowest number as the root port.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>stp intro</tabTrigger>
+</snippet>

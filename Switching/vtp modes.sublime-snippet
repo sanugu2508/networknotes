@@ -1,17 +1,20 @@
 <snippet>
 	<content><![CDATA[
 
-163.What are differentVTP mode?
 
-▪ VTP Server mode- By default, every switch is in server mode. Switch in VTP Server 
+VTP (VLAN Trunking Protocol) is a Cisco proprietary protocol used by Cisco switches to 
+exchange VLAN information. VTP is used to synchronize VLAN information like VLAN ID ,  
+VLAN Name  with switches inside the same VTP domain.
+
+VTP Server mode : This is the  default mode in every cisco switch. Switch in VTP Server 
 Mode can create, delete VLANs and will propagate VLAN changes.
 
-▪ VTP Client mode- Switch in VTP client mode cannot create or delete VLANs. 
+VTP Client mode : if we configure a switch in client mode, we cannot create or delete VLANs. 
+
 (VTP) client mode switch listen to VTP advertisements from other switches and modify their VLAN configuration accordingly. 
 It listens and forwards updates.
 
-▪ VTP Transparent mode- Switch in VTP Transparent mode does not share its VLAN database but it forwards received VTP advertisements
-. We can create and delete VLANs on a VTP transparent switch, but these changes are not sent to other switches
+VTP Transparent mode : Switch in VTP Transparent mode does not share its VLAN database but it forwards received VTP advertisements . We can create and delete VLANs on a VTP transparent switch, but these changes are not sent to other switches
 
 
 
