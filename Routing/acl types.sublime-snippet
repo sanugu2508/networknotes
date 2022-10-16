@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+		Standard Access lists match only based on the source IP address of the packet. 
+		Extended Access lists can match on source and destination address, port number and protocol.
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>acl types</tabTrigger>
+</snippet>

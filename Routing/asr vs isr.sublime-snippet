@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+
+ASR routers are Advanced Service Routers, these are used by ISPs. they have lot of ports and can also route lot of data.
+
+ISR routers are integrated Service Routers. These are used by small and medium companies. these routers have less ports and less bandwidth support.
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ASR vs ISR</tabTrigger>
+</snippet>
