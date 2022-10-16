@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+
+"capture <capture-name> interface <interface-name> match ip host <source ip> host <destination ip>"
+
+To verify run “show capture”
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>asa packetcapture</tabTrigger>
+</snippet>
