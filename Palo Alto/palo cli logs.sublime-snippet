@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+
+in cli we can check multiple logs using "less " command or "tail " command.
+
+we can use like 
+
+> tail lines 200 mp-log ikemgr.log
+
+to check the ipsec site to site vpn related logs.
+
+there is also agent-log, dp-log, mp-log, webserver-log etc.
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>palo cli logs</tabTrigger>
+</snippet>
